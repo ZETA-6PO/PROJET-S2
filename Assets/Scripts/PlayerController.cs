@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 500;
     public Rigidbody2D rb;
+    public Animator animator;
     private Vector3 velocity = new Vector3(0,0,0);
     void FixedUpdate()
     {
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
         float verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
         MovePlayer(horizontalMovement, verticalMovement);
+        animator.SetFloat("SpeedX", rb.velocity.x);
+        animator.SetFloat("SpeedY", rb.velocity.y);
     }
     
     void MovePlayer(float _horizontalMovement, float _verticvalMovement)
