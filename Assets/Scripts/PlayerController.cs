@@ -34,6 +34,6 @@ public class PlayerController : MonoBehaviour
     void MovePlayer(float _horizontalMovement, float _verticvalMovement)
     {
         Vector3 targetVelocity = new Vector2(-_horizontalMovement, _verticvalMovement);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .002f);
     }
 }
