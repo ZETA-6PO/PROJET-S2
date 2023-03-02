@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 500;
     public Rigidbody2D rb;
     private Vector3 velocity = new Vector3(0,0,0);
     void FixedUpdate()
