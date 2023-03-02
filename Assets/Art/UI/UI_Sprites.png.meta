@@ -1,0 +1,3466 @@
+fileFormatVersion: 2
+guid: 6f4ddf432d72cca4998ad529547e73c4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_TabRect
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 12, z: 10, w: 14}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223ece0c5bada5d4980a3f7b3f4cefdb
+      internalID: -1651947087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Help
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 992
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4400353ba0e361489b7330f505951f6
+      internalID: 908391263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GiftGreen
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 992
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a802d0b59708279429f71f18a4062559
+      internalID: 1034964099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GiftRed
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 992
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7022da86767141849963f350e060a700
+      internalID: -971269473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GiftBlue
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 994
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c2f243eac60d647a30a2af9d7ea107
+      internalID: 908001703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Light
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 994
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24e020300769a84c9d3d8c125682607
+      internalID: 185659016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Chair
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 960
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736490095ac8fdd4e967fc201f840951
+      internalID: -891616231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bed
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 992
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb8b8c29397950458b8cb05c3e5e6f5
+      internalID: 1856626814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Rect_In
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 954
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6967a636f80209c4ba508da4bac1305b
+      internalID: -1779148075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Star
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 964
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d814a12682ff9e4287142c3b37cb2d5
+      internalID: 333747887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Star2
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 964
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e1680ce5968874bbb830859ac893f4
+      internalID: 1460123026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bed2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 960
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5024890c91daa46bb51d5bde586693
+      internalID: 979567967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_DialogRect
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 886
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 12}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e48474e4932db8419d590b3071dfbd8
+      internalID: -2000340095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GoldenBollox
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 932
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8d81a7402dd9549a10432d270a88e4
+      internalID: -200354784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bag
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 930
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0c0cbf416768549b98e2c03a4e4d9d
+      internalID: -1765723995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Ballon
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 900
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab901a9a5affd654f8593b5c120cebb0
+      internalID: -206761035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Sapin
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 896
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71ae0962f6a7104fb05b34221af4dd5
+      internalID: -1644298793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bagpack
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 848
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dd8e57410859d459f0acf346be9101
+      internalID: 1889688949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Clock
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 868
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53fe7a470175e44fbc2a350c02b9139
+      internalID: -1417716685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Sabler
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 676
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dde2ac310f1114c9e31eba3a937315
+      internalID: -2025959916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Lightning_Icon
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 674
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7bebdb2a6792b43958b089ae1e13c2
+      internalID: 1074850117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Heart_Icon
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 676
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf22006321ec144c94a29b6b5f6e856
+      internalID: 2072658481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Chicken
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 674
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9133589c723931841a4526667a604eec
+      internalID: 356398392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Heart2
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 674
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa53e24ad71d584f9ca6ba7de726162
+      internalID: -1290006917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Tab
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 608
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 0, z: 10, w: 14}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd930221934a144e9481d7099eeebc7
+      internalID: -1422175219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Book
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 622
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957d192078ed94941871593fd7dc51e9
+      internalID: -420839006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Gears
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 624
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83823dfbc41a6a46894a02100ccfbe9
+      internalID: 28011401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Phone
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 620
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22929c8618e9afd48a3cda60b860e156
+      internalID: 721520864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Heart
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 642
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e424b4f5bd1fc1640b66e8c4a01db9f8
+      internalID: 175590575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Write_2
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 608
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd23575852c27e44aabc1b1168f6b3e
+      internalID: 1055743456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Write_3
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 608
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7700d3eaf8708146916d60bcb7127e4
+      internalID: -1017162956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Check_2
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 576
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1004f8157ce9b6f47a89648041f3cf99
+      internalID: 1248094901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Check_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 576
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fce4853f99a9eb42bc9240105554b9c
+      internalID: -1927121577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Cross_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 576
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58838fbffd13414383aaca3b73cd181
+      internalID: -862387847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Plus_2
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 576
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0803505f4e7b6bc4987920498581d614
+      internalID: -1537753567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Plus_3
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 576
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1222e8473911644b592ecb01db8897
+      internalID: 361231657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Minus_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 576
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fee499cac1b4de4e957b50db78feaba
+      internalID: 1920076778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Minus_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 576
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87901fdd0063fe488a6ecd03a661a41
+      internalID: -862103991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Erase_2
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 576
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8881e64ef012ea34985a722e9c52b5cc
+      internalID: 1985749443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Erase_3
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 576
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34f298298519f645a7deb72efee2c36
+      internalID: -184906646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SelectBox
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 504
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 6, z: 6, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea262ce929c53542ab920adaa399b60
+      internalID: -416353801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Help_2
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 512
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d3fd76e7f4cfa4398c9861efdcd430
+      internalID: -83496199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Help_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 512
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87331769a9160d64bb27fabb67713ce9
+      internalID: -521792165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Info_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 512
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ab772efd0e0fb4e926411e084e07e4
+      internalID: 1503704385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Info_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 512
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3747d708569066e43bee1320bc3b35be
+      internalID: 2047458734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Discord_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 480
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662d85be305c80f4aba449c6933f474d
+      internalID: 141555054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Discord_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 480
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023b037e3a029c741befd05025ff4105
+      internalID: -1772661940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Settings_2
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 480
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd43c284229fdf844a48f1404e3984f1
+      internalID: 223472637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Settings_3
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 480
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a3b685315b6be4494cd452c2b4ca0d
+      internalID: -1742853652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Home_2
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 448
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28699b0c7c005db46ab4af9775ef59d0
+      internalID: 886311108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Home_3
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 448
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f28382daec82704c8f047b1279da036
+      internalID: 1465180412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Menu_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 448
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f88c7138544af64da6bc7668c6e363b
+      internalID: 597647593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Menu_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 448
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3358cb9e1f20dbd4db5e3352bcfe7ad6
+      internalID: -240376900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Shop_2
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 448
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce0314665d1292448a20d67f6257505
+      internalID: 658163363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Shop_3
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 448
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0552870ba262a14490c67a4117b5c27
+      internalID: 543358488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_IDLE
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 408
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 8, z: 6, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c763223f25da842946c90427108840
+      internalID: -2039903807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_Pressed
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 408
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 8, z: 6, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8572b095de6744d9e287731e0da99b
+      internalID: -1108069814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Custom_2
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 416
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d12f739ac88eae468f84ed0aae091e8
+      internalID: -2048158357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Custom_3
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 416
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390fac76af9339d40966d5d94266556e
+      internalID: 2138065089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_BarContainer
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 226
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 8, z: 6, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf32e5667cf3c148959660dc0a684d7
+      internalID: -970310823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_RightArrowLittle_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 384
+        width: 28
+        height: 30
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7b0d914f89c81488b4b1b9dbe0d1b0
+      internalID: -1508564291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_RightArrowLittle_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 384
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891e5ac9789aefe46bdb71dc6a313d22
+      internalID: -459448985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_LeftArrowLittle_2
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 384
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c1df5e98276d34f883fa84bedf0fa4
+      internalID: 802333062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_LeftArrowLittle_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 384
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc66b2a1814232498d3558f72d4dcb3
+      internalID: -573397531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_DownArrowLittle_2
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 384
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7650f66052b662243a87f1226371132c
+      internalID: -324772649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_DownArrowLittle_
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 384
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c70ba07778cf3e4491b289b5a44d6d6
+      internalID: -361797167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_UpArrowLittle_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 384
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01bdd9a7bc9c294a8c7768de3f215ca
+      internalID: -652072044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_UpArrowLittle_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 384
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab94867054f40bd478b820f94e32c0f2
+      internalID: -725525576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Cursor_IDLE
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 356
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56871e231306fd547b3c7aef1158245d
+      internalID: -1746484438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Cursor_CanClick
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 352
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1895d36c3c2d5c4fb46b5dc12cdb350
+      internalID: -2089884236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Cursor_Clicking_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 352
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01973cb345b5ac41897a45290f7f363
+      internalID: -1605979634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Cursor_Clicking_2
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 352
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f525155c4de6e7409b6337a3b6c4cda
+      internalID: -346462916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Pause_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 352
+        width: 28
+        height: 30
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b40300aeff89684eb36a7c1e3125dd8
+      internalID: -1464191058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Pause_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 352
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fe93398f6ba044c88c61ea0a63c305
+      internalID: -214679592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Volume_2
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 352
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caea96efa7db0047b4dd0536b87d8ed
+      internalID: 1169699256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Volume_3
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 352
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1265448dabcc0a34681891172b3bc3be
+      internalID: -461113861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Mute_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 352
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4621e0d7141233e4e972e904e6fd6f81
+      internalID: 1460893165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Mute_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 352
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597d6cd08421d674699081703e90c77c
+      internalID: -952417516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Coin
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 200
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adc4a13d0aed0f47af513fe979d81b3
+      internalID: -770608296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_FullbarRed
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 234
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbf75dc76c05b44ba7c66de08819d08
+      internalID: 2937280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_FullbarGreen
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 202
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d57166c7648bcc40876976b092c06a0
+      internalID: -1470268789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_FullbarOrange
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 202
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a53db32d1ac2494c80d57951a8a4ecf
+      internalID: -1550091984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Switch_Off
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 38
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6960e07b30dac646864176cd50b62d5
+      internalID: 464904314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Switch_On
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 38
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426471bb352a3bb40a1936d0366d7b58
+      internalID: -1125210020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_RightArrowLittle_1
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 384
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56db99e6874f4a4db4426f91a9b21e7
+      internalID: 1965609720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Pause_1
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 352
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761e558633365da47aab4cc8bd2ff757
+      internalID: -1270837416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Check_1
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 576
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf04697badb5bc469e2ae7cf94953a1
+      internalID: 1222351803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Help_1
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 512
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e7afd3ec496e941b2b0335829678a7
+      internalID: -721450280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Cross_2
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 576
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725761dd32c82334a812e36e4cb8d1a7
+      internalID: 2087809166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Cross_1
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 576
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57d4c44690c4b04db109159959dee34
+      internalID: -1406248944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_LeftArrowLittle_1
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 384
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768e0e6b49bb1434eaa2f76e805d6901
+      internalID: -1244272543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Volume_1
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 352
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba01311c59dd9d448a99f2db25d5feb
+      internalID: 1738721386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_DownArrowLittle_1
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 384
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3efb473c007e342b78e4e5de90c0c7
+      internalID: -1134512457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Home_1
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 447
+        width: 28
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b5ea8cacb67ea40bc013c874ac32fc
+      internalID: -857004449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Plus_1
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 576
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505eef78cadb6f844a6dddb61de8affb
+      internalID: 112789144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Minus_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 575
+        width: 28
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3faee4cb5f3c524dbb5295ceac7c853
+      internalID: 1764739451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Info_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 511
+        width: 28
+        height: 33
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f741dfbb0dba69e448168e7bbe63ee1e
+      internalID: -1382060916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Discord_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 479
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73445df6351bcd54fa34c6de7d057525
+      internalID: 1311703292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Menu_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 447
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5822f7834c27148ab92052bed7ff29
+      internalID: -1536674704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_UpArrowLittle_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 383
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9297c869eddf185489035ebf80cfb07c
+      internalID: 1071955555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Mute_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 352
+        width: 28
+        height: 31
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb1c263e92787b40ae123c86d087092
+      internalID: -1598180606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Custom_1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 416
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d350df8609aaf5842a32eace2bd13a79
+      internalID: 1189143129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Shop_1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 448
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d960da99790478c4a9e57b757a6e8629
+      internalID: 1549606843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Settings_1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 480
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b73255c0b51c94d832d96feb5f1e05
+      internalID: -1675266577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Erase_1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 576
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57286735daf3cad439155ec6bb596d02
+      internalID: 1369962888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_Write_1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 608
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a902188a722c448843baddc6d9adc7
+      internalID: 1866299646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_RightArrow_1
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 416
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4b1da6c0fa80e4faf35f01ed635726
+      internalID: 999904875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_RightArrow_2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 416
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9470aff7bfaf4f408e5e893eb8320a5
+      internalID: -430819078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_RightArrow_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 416
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310e7a26d645f034a8ae0d12db60cd6e
+      internalID: 1724923717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_LeftArrow_1
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 416
+        width: 28
+        height: 31
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e187461d1aee242b5ed6d9c2d8f096
+      internalID: 788229962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_LeftArrow_2
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 416
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124ffcc394c31f84ca7eedda0f6f382f
+      internalID: 872812712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_LeftArrow_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 416
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b449b1601043e894e83ab31351c99c27
+      internalID: -1913399027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_DownArrow_1
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 416
+        width: 28
+        height: 31
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36620ce9a7858a24d802c32363fdb1fc
+      internalID: -502408974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_DownArrow_2
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 416
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9edab66afe9cf4ab36622b266436a1
+      internalID: 658554318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_DownArrow_3
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 416
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a97ea124cef9da4481c5606797e6541
+      internalID: -121361837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_UpArrow_1
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 415
+        width: 28
+        height: 32
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bbf7638f21ff942a40b9f78df94037
+      internalID: 1520121534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_UpArrow_2
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 416
+        width: 28
+        height: 30
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2d58b519843664b9e25d682965f9ef
+      internalID: -1124745963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MButton_UpArrow_3
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 416
+        width: 28
+        height: 28
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d860af4e61008114db0a0bfa84d5fa16
+      internalID: 1871212926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Table
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 928
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d13ba87839b2b4496f9cc1e37727cd
+      internalID: 28710418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Cartoon
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 992
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b47cc57d910ce49ae9aaab2c7712fe
+      internalID: -1063562628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Mobilier
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 896
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a690f50c601b5d48a9bbe151b83635b
+      internalID: 1845838849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Selector_Big
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 400
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fd458bf1f292b4198613759a8280fe
+      internalID: -1196931723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Selector_Medium
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 402
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e7a4b64e7c02142832d38decabdbe0
+      internalID: -93600850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Selector_Little
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 404
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b09aeb02db2b344910e70ad20cdc28
+      internalID: -553211678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RedCross_IDLE
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 294
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc0f483c52385e4d976f02f679b50bd
+      internalID: -315225998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RedCross_Clicked
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 296
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a0daca7cc4a734aa59b07eb5ff3aa0
+      internalID: -906074169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GreenCheck_IDLE
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 262
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8efb499613ecb439c0f35252ab0d08
+      internalID: 22040393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_GreenCheck_Clicked
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 266
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a855a82b556a64cb1bbe9d93fc2915
+      internalID: -167559518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Modern_UI_Style_2_32x32_126: -1063562628
+      Modern_UI_Style_2_32x32_245: 1658413741
+      Modern_UI_Style_2_32x32_461: 658677047
+      Modern_UI_Style_2_32x32_279: 1579576101
+      Modern_UI_Style_2_32x32_471: -1420605886
+      UI_MButton_RightArrow_2: -430819078
+      Modern_UI_Style_2_32x32_134: -476152861
+      Modern_UI_Style_2_32x32_380: 1157244776
+      Modern_UI_Style_2_32x32_118: 1978548287
+      Modern_UI_Style_2_32x32_221: 1291986680
+      UI_MButton_Volume_3: -461113861
+      Modern_UI_Style_2_32x32_155: -1937340872
+      Modern_UI_Style_2_32x32_499: -685901049
+      Modern_UI_Style_2_32x32_2: -195276343
+      Modern_UI_Style_2_32x32_636: -1076553430
+      Modern_UI_Style_2_32x32_31: -122462083
+      Modern_UI_Style_2_32x32_145: 1592162610
+      Modern_UI_Style_2_32x32_557: -2016367063
+      UI_MButton_Check_1: 1222351803
+      Modern_UI_Style_2_32x32_416: 1760186366
+      Modern_UI_Style_2_32x32_591: 1941735671
+      Modern_UI_Style_2_32x32_396: -1795469055
+      Modern_UI_Style_2_32x32_125: -578059598
+      UI_Cartoon: -1063562628
+      Modern_UI_Style_2_32x32_255: 1716525511
+      Modern_UI_Style_2_32x32_630: 1996162612
+      Modern_UI_Style_2_32x32_292: 68640905
+      Modern_UI_Style_2_32x32_383: -1603767923
+      Modern_UI_Style_2_32x32_116: 1616603158
+      UI_Help: 908391263
+      Modern_UI_Style_2_32x32_218: 1258857715
+      Modern_UI_Style_2_32x32_509: -1754870272
+      UI_MButton_Write_3: -1017162956
+      Modern_UI_Style_2_32x32_81: 544337179
+      Modern_UI_Style_2_32x32_104: 1313765810
+      Modern_UI_Style_2_32x32_341: -786515665
+      Modern_UI_Style_2_32x32_599: -342148358
+      Modern_UI_Style_2_32x32_54: 1403672414
+      UI_Clock: -1417716685
+      Modern_UI_Style_2_32x32_604: -1789185236
+      UI_MButton_Plus_2: -1537753567
+      Modern_UI_Style_2_32x32_289: 1076637755
+      UI_Cursor_Clicking_2: -346462916
+      UI_MButton_Home_1: -857004449
+      Modern_UI_Style_2_32x32_561: -473471593
+      Modern_UI_Style_2_32x32_325: 412771519
+      Modern_UI_Style_2_32x32_252: 1019609749
+      UI_MButton_Help_1: -721450280
+      Modern_UI_Style_2_32x32_223: -1937466032
+      Modern_UI_Style_2_32x32_154: -377011067
+      Modern_UI_Style_2_32x32_253: 599989707
+      Modern_UI_Style_2_32x32_96: -1133312983
+      Modern_UI_Style_2_32x32_135: -1596947871
+      Modern_UI_Style_2_32x32_222: 678487184
+      Modern_UI_Style_2_32x32_364: 1920722622
+      Modern_UI_Style_2_32x32_95: 96967568
+      UI_Cursor_IDLE: -1746484438
+      Modern_UI_Style_2_32x32_524: 657539663
+      Modern_UI_Style_2_32x32_63: 186676545
+      Modern_UI_Style_2_32x32_61: -1551846343
+      Modern_UI_Style_2_32x32_7: 1556436732
+      Modern_UI_Style_2_32x32_219: -451154534
+      Modern_UI_Style_2_32x32_178: -1290485994
+      Modern_UI_Style_2_32x32_338: 285412206
+      Modern_UI_Style_2_32x32_37: 1915268540
+      Modern_UI_Style_2_32x32_429: -222033943
+      Modern_UI_Style_2_32x32_348: -1340122707
+      Modern_UI_Style_2_32x32_553: 1839214835
+      Modern_UI_Style_2_32x32_458: -316712892
+      Modern_UI_Style_2_32x32_58: 1929359205
+      Modern_UI_Style_2_32x32_362: -217052826
+      UI_Cursor_Clicking_1: -1605979634
+      Modern_UI_Style_2_32x32_25: -707274189
+      UI_MButton_DownArrowLittle_: -324772649
+      Modern_UI_Style_2_32x32_329: -749301842
+      Modern_UI_Style_2_32x32_224: -832583100
+      Modern_UI_Style_2_32x32_231: -1303568346
+      UI_MButton_Settings_3: -1742853652
+      Modern_UI_Style_2_32x32_438: -1211160770
+      Modern_UI_Style_2_32x32_620: 2079148005
+      Modern_UI_Style_2_32x32_232: -1105190881
+      Modern_UI_Style_2_32x32_629: -395823278
+      Modern_UI_Style_2_32x32_570: -1225331184
+      Modern_UI_Style_2_32x32_248: -1664148230
+      Modern_UI_Style_2_32x32_349: 1591198850
+      Modern_UI_Style_2_32x32_19: -703965751
+      Modern_UI_Style_2_32x32_554: 1485383720
+      Modern_UI_Style_2_32x32_92: -1399311651
+      Modern_UI_Style_2_32x32_548: 1411298896
+      Modern_UI_Style_2_32x32_171: 1016204993
+      UI_Bed: 1856626814
+      Modern_UI_Style_2_32x32_296: -1269060360
+      UI_MButton_Mute_1: -1598180606
+      UI_FullbarGreen: -1470268789
+      Modern_UI_Style_2_32x32_544: 556726658
+      UI_MButton_Settings_2: 223472637
+      Modern_UI_Style_2_32x32_97: 2057135707
+      UI_MButton_Plus_3: 361231657
+      Modern_UI_Style_2_32x32_641: 1425609410
+      Modern_UI_Style_2_32x32_441: -175790550
+      Modern_UI_Style_2_32x32_470: 2146525251
+      UI_Star: 333747887
+      Modern_UI_Style_2_32x32_46: 292190265
+      Modern_UI_Style_2_32x32_306: 253722465
+      Modern_UI_Style_2_32x32_535: 1129172012
+      UI_MButton_UpArrowLittle_2: -652072044
+      Modern_UI_Style_2_32x32_354: 325353555
+      Modern_UI_Style_2_32x32_45: 1059390356
+      UI_MButton_Erase_3: -184906646
+      UI_MButton_Cross_1: -1406248944
+      Modern_UI_Style_2_32x32_129: 80018080
+      Modern_UI_Style_2_32x32_244: -1407586633
+      UI_MButton_Check_2: 1248094901
+      Modern_UI_Style_2_32x32_417: 901892500
+      Modern_UI_Style_2_32x32_460: 1765897039
+      Modern_UI_Style_2_32x32_314: -1060920332
+      Modern_UI_Style_2_32x32_93: 802311316
+      Modern_UI_Style_2_32x32_298: 91365241
+      Modern_UI_Style_2_32x32_324: -800423520
+      Modern_UI_Style_2_32x32_278: 1622188144
+      Modern_UI_Style_2_32x32_139: -606998865
+      Modern_UI_Style_2_32x32_336: -337948468
+      Modern_UI_Style_2_32x32_617: 1241865328
+      Modern_UI_Style_2_32x32_573: -183644614
+      Modern_UI_Style_2_32x32_480: 848595489
+      UI_MButton_Custom_2: -2048158357
+      Modern_UI_Style_2_32x32_474: 1016417869
+      UI_Selector_Little: 631014154
+      Modern_UI_Style_2_32x32_87: 1866299646
+      UI_MButton_Discord_3: -1772661940
+      Modern_UI_Style_2_32x32_418: 464904314
+      Modern_UI_Style_2_32x32_508: 2045377029
+      Modern_UI_Style_2_32x32_57: 945662431
+      Modern_UI_Style_2_32x32_464: 751828234
+      Modern_UI_Style_2_32x32_379: -578052208
+      Modern_UI_Style_2_32x32_199: 157459477
+      Modern_UI_Style_2_32x32_181: -1488148261
+      Modern_UI_Style_2_32x32_505: -361797167
+      UI_MButton_Volume_1: 1738721386
+      Modern_UI_Style_2_32x32_433: -83496199
+      Modern_UI_Style_2_32x32_571: -1360581288
+      Modern_UI_Style_2_32x32_363: 27527303
+      Modern_UI_Style_2_32x32_49: -1424697585
+      UI_MButton_LeftArrowLittle_1: -1244272543
+      Modern_UI_Style_2_32x32_611: -777420784
+      Modern_UI_Style_2_32x32_588: 2072658481
+      Modern_UI_Style_2_32x32_33: 825753088
+      Modern_UI_Style_2_32x32_346: -1175003519
+      UI_MButton_Check_3: -1927121577
+      UI_MButton_DownArrow_3: 658554318
+      Modern_UI_Style_2_32x32_160: -1535792846
+      Modern_UI_Style_2_32x32_340: 1821948503
+      Modern_UI_Style_2_32x32_282: -1667229929
+      UI_Lightning_Icon: 1074850117
+      UI_MButton_DownArrow_1: -502408974
+      Modern_UI_Style_2_32x32_297: 1920076778
+      Modern_UI_Style_2_32x32_637: 1669329310
+      Modern_UI_Style_2_32x32_593: 1027737205
+      Modern_UI_Style_2_32x32_120: 583053465
+      Modern_UI_Style_2_32x32_556: 1415773131
+      UI_Book: -420839006
+      Modern_UI_Style_2_32x32_368: 697967193
+      Modern_UI_Style_2_32x32_75: 578095089
+      Modern_UI_Style_2_32x32_504: -790746284
+      Modern_UI_Style_2_32x32_409: -310536003
+      Modern_UI_Style_2_32x32_486: -1504821242
+      Modern_UI_Style_2_32x32_459: 1592254301
+      Modern_UI_Style_2_32x32_82: -275587010
+      Modern_UI_Style_2_32x32_602: 2063025677
+      Modern_UI_Style_2_32x32_277: -452769649
+      Modern_UI_Style_2_32x32_148: 1351592077
+      Modern_UI_Style_2_32x32_563: 245371831
+      Modern_UI_Style_2_32x32_249: -1294751429
+      Modern_UI_Style_2_32x32_235: -924649135
+      Modern_UI_Style_2_32x32_313: 1047483154
+      Modern_UI_Style_2_32x32_555: -2112784225
+      Modern_UI_Style_2_32x32_220: -1563101218
+      Modern_UI_Style_2_32x32_79: 1983437157
+      Modern_UI_Style_2_32x32_406: -2045969744
+      Modern_UI_Style_2_32x32_251: 1530651441
+      Modern_UI_Style_2_32x32_149: -1406248944
+      UI_MButton_UpArrowLittle_1: 1071955555
+      Modern_UI_Style_2_32x32_32: 1196737011
+      Modern_UI_Style_2_32x32_142: -1526490035
+      Modern_UI_Style_2_32x32_83: -1684617408
+      Modern_UI_Style_2_32x32_20: -1675266577
+      Modern_UI_Style_2_32x32_177: -199641110
+      Modern_UI_Style_2_32x32_463: 1498502689
+      Modern_UI_Style_2_32x32_262: -19141812
+      UI_MButton_Menu_1: -1536674704
+      UI_MButton_Write_2: 1055743456
+      Modern_UI_Style_2_32x32_42: -1029875732
+      Modern_UI_Style_2_32x32_84: 631330712
+      Modern_UI_Style_2_32x32_613: 811278480
+      UI_MButton_Erase_1: 1369962888
+      Modern_UI_Style_2_32x32_121: 1456206904
+      Modern_UI_Style_2_32x32_444: 333747887
+      UI_Sabler: -2025959916
+      Modern_UI_Style_2_32x32_267: -1468434466
+      UI_Chicken: 356398392
+      Modern_UI_Style_2_32x32_430: -1913399027
+      Modern_UI_Style_2_32x32_307: 2141379225
+      Modern_UI_Style_2_32x32_259: -1701879611
+      Modern_UI_Style_2_32x32_263: -1538900654
+      Modern_UI_Style_2_32x32_367: -607343333
+      Modern_UI_Style_2_32x32_646: -1766140288
+      Modern_UI_Style_2_32x32_541: -857036601
+      Modern_UI_Style_2_32x32_210: 1049815350
+      Modern_UI_Style_2_32x32_407: -822064699
+      Modern_UI_Style_2_32x32_647: -496286742
+      Modern_UI_Style_2_32x32_577: -562018814
+      Modern_UI_Style_2_32x32_65: -1532878718
+      Modern_UI_Style_2_32x32_261: 1714229235
+      Modern_UI_Style_2_32x32_432: 61440690
+      Modern_UI_Style_2_32x32_180: -2038005014
+      UI_GiftRed: -971269473
+      Modern_UI_Style_2_32x32_489: 597647593
+      Modern_UI_Style_2_32x32_15: 659226672
+      Modern_UI_Style_2_32x32_26: -214679592
+      Modern_UI_Style_2_32x32_569: -326801027
+      Modern_UI_Style_2_32x32_200: -2128483252
+      Modern_UI_Style_2_32x32_377: 1649416738
+      Modern_UI_Style_2_32x32_395: 945546450
+      Modern_UI_Style_2_32x32_581: 803163022
+      Modern_UI_Style_2_32x32_227: -414329097
+      Modern_UI_Style_2_32x32_74: 505894649
+      Modern_UI_Style_2_32x32_435: 1491316557
+      Modern_UI_Style_2_32x32_182: -1779148075
+      UI_Rect_In: -718203128
+      Modern_UI_Style_2_32x32_585: -571508973
+      Modern_UI_Style_2_32x32_309: -99697510
+      Modern_UI_Style_2_32x32_615: -1855626259
+      Modern_UI_Style_2_32x32_250: -1508564291
+      UI_MButton_LeftArrow_3: -1913399027
+      UI_GiftBlue: 908001703
+      Modern_UI_Style_2_32x32_468: 418728325
+      UI_MButton_UpArrow_2: -1124745963
+      UI_MButton_Shop_1: 1549606843
+      Modern_UI_Style_2_32x32_644: 1625856821
+      Modern_UI_Style_2_32x32_86: 736611889
+      Modern_UI_Style_2_32x32_90: 1845838849
+      Modern_UI_Style_2_32x32_600: 841224802
+      UI_MButton_Shop_2: 658163363
+      UI_MButton_Minus_3: -862103991
+      Modern_UI_Style_2_32x32_634: -2101325
+      Modern_UI_Style_2_32x32_454: -433895466
+      Modern_UI_Style_2_32x32_334: -1020008042
+      UI_MButton_Cross_3: -862387847
+      Modern_UI_Style_2_32x32_500: 841578069
+      Modern_UI_Style_2_32x32_48: -1641131472
+      Modern_UI_Style_2_32x32_56: -1092371381
+      Modern_UI_Style_2_32x32_300: -532489595
+      Modern_UI_Style_2_32x32_174: -1927121577
+      Modern_UI_Style_2_32x32_575: -787784080
+      Modern_UI_Style_2_32x32_173: -1231863970
+      Modern_UI_Style_2_32x32_60: 1549606843
+      Modern_UI_Style_2_32x32_311: 1131362659
+      Modern_UI_Style_2_32x32_490: 102579744
+      Modern_UI_Style_2_32x32_62: 1811490243
+      Modern_UI_Style_2_32x32_228: -1988612018
+      UI_Sapin: -1644298793
+      Modern_UI_Style_2_32x32_391: 1202388138
+      Modern_UI_Style_2_32x32_572: 805994492
+      UI_GiftGreen: 1034964099
+      Modern_UI_Style_2_32x32_176: 391735977
+      Modern_UI_Style_2_32x32_375: -1610602261
+      Modern_UI_Style_2_32x32_117: 1916249131
+      Modern_UI_Style_2_32x32_414: -1825354488
+      Modern_UI_Style_2_32x32_568: 1725193228
+      Modern_UI_Style_2_32x32_29: 522132271
+      Modern_UI_Style_2_32x32_607: 2138065089
+      UI_MButton_Mute_2: 1460893165
+      Modern_UI_Style_2_32x32_645: 2008506184
+      UI_MButton_Discord_1: 1311703292
+      Modern_UI_Style_2_32x32_276: 2115903256
+      Modern_UI_Style_2_32x32_212: -200522833
+      Modern_UI_Style_2_32x32_601: -515554008
+      UI_MButton_RightArrowLittle_3: -459448985
+      Modern_UI_Style_2_32x32_295: -150187439
+      Modern_UI_Style_2_32x32_310: 1917750668
+      Modern_UI_Style_2_32x32_294: 958755999
+      Modern_UI_Style_2_32x32_502: -1742703728
+      Modern_UI_Style_2_32x32_467: 2047458734
+      Modern_UI_Style_2_32x32_627: 578547033
+      Modern_UI_Style_2_32x32_159: 779281429
+      Modern_UI_Style_2_32x32_184: -1772661940
+      UI_FullbarOrange: -1550091984
+      Modern_UI_Style_2_32x32_530: -43609249
+      Modern_UI_Style_2_32x32_579: 872812712
+      Modern_UI_Style_2_32x32_621: -420839006
+      Modern_UI_Style_2_32x32_213: 886311108
+      UI_GoldenBollox: -200354784
+      Modern_UI_Style_2_32x32_77: 1216898461
+      Modern_UI_Style_2_32x32_424: 950496971
+      Modern_UI_Style_2_32x32_122: 895214492
+      Modern_UI_Style_2_32x32_410: -1635723834
+      Modern_UI_Style_2_32x32_50: 1685742368
+      Modern_UI_Style_2_32x32_123: 1183889625
+      Modern_UI_Style_2_32x32_124: 254389415
+      Modern_UI_Style_2_32x32_387: -1131134824
+      Modern_UI_Style_2_32x32_589: 979567967
+      UI_MButton_Custom_3: 2138065089
+      UI_Phone: 721520864
+      Modern_UI_Style_2_32x32_287: -905081612
+      Modern_UI_Style_2_32x32_365: -1387946028
+      UI_MButton_Menu_3: -240376900
+      Modern_UI_Style_2_32x32_610: -347671714
+      UI_MButton_Shop_3: 543358488
+      Modern_UI_Style_2_32x32_265: -557796463
+      Modern_UI_Style_2_32x32_67: 1985749443
+      Modern_UI_Style_2_32x32_109: 1189143129
+      UI_Star2: 1460123026
+      Modern_UI_Style_2_32x32_132: 579859948
+      Modern_UI_Style_2_32x32_6: -411305633
+      UI_RedCross_Clicked: -906074169
+      Modern_UI_Style_2_32x32_389: -1644298793
+      UI_MButton_LeftArrowLittle_2: 802333062
+      Modern_UI_Style_2_32x32_597: -1120934400
+      Modern_UI_Style_2_32x32_506: 802333062
+      Modern_UI_Style_2_32x32_64: 298417108
+      Modern_UI_Style_2_32x32_69: 573737863
+      Modern_UI_Style_2_32x32_78: 597433122
+      Modern_UI_Style_2_32x32_330: 1699713476
+      Modern_UI_Style_2_32x32_52: 536966111
+      Modern_UI_Style_2_32x32_258: 442692911
+      Modern_UI_Style_2_32x32_140: -385476887
+      Modern_UI_Style_2_32x32_22: -97284280
+      Modern_UI_Style_2_32x32_392: -1407998647
+      Modern_UI_Style_2_32x32_119: 1904959544
+      Modern_UI_Style_2_32x32_216: -1620373505
+      Modern_UI_Style_2_32x32_440: -2083868569
+      Modern_UI_Style_2_32x32_537: -1272633053
+      Modern_UI_Style_2_32x32_247: -1111058130
+      Modern_UI_Style_2_32x32_598: 1478298376
+      Modern_UI_Style_2_32x32_36: -594158374
+      Modern_UI_Style_2_32x32_415: -779236399
+      UI_GreenCheck_IDLE: 22040393
+      UI_MButton_Erase_2: 1985749443
+      Modern_UI_Style_2_32x32_308: -1656638437
+      Modern_UI_Style_2_32x32_234: 84287551
+      Modern_UI_Style_2_32x32_254: 1071955555
+      Modern_UI_Style_2_32x32_522: 79837202
+      Modern_UI_Style_2_32x32_420: 1889688949
+      Modern_UI_Style_2_32x32_566: 827611767
+      Modern_UI_Style_2_32x32_385: 1422738333
+      UI_Heart_Icon: 2072658481
+      Modern_UI_Style_2_32x32_305: -2046232670
+      UI_MButton_DownArrow_2: 658554318
+      Modern_UI_Style_2_32x32_266: 1169699256
+      Modern_UI_Style_2_32x32_382: 908001703
+      Modern_UI_Style_2_32x32_532: -1252373314
+      UI_MButton_RightArrow_3: 1724923717
+      Modern_UI_Style_2_32x32_141: 565771217
+      Modern_UI_Style_2_32x32_16: 1369962888
+      Modern_UI_Style_2_32x32_260: -214440621
+      UI_MButton_Pause_1: -1270837416
+      Modern_UI_Style_2_32x32_624: -1196013039
+      Modern_UI_Style_2_32x32_388: -2025959916
+      UI_MButton_Minus_1: 1764739451
+      Modern_UI_Style_2_32x32_592: 379569989
+      Modern_UI_Style_2_32x32_229: 1293264592
+      Modern_UI_Style_2_32x32_455: 1764427688
+      Modern_UI_Style_2_32x32_144: -2006322302
+      Modern_UI_Style_2_32x32_498: 1484105223
+      Modern_UI_Style_2_32x32_94: 223472637
+      Modern_UI_Style_2_32x32_457: -684516073
+      Modern_UI_Style_2_32x32_397: 1916865933
+      Modern_UI_Style_2_32x32_347: 404625942
+      Modern_UI_Style_2_32x32_442: -988292426
+      Modern_UI_Style_2_32x32_70: 336195987
+      Modern_UI_Style_2_32x32_393: -785764510
+      Modern_UI_Style_2_32x32_8: -1953017516
+      Modern_UI_Style_2_32x32_394: -862387847
+      Modern_UI_Style_2_32x32_635: -206311770
+      Modern_UI_Style_2_32x32_576: 376626252
+      Modern_UI_Style_2_32x32_290: -434005884
+      UI_Chair: -891616231
+      Modern_UI_Style_2_32x32_603: 1554341151
+      UI_MButton_Mute_3: -952417516
+      Modern_UI_Style_2_32x32_372: 141555054
+      Modern_UI_Style_2_32x32_158: 110837387
+      Modern_UI_Style_2_32x32_114: 788229962
+      Modern_UI_Style_2_32x32_492: 1169041841
+      Modern_UI_Style_2_32x32_230: 2095170351
+      Modern_UI_Style_2_32x32_147: 487959996
+      Modern_UI_Style_2_32x32_350: 1500224822
+      Modern_UI_Style_2_32x32_337: -1125210020
+      Modern_UI_Style_2_32x32_423: -904298280
+      Modern_UI_Style_2_32x32_411: -1555852671
+      UI_MButton_RightArrowLittle_2: -1508564291
+      Modern_UI_Style_2_32x32_110: -753720368
+      Modern_UI_Style_2_32x32_34: 469701222
+      Modern_UI_Style_2_32x32_51: -1464191058
+      Modern_UI_Style_2_32x32_431: 683691675
+      Modern_UI_Style_2_32x32_85: -937740479
+      Modern_UI_Style_2_32x32_268: -846637102
+      Modern_UI_Style_2_32x32_326: 1872070708
+      Modern_UI_Style_2_32x32_47: 872032782
+      Modern_UI_Style_2_32x32_264: 1738721386
+      Modern_UI_Style_2_32x32_381: -286877589
+      Modern_UI_Style_2_32x32_374: 214126740
+      Modern_UI_Style_2_32x32_24: 1177372997
+      Modern_UI_Style_2_32x32_151: -866310561
+      Modern_UI_Style_2_32x32_422: 43589529
+      Modern_UI_Style_2_32x32_538: 168800806
+      Modern_UI_Style_2_32x32_482: -1792126418
+      Modern_UI_Style_2_32x32_640: 1999739954
+      Modern_UI_Style_2_32x32_595: -1645104460
+      Modern_UI_Style_2_32x32_43: -324772649
+      Modern_UI_Style_2_32x32_211: 2065419674
+      Modern_UI_Style_2_32x32_214: 1259316266
+      Modern_UI_Style_2_32x32_55: -717964563
+      UI_MButton_Pause_3: -214679592
+      Modern_UI_Style_2_32x32_88: 2076215522
+      Modern_UI_Style_2_32x32_127: -262489155
+      Modern_UI_Style_2_32x32_484: 503128072
+      Modern_UI_Style_2_32x32_594: 368162624
+      UI_MButton_LeftArrowLittle_3: -573397531
+      Modern_UI_Style_2_32x32_631: 285175539
+      Modern_UI_Style_2_32x32_107: -1030317578
+      UI_Ballon: -206761035
+      Modern_UI_Style_2_32x32_21: 397489385
+      Modern_UI_Style_2_32x32_146: -1229126737
+      Modern_UI_Style_2_32x32_558: -1750155749
+      Modern_UI_Style_2_32x32_108: 1496469308
+      Modern_UI_Style_2_32x32_580: 721520864
+      Modern_UI_Style_2_32x32_59: -1281207525
+      Modern_UI_Style_2_32x32_339: -119413145
+      Modern_UI_Style_2_32x32_100: 658163363
+      UI_Switch_On: -1125210020
+      Modern_UI_Style_2_32x32_559: -800349903
+      Modern_UI_Style_2_32x32_402: -1086502576
+      Modern_UI_Style_2_32x32_494: -1582626180
+      Modern_UI_Style_2_32x32_628: 1036613908
+      Modern_UI_Style_2_32x32_564: -1748504159
+      Modern_UI_Style_2_32x32_469: -101834180
+      Modern_UI_Style_2_32x32_481: 1345902111
+      Modern_UI_Style_2_32x32_323: 1350252082
+      Modern_UI_Style_2_32x32_105: 1941277998
+      Modern_UI_Style_2_32x32_226: -184906646
+      Modern_UI_Style_2_32x32_501: -1651947087
+      Modern_UI_Style_2_32x32_496: -1092190495
+      Modern_UI_Style_2_32x32_456: -121361837
+      UI_Button_Pressed: 1458903346
+      Modern_UI_Style_2_32x32_27: 1627339886
+      Modern_UI_Style_2_32x32_286: 838550225
+      Modern_UI_Style_2_32x32_495: -620916554
+      Modern_UI_Style_2_32x32_225: -1429947386
+      Modern_UI_Style_2_32x32_293: -286871785
+      Modern_UI_Style_2_32x32_616: -791850165
+      Modern_UI_Style_2_32x32_240: -1108069814
+      UI_MButton_UpArrow_3: 1871212926
+      Modern_UI_Style_2_32x32_312: 991140339
+      Modern_UI_Style_2_32x32_419: 969242627
+      UI_MButton_Info_1: -1382060916
+      Modern_UI_Style_2_32x32_608: 702901206
+      Modern_UI_Style_2_32x32_565: 1292847013
+      UI_TabRect: -1579032010
+      Modern_UI_Style_2_32x32_520: -1807363651
+      Modern_UI_Style_2_32x32_131: 1679346123
+      UI_MButton_Home_2: 886311108
+      UI_MButton_Info_3: 2047458734
+      Modern_UI_Style_2_32x32_256: -114684913
+      Modern_UI_Style_2_32x32_137: 453905042
+      Modern_UI_Style_2_32x32_466: 926242236
+      Modern_UI_Style_2_32x32_242: -408539797
+      UI_MButton_Write_1: 1866299646
+      Modern_UI_Style_2_32x32_217: 978137095
+      Modern_UI_Style_2_32x32_284: 679348348
+      Modern_UI_Style_2_32x32_485: 1620091411
+      Modern_UI_Style_2_32x32_491: 161496207
+      Modern_UI_Style_2_32x32_445: 834961044
+      Modern_UI_Style_2_32x32_215: -1348938838
+      Modern_UI_Style_2_32x32_488: 673619776
+      UI_MButton_RightArrow_1: 999904875
+      Modern_UI_Style_2_32x32_543: -1994605843
+      Modern_UI_Style_2_32x32_633: -2039903807
+      UI_Bed2: 979567967
+      UI_Button_IDLE: -1742853652
+      UI_MButton_DownArrowLittle_2: -324772649
+      Modern_UI_Style_2_32x32_584: 1460123026
+      Modern_UI_Style_2_32x32_345: 1489794463
+      Modern_UI_Style_2_32x32_625: 2023268202
+      Modern_UI_Style_2_32x32_408: -1470268789
+      UI_MButton_Settings_1: -1675266577
+      Modern_UI_Style_2_32x32_272: 984994699
+      Modern_UI_Style_2_32x32_280: 809981271
+      Modern_UI_Style_2_32x32_369: -1408228764
+      Modern_UI_Style_2_32x32_510: 517103216
+      Modern_UI_Style_2_32x32_536: 880741246
+      UI_Table: 28710418
+      Modern_UI_Style_2_32x32_578: 2017657940
+      Modern_UI_Style_2_32x32_612: -1346650437
+      Modern_UI_Style_2_32x32_322: 944809596
+      Modern_UI_Style_2_32x32_493: -2113251166
+      UI_Heart2: -1290006917
+      Modern_UI_Style_2_32x32_331: 1748513925
+      Modern_UI_Style_2_32x32_111: 2048381851
+      Modern_UI_Style_2_32x32_179: -1740577058
+      Modern_UI_Style_2_32x32_98: 1505281321
+      Modern_UI_Style_2_32x32_475: -773070873
+      Modern_UI_Style_2_32x32_399: -465960386
+      Modern_UI_Style_2_32x32_547: 1861671736
+      Modern_UI_Style_2_32x32_511: -1046557398
+      Modern_UI_Style_2_32x32_403: -2000340095
+      UI_Bag: -1765723995
+      UI_DialogRect: 908391263
+      UI_MButton_Custom_1: 1189143129
+      Modern_UI_Style_2_32x32_23: 1314238772
+      Modern_UI_Style_2_32x32_28: 112789144
+      Modern_UI_Style_2_32x32_275: -521792165
+      UI_MButton_UpArrow_1: 1520121534
+      Modern_UI_Style_2_32x32_443: -240376900
+      UI_Gears: 28011401
+      Modern_UI_Style_2_32x32_534: -1281538577
+      UI_Bagpack: 1889688949
+      Modern_UI_Style_2_32x32_80: -788881724
+      Modern_UI_Style_2_32x32_183: -1063043469
+      Modern_UI_Style_2_32x32_99: 1479592592
+      Modern_UI_Style_2_32x32_138: 810812757
+      Modern_UI_Style_2_32x32_483: -502408974
+      UI_Tab: -2048158357
+      Modern_UI_Style_2_32x32_533: -461113861
+      UI_FullbarRed: 2937280
+      Modern_UI_Style_2_32x32_68: 1074850117
+      Modern_UI_Style_2_32x32_586: 203538794
+      UI_MButton_Cross_2: 2087809166
+      Modern_UI_Style_2_32x32_186: 389509644
+      Modern_UI_Style_2_32x32_351: -59772355
+      Modern_UI_Style_2_32x32_366: 1724923717
+      Modern_UI_Style_2_32x32_378: -1814395860
+      Modern_UI_Style_2_32x32_479: -1371332392
+      Modern_UI_Style_2_32x32_434: -497568227
+      Modern_UI_Style_2_32x32_76: 1503704385
+      UI_MButton_DownArrowLittle_1: -361797167
+      Modern_UI_Style_2_32x32_560: -1087300279
+      Modern_UI_Style_2_32x32_609: -1417716685
+      Modern_UI_Style_2_32x32_476: 968264622
+      Modern_UI_Style_2_32x32_274: 1619112632
+      Modern_UI_Style_2_32x32_384: -764883479
+      Modern_UI_Style_2_32x32_412: 1550099834
+      Modern_UI_Style_2_32x32_590: -1550091984
+      Modern_UI_Style_2_32x32_187: 1965428449
+      Modern_UI_Style_2_32x32_487: 2134504807
+      Modern_UI_Style_2_32x32_542: -783611748
+      UI_Rect_In_2: 27864769
+      Modern_UI_Style_2_32x32_44: -2089884236
+      UI_Cursor_CanClick: 125154344
+      Modern_UI_Style_2_32x32_246: 185659016
+      Modern_UI_Style_2_32x32_18: -971269473
+      Modern_UI_Style_2_32x32_523: 81673634
+      Modern_UI_Style_2_32x32_436: 2128347694
+      Modern_UI_Style_2_32x32_3: 1313609918
+      Modern_UI_Style_2_32x32_497: -1545970209
+      Modern_UI_Style_2_32x32_342: 2142845753
+      Modern_UI_Style_2_32x32_91: 1460893165
+      UI_MButton_RightArrowLittle_1: 1965609720
+      Modern_UI_Style_2_32x32_370: -526559586
+      UI_MButton_Pause_2: -1464191058
+      Modern_UI_Style_2_32x32_472: -1456433412
+      Modern_UI_Style_2_32x32_175: 293728908
+      Modern_UI_Style_2_32x32_332: 1020496568
+      Modern_UI_Style_2_32x32_53: -1512436444
+      Modern_UI_Style_2_32x32_152: 2076600978
+      UI_MButton_Help_3: -521792165
+      Modern_UI_Style_2_32x32_587: 1764739451
+      Modern_UI_Style_2_32x32_288: 1568070057
+      Modern_UI_Style_2_32x32_130: 1428029450
+      Modern_UI_Style_2_32x32_281: 518140342
+      Modern_UI_Style_2_32x32_473: -316379594
+      Modern_UI_Style_2_32x32_421: -857004449
+      Modern_UI_Style_2_32x32_596: -1198005712
+      UI_MButton_Discord_2: 141555054
+      Modern_UI_Style_2_32x32_539: -1108069814
+      UI_MButton_LeftArrow_2: 872812712
+      UI_MButton_Minus_2: 1920076778
+      UI_MButton_Volume_2: 1169699256
+      Modern_UI_Style_2_32x32_503: 1454677894
+      Modern_UI_Style_2_32x32_285: -420250032
+      Modern_UI_Style_2_32x32_72: -1032560818
+      Modern_UI_Style_2_32x32_269: 1871937774
+      Modern_UI_Style_2_32x32_273: -1894025285
+      Modern_UI_Style_2_32x32_89: -1270837416
+      Modern_UI_Style_2_32x32_413: -676201037
+      Modern_UI_Style_2_32x32_133: 1898338778
+      Modern_UI_Style_2_32x32_243: 33958697
+      Modern_UI_Style_2_32x32_618: -1737138075
+      Modern_UI_Style_2_32x32_150: -746136694
+      Modern_UI_Style_2_32x32_373: -1124745963
+      UI_Light: 185659016
+      Modern_UI_Style_2_32x32_507: -400647709
+      Modern_UI_Style_2_32x32_574: -1024088
+      Modern_UI_Style_2_32x32_376: -1691709126
+      Modern_UI_Style_2_32x32_390: 830113613
+      Modern_UI_Style_2_32x32_185: 1612160181
+      Modern_UI_Style_2_32x32_333: 1128932357
+      Modern_UI_Style_2_32x32_283: -1143352192
+      Modern_UI_Style_2_32x32_521: 1465180412
+      Modern_UI_Style_2_32x32_638: -2055186344
+      Modern_UI_Style_2_32x32_153: -459448985
+      UI_RedCross_IDLE: -315225998
+      Modern_UI_Style_2_32x32_128: -1871493801
+      UI_Switch_Off: 464904314
+      Modern_UI_Style_2_32x32_233: 1194864368
+      Modern_UI_Style_2_32x32_562: -400119385
+      Modern_UI_Style_2_32x32_136: -699523600
+      Modern_UI_Style_2_32x32_38: 154109555
+      Modern_UI_Style_2_32x32_106: -1097336823
+      UI_MButton_Help_2: -83496199
+      Modern_UI_Style_2_32x32_626: 1716582681
+      Modern_UI_Style_2_32x32_632: -573397531
+      UI_Selector_Medium: -1244272543
+      Modern_UI_Style_2_32x32_606: 770020944
+      Modern_UI_Style_2_32x32_567: 1965609720
+      UI_Heart: 175590575
+      Modern_UI_Style_2_32x32_437: -1564165382
+      Modern_UI_Style_2_32x32_291: -1313815462
+      UI_RedCross_Hover: -545812450
+      Modern_UI_Style_2_32x32_113: 235187771
+      Modern_UI_Style_2_32x32_101: -1196931723
+      UI_Selector_Big: 543358488
+      Modern_UI_Style_2_32x32_540: 2063890924
+      UI_MButton_Info_2: 1503704385
+      UI_MButton_UpArrowLittle_3: -725525576
+      Modern_UI_Style_2_32x32_30: 492088541
+      Modern_UI_Style_2_32x32_371: -416353801
+      UI_SelectBox: 873271082
+      Modern_UI_Style_2_32x32_270: 532159544
+      Modern_UI_Style_2_32x32_327: 38874680
+      UI_MButton_LeftArrow_1: 788229962
+      Modern_UI_Style_2_32x32_462: -248248107
+      UI_GreenCheck_Clicked: -167559518
+      Modern_UI_Style_2_32x32_321: 728370379
+      Modern_UI_Style_2_32x32_328: -506449788
+      Modern_UI_Style_2_32x32_335: -1533322122
+      Modern_UI_Style_2_32x32_143: -228447
+      UI_MButton_Plus_1: 112789144
+      Modern_UI_Style_2_32x32_583: 28710418
+      UI_Coin: -770608296
+      UI_MButton_Home_3: 1465180412
+      Modern_UI_Style_2_32x32_529: 991942894
+      UI_MButton_Menu_2: 597647593
+      Modern_UI_Style_2_32x32_236: -472575278
+      UI_BarContainer: -970310823
+      Modern_UI_Style_2_32x32_157: -921273714
+      Modern_UI_Style_2_32x32_398: 1388540525
+      Modern_UI_Style_2_32x32_198: -1598180606
+      Modern_UI_Style_2_32x32_465: 658554318
+      UI_Mobilier: 1845838849
+      Modern_UI_Style_2_32x32_531: -682840109
+      Modern_UI_Style_2_32x32_271: -206761035
+      Modern_UI_Style_2_32x32_257: -770608296
+      Modern_UI_Style_2_32x32_639: -1475346825
+      Modern_UI_Style_2_32x32_241: 1661202967
+      Modern_UI_Style_2_32x32_439: -553211678
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
