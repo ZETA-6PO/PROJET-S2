@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[System.Serializable]
 public class Dialogue
 {
-    public string name;
-    
-    [TextArea(3,10)]
-    public string[] senteces;
+    public Queue<SingleDialogue> dialogues;
 
-    
+    public Dialogue(SingleDialogue[] dialogues)
+    {
+        this.dialogues = new Queue<SingleDialogue>(); 
+        foreach (var sd in dialogues)
+        {
+            this.dialogues.Enqueue(sd);
+        }
+    }
 }

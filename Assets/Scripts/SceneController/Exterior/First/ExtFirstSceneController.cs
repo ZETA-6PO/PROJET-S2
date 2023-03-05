@@ -10,8 +10,10 @@ public class ExtFirstSceneController : MonoBehaviour
     public GameObject dataPersistenceManager;
     public GameObject playerPrefab;
     public GameObject cameraPrefab;
+    public GameObject dialogPrefab;
     private GameObject playerInstanciated;
     private GameObject cameraInstanciated;
+    private GameObject dialogInstanciated;
     private Vector3 lastPlayerPosition;
     
     
@@ -39,5 +41,13 @@ public class ExtFirstSceneController : MonoBehaviour
         CameraFollow cf = cameraInstanciated.GetComponent<CameraFollow>();
         cf.player = playerInstanciated;
         cameraInstanciated.SetActive(true);
+
+
+        yield return new WaitForSeconds(2f);
+        //instanciate a dialog box at start
+        dialogInstanciated = Instantiate(dialogPrefab, Vector3.zero, Quaternion.identity);
+        DialogManager dm = dialogInstanciated.GetComponent<DialogManager>();
+        dm.StartDialogue(new Dialogue(new []{new SingleDialogue("Player", false, new []{"Alla ackbar", "Woula ibilaille", "jaquemus"}), new SingleDialogue("Opponent", false, new []{"AllafdssGFADWAGF", "Wouladsafq wfle", "jaSFDDSFFDSFs"})}));
+
     }
 }

@@ -8,40 +8,48 @@ public class DialogManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
-    public Animator animator;
-    public Queue<string> sentences; 
-    
-    void Start()
-    {
-        sentences = new Queue<string>();
-    }
+    public Animator dialogAnimator;
+    public Animator startConversationAnimator;
+    public Queue<string> sentences;
+    public Queue<SingleDialogue> singleDialogues;
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("IsOpen", true);
-        sentences.Clear();
-        nameText.text = dialogue.name;
-
-        foreach (string sentence in dialogue.senteces)
-        {
-            sentences.Enqueue(sentence);
-        }
-
-        DisplayNextSentence();
+        singleDialogues = dialogue.dialogues;
+        sentences = new Queue<string>();
+        dialogAnimator.SetBool("IsOpen", true);
+        SingleDialogue sd = singleDialogues.Dequeue();
+        nameText.text = sd.name;
+        DisplayNextDialogue(sd);
     }
 
+    public void DisplayNextDialogue(SingleDialogue sd)
+    {
+        sentences.Clear();
+        foreach (var sentece in sd.senteces)
+        {
+            sentences.Enqueue(sentece);
+        }
+        nameText.text = sd.name;
+        DisplayNextSentence();
+    }
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
-            EndDialogue();
-            return;
+            if (singleDialogues.Count != 0)
+            {
+                DisplayNextDialogue(singleDialogues.Dequeue());
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
         
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSenetence(sentence));
-
     }
 
     IEnumerator TypeSenetence(string sentence)
@@ -57,7 +65,8 @@ public class DialogManager : MonoBehaviour
 
     void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        dialogAnimator.SetBool("IsOpen", false);
+        startConversationAnimator.SetBool("IsOpen", false);
     }
 
 }
