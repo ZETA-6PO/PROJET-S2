@@ -19,7 +19,6 @@ public class DialogManager : MonoBehaviour
         sentences = new Queue<string>();
         dialogAnimator.SetBool("IsOpen", true);
         SingleDialogue sd = singleDialogues.Dequeue();
-        nameText.text = sd.name;
         DisplayNextDialogue(sd);
     }
 
@@ -45,6 +44,7 @@ public class DialogManager : MonoBehaviour
             {
                 EndDialogue();
             }
+            return;
         }
         
         string sentence = sentences.Dequeue();

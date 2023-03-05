@@ -44,10 +44,5 @@ public class ExtFirstSceneController : MonoBehaviour
 
 
         yield return new WaitForSeconds(2f);
-        //instanciate a dialog box at start
-        dialogInstanciated = Instantiate(dialogPrefab, Vector3.zero, Quaternion.identity);
-        DialogManager dm = dialogInstanciated.GetComponent<DialogManager>();
-        dm.StartDialogue(new Dialogue(new []{new SingleDialogue("Player", false, new []{"Alla ackbar", "Woula ibilaille", "jaquemus"}), new SingleDialogue("Opponent", false, new []{"AllafdssGFADWAGF", "Wouladsafq wfle", "jaSFDDSFFDSFs"})}));
-
     }
 }
