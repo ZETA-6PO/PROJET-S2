@@ -1,20 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogManager : MonoBehaviour
 {
+    public GameObject player;
+    public PlayerController playerController;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI button1;
+    public TextMeshProUGUI button2;
     public Animator dialogAnimator;
     public Animator startConversationAnimator;
     public Queue<string> sentences;
     public Queue<SingleDialogue> singleDialogues;
+    private Action<int> onResponse;
 
-    public void StartDialogue(Dialogue dialogue)
+    void Start()
     {
+        playerController = player.GetComponent<PlayerController>();
+    }
+    public void StartDialogue(Dialogue dialogue, string[] responses, Action<int> OnResponse)
+    {
+        playerController.canMove = false;
+        onResponse = OnResponse;
+        button1.text = responses[0];
+        button2.text = responses[1];
         singleDialogues = dialogue.dialogues;
         sentences = new Queue<string>();
         dialogAnimator.SetBool("IsOpen", true);
@@ -42,7 +55,7 @@ public class DialogManager : MonoBehaviour
             }
             else
             {
-                EndDialogue();
+                ResponsePlayer();
             }
             return;
         }
@@ -63,10 +76,25 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    void ResponsePlayer()
     {
         dialogAnimator.SetBool("IsOpen", false);
+        startConversationAnimator.SetBool("IsOpen", true);
+        
+    }
+
+    public void OnClickResponse1()
+    {
+        onResponse(1);
         startConversationAnimator.SetBool("IsOpen", false);
+        playerController.canMove = true;
+    }
+    
+    public void OnClickResponse2()
+    {
+        onResponse(2);
+        startConversationAnimator.SetBool("IsOpen", false);
+        playerController.canMove = true;
     }
 
 }
