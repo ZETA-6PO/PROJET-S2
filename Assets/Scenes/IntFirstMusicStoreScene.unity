@@ -5251,9 +5251,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dedf6909e83f3434a808eabdba44a53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   playerPrefab: {fileID: 7766369728017201895, guid: 671a5a5325a31204abd6a52c7cf86b22, type: 3}
   cameraPrefab: {fileID: 7849791831099689538, guid: 00be9a8ef9b605142b0b37b1806d797e, type: 3}
   entryPoint: {fileID: 2121779485}
+  dialogPrefab: {fileID: 3930066935696389875, guid: c738827daf4c0a743be030af8063a0b3, type: 3}
+  playerInstanciated: {fileID: 0}
+  cameraInstanciated: {fileID: 0}
+  dialogInstanciated: {fileID: 0}
+  dialogManager: {fileID: 0}
+  quest1Prefab: {fileID: 0}
+  quest1Point: {fileID: 0}
 --- !u!4 &1617413098
 Transform:
   m_ObjectHideFlags: 0
@@ -5292,7 +5300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121779484}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.91, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
