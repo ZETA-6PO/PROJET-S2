@@ -35,7 +35,7 @@ public class MainMenuSceneController : MonoBehaviour
 	    //create a newgame files 
 	    DataPersistenceManager.instance.LoadGame();
 
-	    if (!GameManager.Instance.HasDoneTheIntro)
+	    if (!GameManager.Instance.HasDoneQ0)
 	    {
 		    SceneManager.LoadScene("IntFirstHouseScene");
 	    }

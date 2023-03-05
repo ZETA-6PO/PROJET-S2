@@ -801,6 +801,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &333183301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333183302}
+  m_Layer: 0
+  m_Name: Q1_SP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333183302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333183301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.21, y: -5.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529246511
 GameObject:
   m_ObjectHideFlags: 0
@@ -6720,6 +6751,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1116567918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116567919}
+  m_Layer: 0
+  m_Name: Q0_SP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1116567919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116567918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.18, y: 1.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152864100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6762,6 +6824,7 @@ GameObject:
   - component: {fileID: 1321928157}
   - component: {fileID: 1321928156}
   - component: {fileID: 1321928158}
+  - component: {fileID: 1321928159}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -6803,7 +6866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321928154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.07, y: -6.32, z: -0.6006314}
+  m_LocalPosition: {x: 6.184, y: -6.28, z: -0.6006314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6823,6 +6886,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: ExtFirstScene
+  onExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1374628489}
+        m_TargetAssemblyTypeName: IntFirstHouseSceneController, Assembly-CSharp
+        m_MethodName: OnExitScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!58 &1321928159
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321928154}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18867326, y: -1.2160246}
+  serializedVersion: 2
+  m_Radius: 1.1716187
 --- !u!1 &1374628488
 GameObject:
   m_ObjectHideFlags: 0
@@ -6852,12 +6946,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dedf6909e83f3434a808eabdba44a53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   playerPrefab: {fileID: 7766369728017201895, guid: 671a5a5325a31204abd6a52c7cf86b22, type: 3}
   cameraPrefab: {fileID: 7849791831099689538, guid: 00be9a8ef9b605142b0b37b1806d797e, type: 3}
   entryPoint: {fileID: 1152864101}
   dialogPrefab: {fileID: 3930066935696389875, guid: c738827daf4c0a743be030af8063a0b3, type: 3}
+  playerInstanciated: {fileID: 0}
+  cameraInstanciated: {fileID: 0}
+  dialogInstanciated: {fileID: 0}
+  dialogManager: {fileID: 0}
+  quest0Prefab: {fileID: 6113471477549670992, guid: efd352cd15bd58b4b89d78e82789a601, type: 3}
+  quest0Point: {fileID: 1116567919}
   quest1Prefab: {fileID: 7730829675294107423, guid: 57c66af106854e6459520c582d587f72, type: 3}
-  quest1Point: {fileID: 1399819425}
+  quest1Point: {fileID: 333183302}
 --- !u!4 &1374628490
 Transform:
   m_ObjectHideFlags: 0
@@ -6872,37 +6973,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1399819424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1399819425}
-  m_Layer: 0
-  m_Name: Quest1Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1399819425
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399819424}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: -5.99, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1453436394
 GameObject:

@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour, IDataPersistence
     
     
     //PROGRESSION VARIABLE
-    public bool HasDoneTheIntro { get; set; }
+    public bool HasDoneQ0 { get; set; }
+    
+    public bool HasDoneQ1 { get; set; }
+    public bool TIsDoingQ1 { get; set; }
 
     public Vector3 LastPositionOnMap
     {
@@ -52,7 +55,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         Debug.Log("Loading from GM");
         PlayerName = data.playerName;
         Level = data.playerLevel;
-        HasDoneTheIntro = data.hasDoneTheIntro;
+        HasDoneQ1 = data.HasDoneQ1;
         LastPositionOnMap = data.lastPlayerPosition;
         LastMap = data.lastMap;
     }
@@ -62,7 +65,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         Debug.Log("Saving from GM");
         data.playerName = PlayerName;
         data.playerLevel = Level;
-        data.hasDoneTheIntro = HasDoneTheIntro;
+        data.HasDoneQ1 = HasDoneQ1;
         data.lastPlayerPosition = _lastPositionOnMap;
         data.lastMap = LastMap;
     }

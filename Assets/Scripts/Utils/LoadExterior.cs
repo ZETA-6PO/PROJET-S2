@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 
@@ -11,13 +12,13 @@ using UnityEngine.SceneManagement;
 public class LoadExterior : MonoBehaviour
 {
     public string sceneName;
-    
+    public UnityEvent onExit;
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneName);
+            onExit.Invoke();
         }
     }
 }
