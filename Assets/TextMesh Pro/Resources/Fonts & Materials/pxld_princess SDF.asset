@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!21 &-1487853384858433164
+--- !u!21 &-4740976545775900547
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pixelated_princess SDF Material
+  m_Name: pxld_princess SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 3997413044908409677}
+        m_Texture: {fileID: 2520347837262071781}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: pxld_princess SDF
   m_EditorClassIdentifier: 
   hashCode: 1928805901
-  material: {fileID: -1487853384858433164}
+  material: {fileID: -4740976545775900547}
   materialHashCode: -395616371
   m_Version: 1.1.0
   m_SourceFontFileGUID: a09dd44973fddfd41acbe0d07fb2c57d
@@ -1955,7 +1955,7 @@ MonoBehaviour:
     m_GlyphIndex: 97
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 3997413044908409677}
+  - {fileID: 2520347837262071781}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0
@@ -2552,13 +2552,13 @@ MonoBehaviour:
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
---- !u!28 &3997413044908409677
+--- !u!28 &2520347837262071781
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pixelated_princess SDF Atlas
+  m_Name: pxld_princess SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
