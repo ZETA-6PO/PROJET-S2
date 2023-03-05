@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HitBoxFirstDialog : MonoBehaviour
 {
     public DialogManager refDialogManager;
     private Dialogue _dialogue;
-    
-    
+
+
+
+
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -29,6 +32,18 @@ public class HitBoxFirstDialog : MonoBehaviour
             })
         });
         //on fais un appel au DialogManager.
-        refDialogManager.StartDialogue(_dialogue);
+        refDialogManager.StartDialogue(_dialogue,new string[] {"Yes I do !", "Maybe later !"}, i =>
+        {
+            switch (i)
+            {
+                case 1:
+                    Debug.Log("Select 1");
+                    break;
+                case 2:
+                    Debug.Log("Select 2");
+                    break;
+            }
+        } );
     }
+    
 }

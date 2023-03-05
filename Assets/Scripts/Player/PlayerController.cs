@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     private Vector3 velocity;
+    public bool canMove = true;
 
     void FixedUpdate()
     {
-        float h_move = Input.GetAxis("Horizontal");
-        float v_move = Input.GetAxis("Vertical");
+        float h_move = canMove? Input.GetAxis("Horizontal") : 0;
+        float v_move = canMove? Input.GetAxis("Vertical") : 0;
         
         float horizontalMovement = h_move * moveSpeed * Time.deltaTime;
         float verticalMovement =  v_move * moveSpeed * Time.deltaTime;
@@ -33,7 +34,9 @@ public class PlayerController : MonoBehaviour
     
     void MovePlayer(float _horizontalMovement, float _verticvalMovement)
     {
+        
         Vector3 targetVelocity = new Vector2(-_horizontalMovement, _verticvalMovement);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .002f);
+        
     }
 }

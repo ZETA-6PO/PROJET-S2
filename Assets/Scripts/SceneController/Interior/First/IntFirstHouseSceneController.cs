@@ -8,7 +8,7 @@ using UnityEngine;
 public class IntFirstHouseSceneController : MonoBehaviour
 {
 
-
+    public PlayerController playerController;
     public GameObject playerPrefab;
     public GameObject cameraPrefab;
     public Transform entryPoint;
@@ -32,9 +32,12 @@ public class IntFirstHouseSceneController : MonoBehaviour
         cameraInstanciated = Instantiate(cameraPrefab, entryPoint.position, Quaternion.identity);
         CameraFollow cf = cameraInstanciated.GetComponent<CameraFollow>();
         cf.player = playerInstanciated;
+        playerController = playerInstanciated.GetComponent<PlayerController>();
+        playerController.canMove = true;
         cameraInstanciated.SetActive(true);
         dialogInstanciated = Instantiate(dialogPrefab, Vector3.zero, Quaternion.identity);
         dialogManager = dialogInstanciated.GetComponent<DialogManager>();
+        dialogManager.player = playerInstanciated;
         //********************
         //**STATE MANAGEMENT**
         //********************
