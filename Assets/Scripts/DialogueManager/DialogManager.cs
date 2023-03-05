@@ -18,6 +18,7 @@ public class DialogManager : MonoBehaviour
     public Queue<SingleDialogue> singleDialogues;
     private Action<int> onResponse;
 
+
     void Start()
     {
         playerController = player.GetComponent<PlayerController>();
