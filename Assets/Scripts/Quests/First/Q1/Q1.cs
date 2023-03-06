@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class HitBoxFirstDialog : MonoBehaviour
+public class Q1 : MonoBehaviour
 {
     public DialogManager refDialogManager;
     private Dialogue _dialogue;
@@ -37,7 +37,7 @@ public class HitBoxFirstDialog : MonoBehaviour
             switch (i)
             {
                 case 1:
-                    Debug.Log("Select 1");
+                    GameManager.Instance.TIsDoingQ1 = true;
                     break;
                 case 2:
                     Debug.Log("Select 2");

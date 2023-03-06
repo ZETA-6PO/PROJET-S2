@@ -17,6 +17,7 @@ public class DialogManager : MonoBehaviour
     public Queue<string> sentences;
     public Queue<SingleDialogue> singleDialogues;
     private Action<int> onResponse;
+    private bool hasResponse;
 
 
     void Start()
@@ -25,10 +26,16 @@ public class DialogManager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue, string[] responses, Action<int> OnResponse)
     {
+        hasResponse = false;
+        if (responses.Length != 0)
+            hasResponse = true;
         playerController.canMove = false;
         onResponse = OnResponse;
-        button1.text = responses[0];
-        button2.text = responses[1];
+        if (responses.Length != 0)
+        {
+            button1.text = responses[0];
+            button2.text = responses[1];  
+        }
         singleDialogues = dialogue.dialogues;
         sentences = new Queue<string>();
         dialogAnimator.SetBool("IsOpen", true);
@@ -39,11 +46,17 @@ public class DialogManager : MonoBehaviour
     public void DisplayNextDialogue(SingleDialogue sd)
     {
         sentences.Clear();
+        
         foreach (var sentece in sd.senteces)
         {
             sentences.Enqueue(sentece);
         }
-        nameText.text = sd.name;
+
+        if (!sd.isNarration)
+            nameText.text = sd.name;
+        else
+            nameText.text = "";
+        
         DisplayNextSentence();
     }
     public void DisplayNextSentence()
@@ -80,8 +93,14 @@ public class DialogManager : MonoBehaviour
     void ResponsePlayer()
     {
         dialogAnimator.SetBool("IsOpen", false);
+        if (!hasResponse)
+        {
+            startConversationAnimator.SetBool("IsOpen", false);
+            playerController.canMove = true;
+            onResponse(-1);
+            return;   
+        }
         startConversationAnimator.SetBool("IsOpen", true);
-        
     }
 
     public void OnClickResponse1()

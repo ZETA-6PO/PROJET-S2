@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e737db1062c0fca4a9d99419a1de8214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerController: {fileID: 0}
   nameText: {fileID: 4061348556884688288}
   dialogueText: {fileID: 4061348557176712027}
   button1: {fileID: 4061348558522579990}
@@ -423,10 +425,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exemple of Text
+  m_text: Aurelien la meilleure des putes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 09e4cea8a1fbc9041adc0d804df7b8e8, type: 2}
-  m_sharedMaterial: {fileID: -4740976545775900547, guid: 09e4cea8a1fbc9041adc0d804df7b8e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c6043f09856b2d4e88587de698f26ff, type: 2}
+  m_sharedMaterial: {fileID: -5762057190513127739, guid: 9c6043f09856b2d4e88587de698f26ff, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -450,19 +452,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 40.79
+  m_fontSizeBase: 40.79
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 1.8
+  m_wordSpacing: 41.5
+  m_lineSpacing: 16.96
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
