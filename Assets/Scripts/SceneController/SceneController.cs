@@ -16,7 +16,7 @@ using UnityEngine;
         public DialogManager dialogManager;
         IEnumerator Start()
         {
-            yield return new WaitUntil(() => GameManager.Instance != null);
+            yield return new WaitUntil(() => DataPersistenceManager.Instance != null);
             Init();
             PreStart();
             OnStart();

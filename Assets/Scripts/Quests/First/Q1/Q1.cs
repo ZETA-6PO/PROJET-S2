@@ -37,7 +37,7 @@ public class Q1 : MonoBehaviour
             switch (i)
             {
                 case 1:
-                    GameManager.Instance.TIsDoingQ1 = true;
+                    DataPersistenceManager.Instance.tempData.TisDoingQ1 = true;
                     break;
                 case 2:
                     Debug.Log("Select 2");

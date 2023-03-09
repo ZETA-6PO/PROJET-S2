@@ -9,6 +9,6 @@ public class ExtFirstSceneController : SceneController
 
     public override void Init()
     {
-        entryPoint.position = GameManager.Instance.LastPositionOnMap;
+        entryPoint.position = DataPersistenceManager.Instance.gameData.lastPosition;
     }
 }
