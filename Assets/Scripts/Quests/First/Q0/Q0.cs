@@ -26,7 +26,7 @@ public class Q0 : MonoBehaviour
         
         refDialogManager.StartDialogue(_dialogue, new string[]{}, (i) =>
         {
-            GameManager.Instance.HasDoneQ0 = true;
+            DataPersistenceManager.Instance.gameData.HasDoneQ0 = true;
             SceneManager.LoadScene("IntFirstHouseScene");
         });
     }

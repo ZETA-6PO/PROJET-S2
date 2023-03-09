@@ -523,7 +523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dbb32a80f43acc4e9241a548c204565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerPrefab: {fileID: 2561441557606700497, guid: 60a4a19c4f7a41646846f93b4bede917, type: 3}
   dataPersistenceManagerPrefab: {fileID: 4393303691626068183, guid: 6e7dbee892916164db5ea8e9eb9223b4, type: 3}
 --- !u!1 &184343854
 GameObject:
@@ -4741,7 +4740,6 @@ GameObject:
   - component: {fileID: 1581856921}
   - component: {fileID: 1581856920}
   - component: {fileID: 1581856919}
-  - component: {fileID: 1581856918}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4749,20 +4747,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1581856918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581856917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dbb32a80f43acc4e9241a548c204565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManagerPrefab: {fileID: 0}
-  dataPersistenceManagerPrefab: {fileID: 0}
 --- !u!114 &1581856919
 MonoBehaviour:
   m_ObjectHideFlags: 0

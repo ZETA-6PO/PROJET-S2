@@ -15,7 +15,7 @@ public class GameData
 
     //PROGRESSIONS VARIABLES
     public Map lastMap;
-    public Vector3 lastPlayerPosition;
+    public Vector3 lastPosition;
 
     //PROGRESSIONS STATES
     public bool HasDoneQ0;
@@ -29,9 +29,17 @@ public class GameData
     {
         playerName = "Player";
         lastMap = Map.First;
-        lastPlayerPosition = new Vector3(0, 0, 0);
+        lastPosition = new Vector3(0, 0, 0);
         HasDoneQ0 = false;
         HasDoneQ1 = false;
     }
     
+}
+
+
+public enum Map
+{
+    First,
+    Second,
+    Third
 }

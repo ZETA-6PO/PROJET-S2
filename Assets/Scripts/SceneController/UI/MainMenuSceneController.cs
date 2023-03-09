@@ -5,15 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuSceneController : MonoBehaviour
 {
-
-
-	public GameObject gameManagerPrefab;
 	public GameObject dataPersistenceManagerPrefab;
 	public void Start()
 	{
-		if (GameManager.Instance == null)
-			Instantiate(gameManagerPrefab, Vector3.zero, Quaternion.identity);
-		if (DataPersistenceManager.instance == null)
+		if (DataPersistenceManager.Instance == null)
 			Instantiate(dataPersistenceManagerPrefab, Vector3.zero, Quaternion.identity);
 	}
 	
@@ -22,7 +17,7 @@ public class MainMenuSceneController : MonoBehaviour
 	{
 		Debug.Log("StartNewGame");
 		//create a newgame files 
-		DataPersistenceManager.instance.NewGame();
+		DataPersistenceManager.Instance.NewGame();
 		
 		
 		//change scene to first scene where the intro will popup
@@ -33,9 +28,9 @@ public class MainMenuSceneController : MonoBehaviour
     {
 	    Debug.Log("StartNewGame");
 	    //create a newgame files 
-	    DataPersistenceManager.instance.LoadGame();
+	    DataPersistenceManager.Instance.LoadGame();
 
-	    if (!GameManager.Instance.HasDoneQ0)
+	    if (!DataPersistenceManager.Instance.gameData.HasDoneQ0)
 	    {
 		    SceneManager.LoadScene("IntFirstHouseScene");
 	    }

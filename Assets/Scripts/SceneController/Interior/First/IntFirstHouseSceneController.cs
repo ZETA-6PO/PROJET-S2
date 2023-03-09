@@ -22,7 +22,7 @@ public class IntFirstHouseSceneController : SceneController
         //********************
         //**STATE MANAGEMENT**
         //********************
-        if (GameManager.Instance.HasDoneQ0 == false)
+        if (DataPersistenceManager.Instance.gameData.HasDoneQ0 == false)
         {
             questInstanciated = Instantiate(quest0Prefab, quest0Point.position, Quaternion.identity);
             Q0 script = questInstanciated.GetComponent<Q0>();
@@ -31,7 +31,7 @@ public class IntFirstHouseSceneController : SceneController
         }
         
         //Check if the player has done the intro.
-        if (GameManager.Instance.HasDoneQ1 == false && GameManager.Instance.HasDoneQ0 == true && GameManager.Instance.TIsDoingQ1 == false)
+        if (DataPersistenceManager.Instance.gameData.HasDoneQ1 == false && DataPersistenceManager.Instance.gameData.HasDoneQ0 == true && DataPersistenceManager.Instance.tempData.TisDoingQ1 == false)
         {
             //instanciate the quest prefab containing dad, mom and the collidebox + scripts
             questInstanciated = Instantiate(quest1Prefab, quest1Point.position, Quaternion.identity);
@@ -43,7 +43,7 @@ public class IntFirstHouseSceneController : SceneController
 
     public override void Init()
     {
-        if (GameManager.Instance.HasDoneQ0 == false)
+        if (DataPersistenceManager.Instance.gameData.HasDoneQ0 == false)
         {
             entryPoint.position = quest0Point.position;
         }
@@ -52,7 +52,7 @@ public class IntFirstHouseSceneController : SceneController
     //event function triggered when touching exiting point 
     public void OnExitScene()
     {
-        if (GameManager.Instance.TIsDoingQ1)
+        if (DataPersistenceManager.Instance.tempData.TisDoingQ1)
             SceneManager.LoadScene("ExtFirstScene");
     }
 }
