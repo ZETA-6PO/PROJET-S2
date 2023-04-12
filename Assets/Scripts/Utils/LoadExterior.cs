@@ -12,13 +12,13 @@ using UnityEngine.SceneManagement;
 public class LoadExterior : MonoBehaviour
 {
     public string sceneName;
-    public UnityEvent onExit;
+    public UnityEvent<int> onExit;
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
-            onExit.Invoke();
+            onExit.Invoke(1);
         }
     }
 }

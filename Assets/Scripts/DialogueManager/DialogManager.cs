@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
@@ -19,16 +20,13 @@ public class DialogManager : MonoBehaviour
     private Action<int> onResponse;
     private bool hasResponse;
 
-
-    void Start()
-    {
-        playerController = player.GetComponent<PlayerController>();
-    }
+    
     public void StartDialogue(Dialogue dialogue, string[] responses, Action<int> OnResponse)
     {
         hasResponse = false;
         if (responses.Length != 0)
             hasResponse = true;
+        playerController = player.GetComponent<PlayerController>();
         playerController.canMove = false;
         onResponse = OnResponse;
         if (responses.Length != 0)
