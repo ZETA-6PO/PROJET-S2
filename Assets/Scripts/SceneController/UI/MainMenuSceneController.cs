@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class MainMenuSceneController : MonoBehaviour
 {
 	public GameObject dataPersistenceManagerPrefab;
+	public GameObject questManagerPrefab;
 	public void Start()
 	{
 		if (DataPersistenceManager.Instance == null)
 			Instantiate(dataPersistenceManagerPrefab, Vector3.zero, Quaternion.identity);
+		if (QuestManager.Instance == null)
+			Instantiate(questManagerPrefab, Vector3.zero, Quaternion.identity);
 	}
 	
 	
@@ -18,7 +21,6 @@ public class MainMenuSceneController : MonoBehaviour
 		Debug.Log("StartNewGame");
 		//create a newgame files 
 		DataPersistenceManager.Instance.NewGame();
-		
 		
 		//change scene to first scene where the intro will popup
 		SceneManager.LoadScene("IntFirstHouseScene");
@@ -29,12 +31,8 @@ public class MainMenuSceneController : MonoBehaviour
 	    Debug.Log("StartNewGame");
 	    //create a newgame files 
 	    DataPersistenceManager.Instance.LoadGame();
+	    SceneManager.LoadScene(DataPersistenceManager.Instance.gameData.lastMap);
 
-	    if (!DataPersistenceManager.Instance.gameData.HasDoneQ0)
-	    {
-		    SceneManager.LoadScene("IntFirstHouseScene");
-	    }
-	    
     }
 	
     public void QuitGame()

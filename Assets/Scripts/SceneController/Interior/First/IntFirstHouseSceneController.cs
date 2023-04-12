@@ -1,58 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks.Sources;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = System.Object;
 
 
 //This class is responsible for handling every single event in the studio
 public class IntFirstHouseSceneController : SceneController
 {
-    public GameObject quest0Prefab;
-    public Transform quest0Point;
-    public GameObject quest1Prefab;
-    public Transform quest1Point;
-    private GameObject questInstanciated;
-    
-
-    public override void OnStart()
-    {
-        
-        //********************
-        //**STATE MANAGEMENT**
-        //********************
-        if (DataPersistenceManager.Instance.gameData.HasDoneQ0 == false)
-        {
-            questInstanciated = Instantiate(quest0Prefab, quest0Point.position, Quaternion.identity);
-            Q0 script = questInstanciated.GetComponent<Q0>();
-            script.refDialogManager = dialogManager;
-            StartCoroutine(script.demarre());
-        }
-        
-        //Check if the player has done the intro.
-        if (DataPersistenceManager.Instance.gameData.HasDoneQ1 == false && DataPersistenceManager.Instance.gameData.HasDoneQ0 == true && DataPersistenceManager.Instance.tempData.TisDoingQ1 == false)
-        {
-            //instanciate the quest prefab containing dad, mom and the collidebox + scripts
-            questInstanciated = Instantiate(quest1Prefab, quest1Point.position, Quaternion.identity);
-            Q1 script = questInstanciated.GetComponentInChildren<Q1>();
-            script.refDialogManager = dialogManager;
-        }
-
-    }
-
+    private parentsScript parentGO;
     public override void Init()
     {
-        if (DataPersistenceManager.Instance.gameData.HasDoneQ0 == false)
-        {
-            entryPoint.position = quest0Point.position;
-        }
+        //entryPoint.position = DataPersistenceManager.Instance.gameData.lastPosition;
     }
 
     //event function triggered when touching exiting point 
     public void OnExitScene()
     {
-        if (DataPersistenceManager.Instance.tempData.TisDoingQ1)
-            SceneManager.LoadScene("ExtFirstScene");
+        
     }
+    
+    
 }
