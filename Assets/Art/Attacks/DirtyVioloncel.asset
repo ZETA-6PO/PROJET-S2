@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80f221755e89204a9df31cfe48c47ff, type: 3}
+  m_Name: DirtyVioloncel
+  m_EditorClassIdentifier: 
+  Name: DirtyVioloncelle
+  Description: Violoncelle qui court le plus vite.
+  Use: 0
+  MaxUse: 10
+  Rarity: 1
+  Icon: {fileID: -2056783126, guid: 00b6aa06c3b22904ebb8758c40d26847, type: 3}
+  ImageCombat: {fileID: -605550222, guid: 8ce2bad506e48994fa17cc4946a47a52, type: 3}
+  SoundPath: 
+  DialogWhenAttackFail: AD
+  DialogWhenAttackSucceed: ASDS
