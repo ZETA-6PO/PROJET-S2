@@ -24,7 +24,6 @@ public class Q0 : Quest
     public override void onLoadScene(string sceneName)
     {
         Debug.Log($"Q0::onLoadScene(->'{sceneName}')");
-        FindObjectOfType<PlayerController>().teleportPlayerAt(playerPosition);
         if (sceneName == "IntFirstHouseScene")
         {
             FindObjectOfType<DialogManager>().StartDialogue(
@@ -38,35 +37,35 @@ public class Q0 : Quest
                 Array.Empty<string>(),
                 i => {});
         }
+        FindObjectOfType<PlayerController>().teleportPlayerAt(playerPosition);
         FindObjectOfType<parentsScript>().Enable(true, true, momPosition, dadPosition,
-            () =>
+            () => speakToParents(),
+                () => { }, () => { }, () => { });
+    }
+
+    public void speakToParents()
+    {
+        FindObjectOfType<DialogManager>().StartDialogue(
+            new Dialogue(new[]
             {
-                FindObjectOfType<DialogManager>().StartDialogue(
-                    new Dialogue(new []
-                    {
-                        new SingleDialogue("Mom", false, new []
-                        {
-                            "Hello son.",
-                        }),
-                        
-                        new SingleDialogue("Dad", false, new []
-                        {
-                            "Hello son.",
-                        }),
-                        new SingleDialogue("Mom", false, new []
-                        {
-                            "Ta mere la pute va cherche du pain.",
-                        }),
-                    }),
-                    Array.Empty<string>(),
-                    i => {});
-                QuestManager.Instance.OnCompleteQuest(QuestId);
-                QuestManager.Instance.OnActivateQuest("Q1");
-            },
-            () => {},
-            () => {},
-            () => {}
-            );
+                new SingleDialogue("Mom", false, new[]
+                {
+                    "Hello son.",
+                }),
+
+                new SingleDialogue("Dad", false, new[]
+                {
+                    "Hello son.",
+                }),
+                new SingleDialogue("Mom", false, new[]
+                {
+                    "Ta mere la pute va cherche du pain.",
+                }),
+            }),
+            Array.Empty<string>(),
+            i => { });
+        QuestManager.Instance.OnCompleteQuest(QuestId);
+        QuestManager.Instance.OnActivateQuest("Q1");
     }
 
     public override IEnumerator onStartQuest()
