@@ -8,25 +8,20 @@ public class AttackMenu : MonoBehaviour
     private AttackObject[] AttackList;
     public Button Attack1;
     public Button Attack2;
+    public Button Attack3;
+    public Button Attack4;
 
     public void OpenMenu(Fighter player, Action<AttackObject> onAttackSelected)
     {
         gameObject.SetActive(true);
         OnAttackSelected = onAttackSelected;
-        Initialize(player.Attacks);
+        AttackList = player.Attacks;
     }
 
     public void CloseMenu()
     {
+        OnAttackSelected(null);
         gameObject.SetActive(false);
-    }
-    
-    
-    public void Initialize(AttackObject[] attacks)
-    {
-        AttackList = attacks;
-        Attack1.tag = attacks[0].name;
-        Attack2.tag = attacks[1].name;
     }
 
     public void OnClickAttack1()
@@ -38,6 +33,16 @@ public class AttackMenu : MonoBehaviour
     public void OnClickAttack2()
     {
         OnAttackSelected(AttackList[1]);
+        CloseMenu();
+    }
+    public void OnClickAttack3()
+    {
+        OnAttackSelected(AttackList[2]);
+        CloseMenu();
+    }
+    public void OnClickAttack4()
+    {
+        OnAttackSelected(AttackList[4]);
         CloseMenu();
     }
 
