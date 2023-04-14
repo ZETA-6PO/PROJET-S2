@@ -16,12 +16,17 @@ public class Q0 : Quest
     [SerializeField] public Vector3 momPosition;
     [SerializeField] public Vector3 dadPosition;
     
-    public void tg()
+    public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        Debug.Log("tg");
+        return;
     }
-    
-    public override void onLoadScene(string sceneName)
+
+    public override QuestData.QuestProperty[] SaveQuestProperties()
+    {
+        return null;
+    }
+
+    public override void OnLoadScene(string sceneName)
     {
         Debug.Log($"Q0::onLoadScene(->'{sceneName}')");
         if (sceneName == "IntFirstHouseScene")
@@ -43,6 +48,10 @@ public class Q0 : Quest
                 () => { }, () => { }, () => { });
     }
 
+    
+    /// <summary>
+    /// This is the function called when the player enter the "parents" area.
+    /// </summary>
     public void speakToParents()
     {
         FindObjectOfType<DialogManager>().StartDialogue(
@@ -59,19 +68,13 @@ public class Q0 : Quest
                 }),
                 new SingleDialogue("Mom", false, new[]
                 {
-                    "Ta mere la pute va cherche du pain.",
+                    "Bravo son, I am proud of you. You managed to beat the great champion of our city, that's very impressive! You have become a confirmed artist!",
                 }),
             }),
             Array.Empty<string>(),
             i => { });
-        QuestManager.Instance.OnCompleteQuest(QuestId);
-        QuestManager.Instance.OnActivateQuest("Q1");
+        Active = false;
+        GameManager.Instance.quests[1].Active = true;
     }
-
-    public override IEnumerator onStartQuest()
-    {
-        throw new NotImplementedException();
-    }
-    
     
 }
