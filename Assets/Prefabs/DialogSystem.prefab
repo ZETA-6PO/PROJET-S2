@@ -114,8 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e737db1062c0fca4a9d99419a1de8214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerController: {fileID: 0}
   nameText: {fileID: 4061348556884688288}
   dialogueText: {fileID: 4061348557176712027}
+  button1: {fileID: 4061348558522579990}
+  button2: {fileID: 45471749822278663}
   dialogAnimator: {fileID: 4061348558017261648}
   startConversationAnimator: {fileID: 896252514}
 --- !u!1 &4061348556884688318
@@ -421,10 +425,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exemple of Text
+  m_text: Dialog
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 09e4cea8a1fbc9041adc0d804df7b8e8, type: 2}
-  m_sharedMaterial: {fileID: -4740976545775900547, guid: 09e4cea8a1fbc9041adc0d804df7b8e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9c6043f09856b2d4e88587de698f26ff, type: 2}
+  m_sharedMaterial: {fileID: -5762057190513127739, guid: 9c6043f09856b2d4e88587de698f26ff, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -448,19 +452,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 40.79
+  m_fontSizeBase: 40.79
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 1.8
+  m_wordSpacing: 41.5
+  m_lineSpacing: 16.96
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -634,8 +638,6 @@ GameObject:
   - component: {fileID: 4061348557814496919}
   - component: {fileID: 4061348557814496923}
   - component: {fileID: 4061348557814496920}
-  - component: {fileID: 4218911060784509343}
-  - component: {fileID: 4061348557814496922}
   - component: {fileID: 896252514}
   m_Layer: 5
   m_Name: StartConversation
@@ -704,32 +706,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4218911060784509343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4061348557814496916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5fdd41f98cfa6048b5faef780e5359b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 896252514}
---- !u!114 &4061348557814496922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4061348557814496916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c28cc8d915dd9498a0c1d9e7706350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 896252514}
 --- !u!95 &896252514
 Animator:
   serializedVersion: 5
@@ -863,7 +839,7 @@ GameObject:
   - component: {fileID: 4061348558522579990}
   - component: {fileID: 7433300454126392839}
   m_Layer: 5
-  m_Name: StartConversationText
+  m_Name: Response 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,7 +893,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Conversation
+  m_text: 'Responce 1
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
   m_sharedMaterial: {fileID: -7294418382763209940, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
@@ -1030,9 +1008,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4061348557814496922}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
+      - m_Target: {fileID: 4347913766241126204}
+        m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
+        m_MethodName: OnClickResponse1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1055,7 +1033,7 @@ GameObject:
   - component: {fileID: 45471749822278663}
   - component: {fileID: 381245129}
   m_Layer: 5
-  m_Name: MaybeLaterText
+  m_Name: Response 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,7 +1087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Maybe Later
+  m_text: Response 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
   m_sharedMaterial: {fileID: -7294418382763209940, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
@@ -1222,9 +1200,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4218911060784509343}
-        m_TargetAssemblyTypeName: DialogueTriggerClose, Assembly-CSharp
-        m_MethodName: TriggerDialogue
+      - m_Target: {fileID: 4347913766241126204}
+        m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
+        m_MethodName: OnClickResponse2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

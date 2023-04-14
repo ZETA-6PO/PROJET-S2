@@ -1,39 +1,42 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Debug = System.Diagnostics.Debug;
 
-
-/// <summary>
-/// This class is responsible for saving all data throughout the scene
-///
-/// This should store every single state of the game such as
-/// state variable.
-/// </summary>
 public class GameManager : MonoBehaviour, IDataPersistence
 {
-    public static GameManager Instance { get; set; }
-    [SerializeField] private Vector3 _lastPositionOnMap;
-
-
-    //GLOBAL VARIABLE
-    public string PlayerName { get; set; }
-    public int Level { get; set; }
+    public static GameManager Instance { get; private set; }
     
-    
-    //PROGRESSION VARIABLE
-    public bool HasDoneTheIntro { get; set; }
 
-    public Vector3 LastPositionOnMap
+    /// <summary>
+    /// All those variable handle the state of the quest.
+    /// </summary>
+    public List<Quest> quests;
+    public void LoadData(GameData data)
     {
-        get => _lastPositionOnMap;
-        set => _lastPositionOnMap = value;
+        foreach (var dataQuest in data.quests)
+        {
+            var q = quests.First(quest => quest.QuestId == dataQuest.questId);
+            q.Active = dataQuest.active;
+            q.Completed = dataQuest.completed;
+            q.LoadQuestProperties(dataQuest.questProperties);
+        }
     }
 
-    public Map LastMap { get; set; }
-
-    
-    private void Awake()
+    public void SaveData(GameData data)
+    {
+        foreach (var dataQuest in data.quests)
+        {
+            dataQuest.active = quests.First(quest => quest.QuestId == dataQuest.questId).Active;
+            dataQuest.completed = quests.First(quest => quest.QuestId == dataQuest.questId).Completed;
+            dataQuest.questProperties = quests.First(quest => quest.QuestId == dataQuest.questId).SaveQuestProperties();
+        }
+    }
+    public void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -46,32 +49,12 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
     }
     
-    
-    public void LoadData(GameData data)
+    public void OnSceneLoad()
     {
-        Debug.Log("Loading from GM");
-        PlayerName = data.playerName;
-        Level = data.playerLevel;
-        HasDoneTheIntro = data.hasDoneTheIntro;
-        LastPositionOnMap = data.lastPlayerPosition;
-        LastMap = data.lastMap;
-    }
-
-    public void SaveData(ref GameData data)
-    {
-        Debug.Log("Saving from GM");
-        data.playerName = PlayerName;
-        data.playerLevel = Level;
-        data.hasDoneTheIntro = HasDoneTheIntro;
-        data.lastPlayerPosition = _lastPositionOnMap;
-        data.lastMap = LastMap;
+        foreach (var quest in quests)
+        {
+            quest.OnLoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
 
-
-public enum Map
-{
-    First,
-    Second,
-    Third
-}

@@ -1,31 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks.Sources;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Object = System.Object;
 
 
 //This class is responsible for handling every single event in the studio
-public class IntFirstHouseSceneController : MonoBehaviour
+public class IntFirstHouseSceneController : SceneController
 {
-
-
-    public GameObject playerPrefab;
-    public GameObject cameraPrefab;
-    public Transform entryPoint;
-    
-    private GameObject playerInstanciated;
-    private GameObject cameraInstanciated;
-    
-    void Start()
+    private parentsScript parentGO;
+    public override void Init()
     {
-        
-        //instanciate the scene
-        cameraPrefab.SetActive(false);
-        playerInstanciated = Instantiate(playerPrefab, entryPoint.position, Quaternion.identity);
-        cameraInstanciated = Instantiate(cameraPrefab, entryPoint.position, Quaternion.identity);
-        CameraFollow cf = cameraInstanciated.GetComponent<CameraFollow>();
-        cf.player = playerInstanciated;
-        cameraInstanciated.SetActive(true);
+        //entryPoint.position = DataPersistenceManager.Instance.gameData.lastPosition;
     }
 
-
+    //event function triggered when touching exiting point 
+    public void OnExitScene()
+    {
+        
+    }
+    
+    
 }

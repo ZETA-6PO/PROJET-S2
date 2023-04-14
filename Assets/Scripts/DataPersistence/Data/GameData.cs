@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +15,12 @@ public class GameData
     public int playerLevel;
 
     //PROGRESSIONS VARIABLES
-    public Map lastMap;
-    public Vector3 lastPlayerPosition;
+    public string lastMap;
+    public Vector3 lastPosition;
 
     //PROGRESSIONS STATES
-    public bool hasDoneTheIntro;
+    public QuestData[] quests;
+    
 
     /// <summary>
     /// This constructor is responsible for all the default value when
@@ -27,9 +29,12 @@ public class GameData
     public GameData()
     {
         playerName = "Player";
-        lastMap = Map.First;
-        lastPlayerPosition = new Vector3(0, 0, 0);
-        hasDoneTheIntro = false;
+        lastMap = "IntFirstHouseScene";
+        lastPosition = new Vector3(0, 0, 0);
+        quests = new[]
+        {
+            new QuestData("Q0", true, false, Array.Empty<QuestData.QuestProperty>())
+        };
     }
     
 }

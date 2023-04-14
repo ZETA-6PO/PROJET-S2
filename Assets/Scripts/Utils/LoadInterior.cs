@@ -18,7 +18,7 @@ public class LoadInterior : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //set the last position on map
-            GameManager.Instance.LastPositionOnMap = exitPoint.position;
+            DataPersistenceManager.Instance.gameData.lastPosition = exitPoint.position;
             
             
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);

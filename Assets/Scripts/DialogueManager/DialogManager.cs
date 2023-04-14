@@ -1,36 +1,60 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
+    public GameObject player;
+    public PlayerController playerController;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI button1;
+    public TextMeshProUGUI button2;
     public Animator dialogAnimator;
     public Animator startConversationAnimator;
     public Queue<string> sentences;
     public Queue<SingleDialogue> singleDialogues;
+    private Action<int> onResponse;
+    private bool hasResponse;
 
-    public void StartDialogue(Dialogue dialogue)
+    
+    public void StartDialogue(Dialogue dialogue, string[] responses, Action<int> OnResponse)
     {
+        hasResponse = false;
+        if (responses.Length != 0)
+            hasResponse = true;
+        playerController = player.GetComponent<PlayerController>();
+        playerController.canMove = false;
+        onResponse = OnResponse;
+        if (responses.Length != 0)
+        {
+            button1.text = responses[0];
+            button2.text = responses[1];  
+        }
         singleDialogues = dialogue.dialogues;
         sentences = new Queue<string>();
         dialogAnimator.SetBool("IsOpen", true);
         SingleDialogue sd = singleDialogues.Dequeue();
-        nameText.text = sd.name;
         DisplayNextDialogue(sd);
     }
 
     public void DisplayNextDialogue(SingleDialogue sd)
     {
         sentences.Clear();
+        
         foreach (var sentece in sd.senteces)
         {
             sentences.Enqueue(sentece);
         }
-        nameText.text = sd.name;
+
+        if (!sd.isNarration)
+            nameText.text = sd.name;
+        else
+            nameText.text = "";
+        
         DisplayNextSentence();
     }
     public void DisplayNextSentence()
@@ -43,8 +67,9 @@ public class DialogManager : MonoBehaviour
             }
             else
             {
-                EndDialogue();
+                ResponsePlayer();
             }
+            return;
         }
         
         string sentence = sentences.Dequeue();
@@ -63,10 +88,31 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    void EndDialogue()
+    void ResponsePlayer()
     {
         dialogAnimator.SetBool("IsOpen", false);
+        if (!hasResponse)
+        {
+            startConversationAnimator.SetBool("IsOpen", false);
+            playerController.canMove = true;
+            onResponse(-1);
+            return;   
+        }
+        startConversationAnimator.SetBool("IsOpen", true);
+    }
+
+    public void OnClickResponse1()
+    {
+        onResponse(1);
         startConversationAnimator.SetBool("IsOpen", false);
+        playerController.canMove = true;
+    }
+    
+    public void OnClickResponse2()
+    {
+        onResponse(2);
+        startConversationAnimator.SetBool("IsOpen", false);
+        playerController.canMove = true;
     }
 
 }
