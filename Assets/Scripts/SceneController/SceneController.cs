@@ -16,7 +16,7 @@ using UnityEngine;
         public DialogManager dialogManager;
         IEnumerator Start()
         {
-            yield return new WaitUntil(() => DataPersistenceManager.Instance != null && QuestManager.Instance!=null);
+            yield return new WaitUntil(() => DataPersistenceManager.Instance != null && GameManager.Instance!=null);
             Init();
             PreStart();
             OnStart();
@@ -41,7 +41,7 @@ using UnityEngine;
             dialogManager.player = playerInstanciated;
             playerController = playerInstanciated.GetComponent<PlayerController>();
             playerController.canMove = true;
-            QuestManager.Instance.OnSceneLoad();
+            GameManager.Instance.OnSceneLoad();
         }
         
         //set the variable prior the start
