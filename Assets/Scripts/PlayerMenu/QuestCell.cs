@@ -9,7 +9,7 @@ public class QuestCell : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public TMP_Text Name;
+    /*public TMP_Text Name;
     public Image doneToggle;
     public Quest quest;
     public QuestManager Manager;
@@ -29,5 +29,5 @@ public class QuestCell : MonoBehaviour
     public void Clicked()
     {
         Manager.space.Change(quest);
-    }
+    }*/
 }

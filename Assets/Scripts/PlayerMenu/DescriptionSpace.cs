@@ -19,9 +19,9 @@ public class DescriptionSpace : MonoBehaviour
         description.text = item.description;
     }
 
-    public void Change(Quest quest)
+    /*public void Change(Quest quest)
     {
-        name.text = quest.name;
-        description.text = quest.description;
-    }
+        //name.text = quest.name;
+        //description.text = quest.description;
+    }*/
 }

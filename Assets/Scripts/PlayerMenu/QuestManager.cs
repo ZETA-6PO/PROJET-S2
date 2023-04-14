@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public List<Quest> quests;
+    /*public List<Quest> quests;
     public GameObject panel;
     public DescriptionSpace space;
     public GameObject questPrefab;
@@ -31,5 +31,5 @@ public class QuestManager : MonoBehaviour
         {
             AddOneQuest(quest);
         }
-    }
+    }*/
 }
