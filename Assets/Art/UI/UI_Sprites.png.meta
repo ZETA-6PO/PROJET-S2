@@ -2802,7 +2802,7 @@ TextureImporter:
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 0, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2823,7 +2823,7 @@ TextureImporter:
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 8, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2844,7 +2844,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2886,7 +2886,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2907,7 +2907,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2923,39 +2923,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 118
-        y: 800
+        y: 802
         width: 52
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 889f7ceeb6cad4843a520e2352c57ba3
       internalID: 1739428753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI_Rect_5
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 768
-        width: 52
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36a50beff50c8fe4f8e3a3fb7e23dfbb
-      internalID: 2102914412
       vertices: []
       indices: 
       edges: []
@@ -2985,13 +2964,13 @@ TextureImporter:
       name: UI_Rect_8
       rect:
         serializedVersion: 2
-        x: 126
+        x: 128
         y: 702
         width: 36
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3012,7 +2991,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 0, z: 2, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3600,7 +3579,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3621,7 +3600,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3642,7 +3621,7 @@ TextureImporter:
         height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3662,7 +3641,7 @@ TextureImporter:
         width: 12
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3670,6 +3649,2148 @@ TextureImporter:
       bones: []
       spriteID: ce83619215b141044b8f3d2864a408f3
       internalID: -15343585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Rect_Mini_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 906
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 0, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7551c9cd05f120740ba22b0c9ac3e12f
+      internalID: 2036956458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 906
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeaf28b7806e0d6498c51fc438bb184e
+      internalID: -2104926612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Rect_5
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 768
+        width: 52
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8557f3b63900ad543887b2ce14ce7201
+      internalID: -469815619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Gear_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 996
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b36ca577e2173849857552132aeca46
+      internalID: -1510466490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Gear_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 964
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3843dfe9765c3de4e8db80f1271a5312
+      internalID: -1496697340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Gear_mini_2
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 938
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc614284be13414b908019870bb3363
+      internalID: -402920309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Gear_mini_1
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 906
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ac490c3644b664eb6540aa4d8190f1
+      internalID: 2032897678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_White_Square_mini
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 842
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67aad4af6c4841448690bd6c2593499
+      internalID: -326872987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_ring_mini
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 876
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461c3711dd899704f865f420624e8213
+      internalID: 375665364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Checkback
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1000
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfb33e092faee946b549d3d18e287d7
+      internalID: -845008404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOn_Green
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 134
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090d9bf9fb7984a4e9be07a6d01ccf10
+      internalID: 1002146452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOff_Green
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 134
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c992c7a92cf3ab43a17119d79f3039d
+      internalID: 1246988521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOff_Black
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 166
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345fc24ddb9d57443a8449719d1aca94
+      internalID: 1661958692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOff_Red
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 102
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023ba4f72a1b3e749ae7890c63a324f1
+      internalID: -995767903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOff_Brown
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 70
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6b0f7e55d17cb42b70dc5939927da1
+      internalID: -1378030630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOn_Brown
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 70
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3949998b8ecbe4187a2b7e26b42e63
+      internalID: 260193735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOn_Red
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 102
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2355035493504ee4daa62d6414e136d8
+      internalID: 1553875379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SwitchOn_White
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 166
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce77e624bea10f488f343adedff4adb
+      internalID: 1669825954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Arrow2_Down
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1002
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d70a28bfbd0ca4da34dfb5952116ef
+      internalID: 869355886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Arrow2_Up
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 972
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148709b786b1ef74791dfa48743d4abe
+      internalID: -9341255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Arrow2_Left
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 938
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040babb7efc18a14bbc028e424db656d
+      internalID: 2111746235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Arrow2_Right
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 906
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9803d7e018978e40a151b466c3517ab
+      internalID: 1865905793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Scrollbar_Handle_Horizontal
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 902
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad46b4b2719b894f855cc30d91bb56b
+      internalID: -1916907207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Scrollbar_Handle_Vertical
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 842
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf58448ca987c28478a7294a9ca2ab96
+      internalID: 1493762124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Item_Container_bar
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 224
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67b7eb420f3edb46b37255aa7576763
+      internalID: 1070425328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Container_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3cbeebd3f7457489805c4d27711896
+      internalID: -861410414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_1
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 774
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 4, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8347e529e0a0a654680456651c41822c
+      internalID: -1899768903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 742
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172af5e638c0dfa4c9711a4615234538
+      internalID: 1968855971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_3
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 742
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e033fe01975eb4aadfa89d70c3f226
+      internalID: -1725136715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 744
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a049cc1c0c7c99d45abb07ed3ea8bc34
+      internalID: -262774128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_5
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 776
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83fe0c817ee2e64cb8fc8a99a3eb492
+      internalID: 1976724283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UUI_Bar_Green_6
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 778
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e2a302231121147a1179f79ff0f0d5
+      internalID: 617032284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 712
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd6c0ac14b72bb43a6a80cdb5946402
+      internalID: -1860873648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 744
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6508bb5126551994984a8b257b3e6ef3
+      internalID: 1978491126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_9
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 746
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63350b0ceea0eff439e54a624a8220c5
+      internalID: 2096278915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 712
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386461080e506db488dfa530811a52d0
+      internalID: -1649232017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Green_11
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 710
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f0426a6a7fb32408e266a6a87168ca
+      internalID: -708700461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 680
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a80b671d5724247bf621a11c85ab80
+      internalID: 1574220362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_1
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 678
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e841126313ef36e438dfa564806bc13a
+      internalID: -974903440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 682
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d6d05bdb2724546b95aa9bf52e2397
+      internalID: -1304050994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_5
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 650
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7aad0ad01839d46afaf22abad8598f
+      internalID: -1319237958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 648
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6e6ee36a5b1a34e88c11289034d35a
+      internalID: -1790586307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 646
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e214758f52d40d4488639484b067d48c
+      internalID: -151187240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_3
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 646
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fdd99a3c9540b4e9e3627bc3d5907b
+      internalID: -1638242003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 614
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58246ac802b9ac64eac572ff085dae5b
+      internalID: -863191321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 616
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3bd5e71139d1e49b2f0288b740648a
+      internalID: 579611948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 616
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05c47d5cd3bc4245b66bca9fd7cef9c
+      internalID: 1862276020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Yellow_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 648
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8205e1d589af1e4c92cf1c56f8b0baa
+      internalID: -250374288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 586
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73264acff970792468b767febf45fc2b
+      internalID: -2146197087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 584
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 4, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc11cccf6c3ba3142aca7914e46bd5cd
+      internalID: 43997605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_1
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 582
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 4, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7ca4b2e8f0a364a822e5ecdc604c63
+      internalID: 47295546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_3
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 550
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6864f257e4da0ed4291175a9c909e1a3
+      internalID: -1855732106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_2
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 550
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52509b1b20a38d24582f4f18bd7e51b7
+      internalID: 1055839681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_9
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 518
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1201aed8fbda57c459c29d0d34a8ab92
+      internalID: 2111472944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 552
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662d1cf8c3eae03418ae27918dc65cb8
+      internalID: -1352892361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_5
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 554
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8540a6ab6389a5546a4f2413896b86e3
+      internalID: -956996984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 552
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5468cec195f4f7c4b83a3aab8507a8d7
+      internalID: 1481222543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 520
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfc577632044db4caedca3e9e6e1be3
+      internalID: 1463029618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 520
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc414ec89ed70984189f9c9375dae2f6
+      internalID: -496105100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_3
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 488
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c26f4d4f4cb13249a0a639dfe6c23ed
+      internalID: 84879793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_2
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 490
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc3817f067e1c846b9cd785e15f9dcd
+      internalID: -1862293857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_1
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 486
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 0, z: 4, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8217a8d8137dded43a468513bc102a8d
+      internalID: -1544297787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 454
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f5cf1510afcbc40a9d715af31afd3c
+      internalID: -1758206719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_4
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 454
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939dd154aef74b546a2fa115d8f4b13a
+      internalID: 1325265452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_9
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 422
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfade71397ceca488f8e5d9919fbae1
+      internalID: 694823395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_6
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 458
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10b5146f09816341bb556d61894de75
+      internalID: -561610177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 456
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1852c5e850ecae94c84a9618e976d00e
+      internalID: 1398607626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 456
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed08ece4257179b48a9005e185afb832
+      internalID: -1420737564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 424
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6c3922867e1534ea6d01ef19757dea
+      internalID: 1164974104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Blue_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 424
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021470511a7ddff4fbae40889e01970a
+      internalID: -1983870621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 392
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c769b6166a1623d47902d8903644fee2
+      internalID: 543689234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_2
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 394
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb2d8e96af819d4f94d1253e48ac291
+      internalID: 2103664585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_1
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 390
+        width: 42
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8aded55bcb0d8448a268fc52df6844c
+      internalID: -1141347310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_4
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 358
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841a6417a7d7fe54580d89b8e65b8512
+      internalID: 1082324877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 358
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59823f3ef5304b34381171f06f5fbada
+      internalID: -1315789945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_9
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 325
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479f9367c1e918c459c6f0b57ddabbfd
+      internalID: 221553662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Yellow_1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c383c269cd6417640b138df6f01497b6
+      internalID: -1014171473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Yellow_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11b90ed5cddae3468de6f7269890307
+      internalID: 1472025170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Yellow_3
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcce3881696080b4caf7975a09705353
+      internalID: -430113597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Yellow_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345309f0507ec98429f086193bdfd5ef
+      internalID: 2048577659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Green_1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27c689bf945cb541adc7cdf9b63fe2e
+      internalID: 1401176509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Green_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9150988d09ba044a33e14730e93a00
+      internalID: 1123276201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Green_3
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a94e44d70b174848ae63d8c796ca755
+      internalID: 415253582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Green_4
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 296
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38084911074db3409b6b2775d35fd83
+      internalID: -1579899974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Blue_1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018b4dc2f1ec51b449f0d67dd2ad18af
+      internalID: -1365809146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Blue_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d96628f3014694ea01f932566b54a8
+      internalID: 317831555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Blue_3
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273ef5033620d9f439c1b63f362b1ee9
+      internalID: -2049160019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Blue_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418c7d9b5b225e54897d51d25dde92f7
+      internalID: 2029624052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Red_1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3a1082a62dc594989ffe4395c7aabf
+      internalID: -1612881231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Red_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcdb188804063041b08a9676119c517
+      internalID: -804768746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Red_3
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851a66eccd2672e43a399aa2ca3a28c6
+      internalID: 1791431335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Var_Red_4
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 264
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf15ae8f59516bc49b7a865bc09ff36b
+      internalID: 1507934080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_6
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 362
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a120fa1ece1ad14a87c4f2c1fdc6c06
+      internalID: -1765171240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 360
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ec0c1ad665de94a8ef7024fd0581bd
+      internalID: -842155869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 328
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe46c8b0eb88a24790edf63f728f501
+      internalID: -1103840245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 360
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616056da4b81bee4084d01f130649fbc
+      internalID: -1625631303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 328
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef086fbda14171b45a58451721b3b615
+      internalID: -881037369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Right
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 486
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d065f00862e88154da06fabfda8e23f8
+      internalID: 1065578683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Left
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 486
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17425d740564c54dba689bc90730b91
+      internalID: -1196748274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Red_13
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 584
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a82d0bcba527740a050f8a48f26e02
+      internalID: -296133285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Green_Emoji
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 582
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac60e3cdb2fdace4282ba0946b8fcc9e
+      internalID: 298776157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Bar_Brown_12
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 392
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1241a0c2eb542b41a459bfcd892d493
+      internalID: 1797138667
       vertices: []
       indices: 
       edges: []
@@ -3696,24 +5817,28 @@ TextureImporter:
       Modern_UI_Style_2_32x32_636: -1076553430
       Modern_UI_Style_2_32x32_31: -122462083
       Modern_UI_Style_2_32x32_145: 1592162610
+      UI_Bar_Red_7: 43997605
       Modern_UI_Style_2_32x32_416: 1760186366
       Modern_UI_Style_2_32x32_383: -1603767923
       Modern_UI_Style_2_32x32_218: 1258857715
       Modern_UI_Style_2_32x32_509: -1754870272
-      UI_MButton_Plus_2: -1537753567
-      Modern_UI_Style_2_32x32_81: 544337179
-      Modern_UI_Style_2_32x32_104: 1313765810
+      UI_Scrollbar_Handle_Horizontal: -1916907207
       UI_MButton_Write_3: -1017162956
-      Modern_UI_Style_2_32x32_599: -342148358
+      UI_MButton_Plus_2: -1537753567
+      Modern_UI_Style_2_32x32_104: 1313765810
       Modern_UI_Style_2_32x32_54: 1403672414
+      Modern_UI_Style_2_32x32_599: -342148358
+      Modern_UI_Style_2_32x32_81: 544337179
       UI_MButton_Home_1: -857004449
       UI_Arrow_Down: 329098787
+      UUI_Bar_Green_6: 617032284
       Modern_UI_Style_2_32x32_325: 412771519
       Modern_UI_Style_2_32x32_252: 1019609749
       UI_MButton_Help_1: -721450280
       Modern_UI_Style_2_32x32_223: -1937466032
       Modern_UI_Style_2_32x32_154: -377011067
       Modern_UI_Style_2_32x32_253: 599989707
+      UI_Bar_Var_Green_4: -1579899974
       Modern_UI_Style_2_32x32_135: -1596947871
       Modern_UI_Style_2_32x32_222: 678487184
       Modern_UI_Style_2_32x32_364: 1920722622
@@ -3725,10 +5850,14 @@ TextureImporter:
       Modern_UI_Style_2_32x32_338: 285412206
       UI_Button_Empty_2: -2069505045
       Modern_UI_Style_2_32x32_553: 1839214835
-      Modern_UI_Style_2_32x32_58: 1929359205
+      UI_Bar_Blue_9: 694823395
       Modern_UI_Style_2_32x32_362: -217052826
+      Modern_UI_Style_2_32x32_58: 1929359205
       UI_No_Music: -2033788568
+      UI_Gear_1: -1510466490
       UI_MButton_DownArrowLittle_: -324772649
+      UI_SwitchOff_Green: 1246988521
+      UI_Bar_Container_2: -861410414
       Modern_UI_Style_2_32x32_231: -1303568346
       Modern_UI_Style_2_32x32_438: -1211160770
       UI_MButton_Settings_3: -1742853652
@@ -3737,6 +5866,8 @@ TextureImporter:
       Modern_UI_Style_2_32x32_570: -1225331184
       Modern_UI_Style_2_32x32_548: 1411298896
       UI_Bed: 1856626814
+      UI_Bar_Var_Red_1: -1612881231
+      UI_Bar_Var_Yellow_2: -1014171473
       UI_MButton_Mute_1: -1598180606
       Modern_UI_Style_2_32x32_97: 2057135707
       UI_MButton_Plus_3: 361231657
@@ -3756,22 +5887,29 @@ TextureImporter:
       Modern_UI_Style_2_32x32_617: 1241865328
       Modern_UI_Style_2_32x32_139: -606998865
       Modern_UI_Style_2_32x32_336: -337948468
+      UI_Bar_Brown_5: -1315789945
+      UI_Bar_Var_Red_4: 1507934080
       Modern_UI_Style_2_32x32_474: 1016417869
       Modern_UI_Style_2_32x32_87: 1866299646
       Modern_UI_Style_2_32x32_418: 464904314
+      UI_Bar_Green_9: 2096278915
       Modern_UI_Style_2_32x32_57: 945662431
       Modern_UI_Style_2_32x32_505: -361797167
       Modern_UI_Style_2_32x32_363: 27527303
       Modern_UI_Style_2_32x32_611: -777420784
       Modern_UI_Style_2_32x32_33: 825753088
       UI_MButton_Check_3: -1927121577
+      UI_Bar_Red_2: 1055839681
+      UI_Bar_Red_6: 2111472944
       Modern_UI_Style_2_32x32_160: -1535792846
       Modern_UI_Style_2_32x32_340: 1821948503
       UI_MButton_DownArrow_1: -502408974
       UI_Music: -1352290380
+      UI_Bar_Var_Yellow_1: -1014171473
       Modern_UI_Style_2_32x32_593: 1027737205
       Modern_UI_Style_2_32x32_556: 1415773131
       Modern_UI_Style_2_32x32_368: 697967193
+      UI_Bar_Red_11: 1463029618
       Modern_UI_Style_2_32x32_486: -1504821242
       Modern_UI_Style_2_32x32_82: -275587010
       Modern_UI_Style_2_32x32_277: -452769649
@@ -3792,12 +5930,16 @@ TextureImporter:
       UI_MButton_Shop_1: 1549606843
       UI_MButton_Write_2: 1055743456
       UI_MButton_Menu_1: -1536674704
+      UI_Bar_Yellow_6: 1574220362
+      UI_Bar_Blue_10: 694823395
       UI_Sabler: -2025959916
       Modern_UI_Style_2_32x32_444: 333747887
       UI_GiftRed: -971269473
+      UI_Bar_Brown_8: -1625631303
       Modern_UI_Style_2_32x32_259: -1701879611
       Modern_UI_Style_2_32x32_541: -857036601
       Modern_UI_Style_2_32x32_646: -1766140288
+      UI_Bar_Brown_4: 1082324877
       UI_Box_6: 767434360
       Modern_UI_Style_2_32x32_210: 1049815350
       Modern_UI_Style_2_32x32_407: -822064699
@@ -3809,6 +5951,7 @@ TextureImporter:
       Modern_UI_Style_2_32x32_15: 659226672
       Modern_UI_Style_2_32x32_395: 945546450
       Modern_UI_Style_2_32x32_377: 1649416738
+      UI_Rect_Mini_1: 2036956458
       Modern_UI_Style_2_32x32_227: -414329097
       Modern_UI_Style_2_32x32_74: 505894649
       UI_Rect_In: -718203128
@@ -3817,9 +5960,11 @@ TextureImporter:
       UI_MButton_UpArrow_2: -1124745963
       Modern_UI_Style_2_32x32_644: 1625856821
       Modern_UI_Style_2_32x32_86: 736611889
+      UI_Item_Container_bar: 1070425328
       Modern_UI_Style_2_32x32_90: 1845838849
       UI_MButton_Shop_2: 658163363
       UI_MButton_Minus_3: -862103991
+      UI_Bar_Green_1: -1899768903
       Modern_UI_Style_2_32x32_634: -2101325
       Modern_UI_Style_2_32x32_454: -433895466
       Modern_UI_Style_2_32x32_334: -1020008042
@@ -3833,6 +5978,7 @@ TextureImporter:
       Modern_UI_Style_2_32x32_391: 1202388138
       Modern_UI_Style_2_32x32_228: -1988612018
       Modern_UI_Style_2_32x32_414: -1825354488
+      UI_Gear_mini_1: 2032897678
       Modern_UI_Style_2_32x32_117: 1916249131
       Modern_UI_Style_2_32x32_568: 1725193228
       Modern_UI_Style_2_32x32_29: 522132271
@@ -3844,13 +5990,16 @@ TextureImporter:
       Modern_UI_Style_2_32x32_627: 578547033
       UI_FullbarOrange: -1550091984
       Modern_UI_Style_2_32x32_213: 886311108
+      UI_SwitchOff_Red: -995767903
       Modern_UI_Style_2_32x32_424: 950496971
       Modern_UI_Style_2_32x32_410: -1635723834
       Modern_UI_Style_2_32x32_589: 979567967
       Modern_UI_Style_2_32x32_387: -1131134824
+      UI_SwitchOn_Brown: 260193735
       UI_MButton_Custom_3: 2138065089
       Modern_UI_Style_2_32x32_365: -1387946028
       Modern_UI_Style_2_32x32_610: -347671714
+      UI_Arrow2_Right: 1865905793
       UI_MButton_Shop_3: 543358488
       Modern_UI_Style_2_32x32_265: -557796463
       Modern_UI_Style_2_32x32_67: 1985749443
@@ -3861,15 +6010,18 @@ TextureImporter:
       Modern_UI_Style_2_32x32_597: -1120934400
       Modern_UI_Style_2_32x32_64: 298417108
       Modern_UI_Style_2_32x32_598: 1478298376
+      UI_Bar_Blue_5: -1758206719
       Modern_UI_Style_2_32x32_392: -1407998647
       UI_MButton_Minus_1: 1764739451
       Modern_UI_Style_2_32x32_22: -97284280
+      UI_Bar_Var_Blue_4: 2029624052
       Modern_UI_Style_2_32x32_420: 1889688949
-      UI_MButton_DownArrow_2: 658554318
+      UI_Gear_mini_2: -402920309
       Modern_UI_Style_2_32x32_440: -2083868569
-      UI_Rect_3: -1185194540
+      UI_MButton_DownArrow_2: 658554318
       Modern_UI_Style_2_32x32_308: -1656638437
       Modern_UI_Style_2_32x32_522: 79837202
+      UI_Rect_3: -1185194540
       UI_GreenCheck_IDLE: 22040393
       Modern_UI_Style_2_32x32_234: 84287551
       Modern_UI_Style_2_32x32_254: 1071955555
@@ -3877,10 +6029,14 @@ TextureImporter:
       Modern_UI_Style_2_32x32_305: -2046232670
       UI_MButton_RightArrow_3: 1724923717
       Modern_UI_Style_2_32x32_141: 565771217
+      UI_Bar_Yellow_3: -151187240
       Modern_UI_Style_2_32x32_16: 1369962888
       Modern_UI_Style_2_32x32_260: -214440621
+      UI_SwitchOn_White: 1669825954
       UI_MButton_Pause_1: -1270837416
+      UI_Bar_Blue_7: 1398607626
       Modern_UI_Style_2_32x32_388: -2025959916
+      UI_SwitchOff_Brown: -1378030630
       Modern_UI_Style_2_32x32_592: 379569989
       Modern_UI_Style_2_32x32_229: 1293264592
       Modern_UI_Style_2_32x32_455: 1764427688
@@ -3909,14 +6065,17 @@ TextureImporter:
       Modern_UI_Style_2_32x32_374: 214126740
       Modern_UI_Style_2_32x32_24: 1177372997
       Modern_UI_Style_2_32x32_151: -866310561
-      Modern_UI_Style_2_32x32_422: 43589529
       Modern_UI_Style_2_32x32_538: 168800806
       Modern_UI_Style_2_32x32_482: -1792126418
+      Modern_UI_Style_2_32x32_422: 43589529
       Modern_UI_Style_2_32x32_640: 1999739954
       Modern_UI_Style_2_32x32_55: -717964563
+      UI_Bar_Brown_10: -1103840245
       Modern_UI_Style_2_32x32_88: 2076215522
       Modern_UI_Style_2_32x32_594: 368162624
+      UI_Bar_Red_13: -296133285
       UI_Ballon: -206761035
+      UI_Sprites_0: -2104926612
       Modern_UI_Style_2_32x32_21: 397489385
       Modern_UI_Style_2_32x32_146: -1229126737
       Modern_UI_Style_2_32x32_558: -1750155749
@@ -3956,22 +6115,26 @@ TextureImporter:
       UI_Box_2: 1625671861
       Modern_UI_Style_2_32x32_179: -1740577058
       UI_Button_Cross: 2121986883
+      UI_Arrow2_Down: 869355886
       Modern_UI_Style_2_32x32_475: -773070873
       Modern_UI_Style_2_32x32_511: -1046557398
       UI_Bag: -1765723995
       UI_DialogRect: 908391263
       UI_MButton_Custom_1: 1189143129
       UI_Box_4: -694788833
+      UI_Bar_Green_8: 1978491126
       UI_Rect_2: -1978112077
       Modern_UI_Style_2_32x32_443: -240376900
+      UI_Bar_Var_Red_3: 1791431335
       Modern_UI_Style_2_32x32_99: 1479592592
-      UI_Tab: -2048158357
-      Modern_UI_Style_2_32x32_483: -502408974
       Modern_UI_Style_2_32x32_138: 810812757
+      Modern_UI_Style_2_32x32_483: -502408974
+      UI_Tab: -2048158357
       Modern_UI_Style_2_32x32_533: -461113861
       Modern_UI_Style_2_32x32_68: 1074850117
       Modern_UI_Style_2_32x32_186: 389509644
       Modern_UI_Style_2_32x32_366: 1724923717
+      UI_Bar_Var_Yellow_3: -430113597
       Modern_UI_Style_2_32x32_351: -59772355
       Modern_UI_Style_2_32x32_76: 1503704385
       UI_MButton_DownArrowLittle_1: -361797167
@@ -3994,10 +6157,13 @@ TextureImporter:
       UI_MButton_Volume_2: 1169699256
       UI_MButton_Discord_2: 141555054
       UI_MButton_LeftArrow_2: 872812712
+      UI_ring_mini: 375665364
       UI_Light: 185659016
+      UI_Bar_Var_Blue_2: 317831555
       Modern_UI_Style_2_32x32_285: -420250032
       Modern_UI_Style_2_32x32_413: -676201037
       Modern_UI_Style_2_32x32_89: -1270837416
+      UI_Bar_Blue_2: -1862293857
       Modern_UI_Style_2_32x32_133: 1898338778
       Modern_UI_Style_2_32x32_243: 33958697
       Modern_UI_Style_2_32x32_574: -1024088
@@ -4005,6 +6171,7 @@ TextureImporter:
       Modern_UI_Style_2_32x32_333: 1128932357
       Modern_UI_Style_2_32x32_283: -1143352192
       UI_Switch_Off: 464904314
+      UI_Bar_Green_5: 1976724283
       UI_Selector_Medium: -1244272543
       Modern_UI_Style_2_32x32_136: -699523600
       Modern_UI_Style_2_32x32_38: 154109555
@@ -4012,27 +6179,33 @@ TextureImporter:
       Modern_UI_Style_2_32x32_632: -573397531
       UI_RedCross_Hover: -545812450
       Modern_UI_Style_2_32x32_113: 235187771
+      UI_Scrollbar_Handle_Vertical: 1493762124
       UI_Selector_Big: 543358488
       UI_MButton_Info_2: 1503704385
       Modern_UI_Style_2_32x32_327: 38874680
+      UI_Bar_Brown_11: -881037369
       Modern_UI_Style_2_32x32_462: -248248107
       Modern_UI_Style_2_32x32_328: -506449788
       Modern_UI_Style_2_32x32_335: -1533322122
       Modern_UI_Style_2_32x32_143: -228447
       UI_MButton_Plus_1: 112789144
       UI_MButton_Menu_2: 597647593
+      UI_Bar_Yellow_11: 1862276020
       Modern_UI_Style_2_32x32_529: 991942894
+      UI_Bar_Var_Yellow_4: 2048577659
       Modern_UI_Style_2_32x32_465: 658554318
       Modern_UI_Style_2_32x32_531: -682840109
-      Modern_UI_Style_2_32x32_639: -1475346825
       UI_MButton_RightArrow_2: -430819078
+      Modern_UI_Style_2_32x32_639: -1475346825
       Modern_UI_Style_2_32x32_245: 1658413741
       Modern_UI_Style_2_32x32_461: 658677047
       Modern_UI_Style_2_32x32_380: 1157244776
+      UI_Bar_Green_4: -262774128
       UI_MButton_Volume_3: -461113861
       UI_Button_Empty_3: 823389888
       Modern_UI_Style_2_32x32_557: -2016367063
       UI_MButton_Check_1: 1222351803
+      UI_Bar_Green_7: -1860873648
       Modern_UI_Style_2_32x32_591: 1941735671
       Modern_UI_Style_2_32x32_396: -1795469055
       Modern_UI_Style_2_32x32_125: -578059598
@@ -4046,7 +6219,9 @@ TextureImporter:
       Modern_UI_Style_2_32x32_341: -786515665
       UI_Clock: -1417716685
       Modern_UI_Style_2_32x32_604: -1789185236
+      UI_SwitchOn_Green: 1002146452
       UI_Cursor_Clicking_2: -346462916
+      UI_Green_Emoji: 298776157
       Modern_UI_Style_2_32x32_561: -473471593
       Modern_UI_Style_2_32x32_96: -1133312983
       UI_Check_1: -15343585
@@ -4059,6 +6234,7 @@ TextureImporter:
       Modern_UI_Style_2_32x32_348: -1340122707
       Modern_UI_Style_2_32x32_25: -707274189
       UI_Cursor_Clicking_1: -1605979634
+      UI_Bar_Blue_11: -1983870621
       Modern_UI_Style_2_32x32_329: -749301842
       Modern_UI_Style_2_32x32_224: -832583100
       Modern_UI_Style_2_32x32_629: -395823278
@@ -4068,7 +6244,9 @@ TextureImporter:
       Modern_UI_Style_2_32x32_554: 1485383720
       Modern_UI_Style_2_32x32_92: -1399311651
       Modern_UI_Style_2_32x32_171: 1016204993
+      UI_Arrow2_Up: 2111746235
       Modern_UI_Style_2_32x32_296: -1269060360
+      UI_Bar_Red_3: -1855732106
       UI_FullbarGreen: -1470268789
       Modern_UI_Style_2_32x32_544: 556726658
       UI_MButton_Settings_2: 223472637
@@ -4077,12 +6255,16 @@ TextureImporter:
       UI_Star: 333747887
       Modern_UI_Style_2_32x32_306: 253722465
       UI_Rect_1: -2019753099
+      UI_Bar_Yellow_10: -863191321
       Modern_UI_Style_2_32x32_354: 325353555
+      UI_White_Square_mini: -326872987
       Modern_UI_Style_2_32x32_45: 1059390356
       UI_MButton_Erase_3: -184906646
       UI_MButton_Cross_1: -1406248944
+      UI_SwitchOn_Red: 1553875379
       Modern_UI_Style_2_32x32_244: -1407586633
       UI_MButton_Check_2: 1248094901
+      UI_Bar_Yellow_4: -1638242003
       Modern_UI_Style_2_32x32_314: -1060920332
       UI_Slider_Handdle_1: 46233622
       Modern_UI_Style_2_32x32_278: 1622188144
@@ -4099,20 +6281,25 @@ TextureImporter:
       UI_MButton_Volume_1: 1738721386
       Modern_UI_Style_2_32x32_433: -83496199
       Modern_UI_Style_2_32x32_571: -1360581288
+      UI_Bar_Yellow_5: -1319237958
       Modern_UI_Style_2_32x32_49: -1424697585
       UI_MButton_LeftArrowLittle_1: -1244272543
       Modern_UI_Style_2_32x32_588: 2072658481
+      UI_Bar_Red_4: -2146197087
       Modern_UI_Style_2_32x32_346: -1175003519
       UI_MButton_DownArrow_3: 658554318
       Modern_UI_Style_2_32x32_282: -1667229929
       UI_Lightning_Icon: 1074850117
+      UI_Gear_2: -1496697340
       Modern_UI_Style_2_32x32_297: 1920076778
       Modern_UI_Style_2_32x32_637: 1669329310
       Modern_UI_Style_2_32x32_120: 583053465
+      UI_Bar_Brown_3: 543689234
       UI_Book: -420839006
       Modern_UI_Style_2_32x32_75: 578095089
       Modern_UI_Style_2_32x32_504: -790746284
       Modern_UI_Style_2_32x32_409: -310536003
+      UI_Bar_Red_5: -956996984
       Modern_UI_Style_2_32x32_459: 1592254301
       Modern_UI_Style_2_32x32_602: 2063025677
       Modern_UI_Style_2_32x32_563: 245371831
@@ -4132,8 +6319,8 @@ TextureImporter:
       Modern_UI_Style_2_32x32_307: 2141379225
       UI_Icon_SoundOn: -840345593
       Modern_UI_Style_2_32x32_263: -1538900654
-      Modern_UI_Style_2_32x32_367: -607343333
       Modern_UI_Style_2_32x32_647: -496286742
+      Modern_UI_Style_2_32x32_367: -607343333
       Modern_UI_Style_2_32x32_432: 61440690
       Modern_UI_Style_2_32x32_489: 597647593
       Modern_UI_Style_2_32x32_200: -2128483252
@@ -4148,20 +6335,25 @@ TextureImporter:
       UI_MButton_LeftArrow_3: -1913399027
       Modern_UI_Style_2_32x32_468: 418728325
       Modern_UI_Style_2_32x32_600: 841224802
+      UI_Bar_Yellow_7: -1790586307
       Modern_UI_Style_2_32x32_500: 841578069
+      UI_Bar_Yellow_1: -974903440
       Modern_UI_Style_2_32x32_56: -1092371381
       Modern_UI_Style_2_32x32_174: -1927121577
       Modern_UI_Style_2_32x32_575: -787784080
       Modern_UI_Style_2_32x32_173: -1231863970
+      UI_Arrow2_Left: 2111746235
       Modern_UI_Style_2_32x32_60: 1549606843
+      UI_Bar_Var_Green_1: 1401176509
       UI_MButton_Mute_2: 1460893165
-      UI_Rect_5: 2102914412
+      UI_Rect_5: -469815619
       UI_Sapin: -1644298793
       Modern_UI_Style_2_32x32_572: 805994492
       UI_GiftGreen: 1034964099
       Modern_UI_Style_2_32x32_176: 391735977
       Modern_UI_Style_2_32x32_375: -1610602261
       Modern_UI_Style_2_32x32_607: 2138065089
+      UI_Bar_Red_1: 47295546
       UI_MButton_Discord_1: 1311703292
       Modern_UI_Style_2_32x32_276: 2115903256
       Modern_UI_Style_2_32x32_212: -200522833
@@ -4175,6 +6367,7 @@ TextureImporter:
       Modern_UI_Style_2_32x32_184: -1772661940
       Modern_UI_Style_2_32x32_579: 872812712
       UI_GoldenBollox: -200354784
+      UI_Bar_Right: 1065578683
       Modern_UI_Style_2_32x32_77: 1216898461
       Modern_UI_Style_2_32x32_122: 895214492
       Modern_UI_Style_2_32x32_50: 1685742368
@@ -4184,16 +6377,20 @@ TextureImporter:
       UI_Phone: 721520864
       Modern_UI_Style_2_32x32_287: -905081612
       UI_MButton_Menu_3: -240376900
+      UI_SwitchOff_Black: 1661958692
+      UI_Bar_Brown_6: -1765171240
       UI_Slider_Dark_Green: 1964399034
       Modern_UI_Style_2_32x32_109: 1189143129
+      UI_Bar_Var_Blue_1: -1365809146
       UI_Star2: 1460123026
       Modern_UI_Style_2_32x32_132: 579859948
+      UI_Bar_Brown_12: 1797138667
       Modern_UI_Style_2_32x32_506: 802333062
       Modern_UI_Style_2_32x32_69: 573737863
       UI_Quit_Cross: 461927884
       Modern_UI_Style_2_32x32_78: 597433122
-      Modern_UI_Style_2_32x32_52: 536966111
       Modern_UI_Style_2_32x32_330: 1699713476
+      Modern_UI_Style_2_32x32_52: 536966111
       Modern_UI_Style_2_32x32_258: 442692911
       Modern_UI_Style_2_32x32_140: -385476887
       Modern_UI_Style_2_32x32_119: 1904959544
@@ -4204,11 +6401,14 @@ TextureImporter:
       Modern_UI_Style_2_32x32_36: -594158374
       Modern_UI_Style_2_32x32_415: -779236399
       UI_MButton_Erase_2: 1985749443
+      UI_Bar_Green_2: 1968855971
+      UI_Bar_Brown_2: 2103664585
       Modern_UI_Style_2_32x32_566: 827611767
       Modern_UI_Style_2_32x32_382: 908001703
       Modern_UI_Style_2_32x32_266: 1169699256
       Modern_UI_Style_2_32x32_532: -1252373314
       Modern_UI_Style_2_32x32_624: -1196013039
+      UI_Bar_Var_Blue_3: -2049160019
       UI_Icon_SoundOff: -345381148
       Modern_UI_Style_2_32x32_94: 223472637
       Modern_UI_Style_2_32x32_457: -684516073
@@ -4220,15 +6420,20 @@ TextureImporter:
       Modern_UI_Style_2_32x32_394: -862387847
       Modern_UI_Style_2_32x32_635: -206311770
       Modern_UI_Style_2_32x32_576: 376626252
+      UI_Bar_Blue_4: 1325265452
+      UI_Bar_Red_8: -1352892361
       Modern_UI_Style_2_32x32_372: 141555054
       Modern_UI_Style_2_32x32_158: 110837387
       Modern_UI_Style_2_32x32_114: 788229962
       Modern_UI_Style_2_32x32_492: 1169041841
       Modern_UI_Style_2_32x32_230: 2095170351
+      UI_Bar_Brown_9: 221553662
       Modern_UI_Style_2_32x32_411: -1555852671
       Modern_UI_Style_2_32x32_431: 683691675
       Modern_UI_Style_2_32x32_326: 1872070708
+      UI_Bar_Yellow_9: 579611948
       Modern_UI_Style_2_32x32_595: -1645104460
+      UI_Bar_Yellow_2: -1304050994
       Modern_UI_Style_2_32x32_43: -324772649
       Modern_UI_Style_2_32x32_211: 2065419674
       Modern_UI_Style_2_32x32_214: 1259316266
@@ -4238,10 +6443,12 @@ TextureImporter:
       UI_MButton_LeftArrowLittle_3: -573397531
       Modern_UI_Style_2_32x32_631: 285175539
       Modern_UI_Style_2_32x32_107: -1030317578
+      UI_Bar_Var_Green_2: 1123276201
       Modern_UI_Style_2_32x32_108: 1496469308
       Modern_UI_Style_2_32x32_580: 721520864
       Modern_UI_Style_2_32x32_59: -1281207525
       Modern_UI_Style_2_32x32_559: -800349903
+      UI_Bar_Blue_3: 84879793
       Modern_UI_Style_2_32x32_494: -1582626180
       Modern_UI_Style_2_32x32_564: -1748504159
       Modern_UI_Style_2_32x32_323: 1350252082
@@ -4262,6 +6469,7 @@ TextureImporter:
       UI_Slider_Red: -274518037
       UI_TabRect: -1579032010
       UI_MButton_Home_2: 886311108
+      UI_Bar_Yellow_8: -250374288
       Modern_UI_Style_2_32x32_137: 453905042
       Modern_UI_Style_2_32x32_466: 926242236
       Modern_UI_Style_2_32x32_242: -408539797
@@ -4278,7 +6486,9 @@ TextureImporter:
       Modern_UI_Style_2_32x32_345: 1489794463
       UI_Vertical_Scrollbar_checked: -466183643
       UI_MButton_Settings_1: -1675266577
+      UI_Bar_Green_10: -1649232017
       Modern_UI_Style_2_32x32_272: 984994699
+      UI_Bar_Brown_7: -842155869
       Modern_UI_Style_2_32x32_510: 517103216
       UI_Box_5: -142501073
       Modern_UI_Style_2_32x32_578: 2017657940
@@ -4288,6 +6498,7 @@ TextureImporter:
       UI_Tab_2: 448407676
       UI_Heart2: -1290006917
       Modern_UI_Style_2_32x32_331: 1748513925
+      UI_Bar_Brown_1: -1141347310
       Modern_UI_Style_2_32x32_111: 2048381851
       Modern_UI_Style_2_32x32_98: 1505281321
       Modern_UI_Style_2_32x32_399: -465960386
@@ -4296,6 +6507,7 @@ TextureImporter:
       Modern_UI_Style_2_32x32_23: 1314238772
       Modern_UI_Style_2_32x32_275: -521792165
       UI_MButton_UpArrow_1: 1520121534
+      UI_Bar_Red_10: -496105100
       Modern_UI_Style_2_32x32_28: 112789144
       UI_Gears: 28011401
       Modern_UI_Style_2_32x32_534: -1281538577
@@ -4309,10 +6521,12 @@ TextureImporter:
       Modern_UI_Style_2_32x32_378: -1814395860
       Modern_UI_Style_2_32x32_479: -1371332392
       UI_Scrollbar: -454118654
+      UI_Bar_Var_Red_2: -804768746
       Modern_UI_Style_2_32x32_560: -1087300279
       Modern_UI_Style_2_32x32_274: 1619112632
       Modern_UI_Style_2_32x32_412: 1550099834
       Modern_UI_Style_2_32x32_590: -1550091984
+      UI_Bar_Blue_6: -561610177
       Modern_UI_Style_2_32x32_187: 1965428449
       UI_Rect_In_2: 27864769
       Modern_UI_Style_2_32x32_246: 185659016
@@ -4320,6 +6534,7 @@ TextureImporter:
       UI_MButton_RightArrowLittle_1: 1965609720
       Modern_UI_Style_2_32x32_436: 2128347694
       Modern_UI_Style_2_32x32_3: 1313609918
+      UI_Bar_Blue_1: -1544297787
       Modern_UI_Style_2_32x32_342: 2142845753
       UI_Slider_Green_Light: -293430681
       UI_MButton_Pause_2: -1464191058
@@ -4333,12 +6548,14 @@ TextureImporter:
       Modern_UI_Style_2_32x32_421: -857004449
       Modern_UI_Style_2_32x32_596: -1198005712
       Modern_UI_Style_2_32x32_539: -1108069814
+      UI_Bar_Var_Green_3: 415253582
       Modern_UI_Style_2_32x32_503: 1454677894
       Modern_UI_Style_2_32x32_376: -1691709126
       Modern_UI_Style_2_32x32_72: -1032560818
-      Modern_UI_Style_2_32x32_618: -1737138075
       Modern_UI_Style_2_32x32_269: 1871937774
       Modern_UI_Style_2_32x32_273: -1894025285
+      Modern_UI_Style_2_32x32_618: -1737138075
+      UI_Checkback: -845008404
       Modern_UI_Style_2_32x32_150: -746136694
       Modern_UI_Style_2_32x32_373: -1124745963
       Modern_UI_Style_2_32x32_507: -400647709
@@ -4354,12 +6571,14 @@ TextureImporter:
       Modern_UI_Style_2_32x32_562: -400119385
       Modern_UI_Style_2_32x32_626: 1716582681
       Modern_UI_Style_2_32x32_106: -1097336823
+      UI_Bar_Left: -1196748274
       Modern_UI_Style_2_32x32_606: 770020944
       Modern_UI_Style_2_32x32_567: 1965609720
       Modern_UI_Style_2_32x32_437: -1564165382
       Modern_UI_Style_2_32x32_291: -1313815462
       Modern_UI_Style_2_32x32_101: -1196931723
       Modern_UI_Style_2_32x32_540: 2063890924
+      UI_Bar_Green_11: -708700461
       UI_MButton_UpArrowLittle_3: -725525576
       Modern_UI_Style_2_32x32_30: 492088541
       Modern_UI_Style_2_32x32_371: -416353801
@@ -4367,10 +6586,13 @@ TextureImporter:
       Modern_UI_Style_2_32x32_270: 532159544
       UI_MButton_LeftArrow_1: 788229962
       UI_GreenCheck_Clicked: -167559518
+      UI_Bar_Blue_8: -1420737564
       Modern_UI_Style_2_32x32_321: 728370379
+      UI_Bar_Red_9: 1481222543
       Modern_UI_Style_2_32x32_583: 28710418
       UI_Coin: -770608296
       UI_MButton_Home_3: 1465180412
+      UI_Bar_Green_3: -1725136715
       Modern_UI_Style_2_32x32_236: -472575278
       UI_BarContainer: -970310823
       Modern_UI_Style_2_32x32_157: -921273714

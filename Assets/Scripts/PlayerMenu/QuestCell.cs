@@ -7,9 +7,8 @@ using UnityEngine.UI;
 
 public class QuestCell : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    /*public TMP_Text Name;
+    // class for the quest cell prefab
+    public TMP_Text Name;
     public Image doneToggle;
     public Quest quest;
     public QuestManager Manager;
@@ -17,8 +16,8 @@ public class QuestCell : MonoBehaviour
     {
         quest = q;
         Manager = manager;
-        Name.text = quest.name;
-        doneToggle.gameObject.SetActive(quest.isDone);
+        Name.text = quest.information.name;
+        doneToggle.gameObject.SetActive(quest.Completed);
     }
 
     public void Done()
@@ -29,5 +28,5 @@ public class QuestCell : MonoBehaviour
     public void Clicked()
     {
         Manager.space.Change(quest);
-    }*/
+    }
 }
