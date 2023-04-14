@@ -19,7 +19,8 @@ public class GameData
     public Vector3 lastPosition;
 
     //PROGRESSIONS STATES
-    public QuestData[] quests;
+    public List<string> activeQuestId;
+    public List<string> completedQuestId;
     
 
     /// <summary>
@@ -31,10 +32,8 @@ public class GameData
         playerName = "Player";
         lastMap = "IntFirstHouseScene";
         lastPosition = new Vector3(0, 0, 0);
-        quests = new[]
-        {
-            new QuestData("Q0", true, false, Array.Empty<QuestData.QuestProperty>())
-        };
+        activeQuestId = new List<string>() { "Q0" };
+        completedQuestId = new List<string>();
     }
     
 }

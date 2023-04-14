@@ -11,7 +11,7 @@ public class MainMenuSceneController : MonoBehaviour
 	{
 		if (DataPersistenceManager.Instance == null)
 			Instantiate(dataPersistenceManagerPrefab, Vector3.zero, Quaternion.identity);
-		if (GameManager.Instance == null)
+		if (QuestManager.Instance == null)
 			Instantiate(questManagerPrefab, Vector3.zero, Quaternion.identity);
 	}
 	
