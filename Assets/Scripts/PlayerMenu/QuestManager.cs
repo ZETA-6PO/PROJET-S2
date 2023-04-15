@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public List<Quest> quests;
+    
     public GameObject panel;
     public DescriptionSpace space;
     public GameObject questPrefab;
     
-    private void Start()
+    public void UpdateQuests(List<Quest> quests)
     {
+        QuestCell[] list = panel.GetComponents<QuestCell>();
+        foreach (QuestCell cell in list)
+        {
+            Destroy(cell);
+        }
         foreach (Quest quest in quests)
         {
             GameObject cellObject = Instantiate(questPrefab, panel.transform);

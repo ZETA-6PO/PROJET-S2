@@ -356,8 +356,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6092283638041185317}
-  - component: {fileID: 3453818581615159448}
   - component: {fileID: 1810515734608528477}
+  - component: {fileID: 2688031877695214426}
   m_Layer: 5
   m_Name: InvCell
   m_TagString: Untagged
@@ -388,23 +388,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 625, y: 112.8481}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3453818581615159448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4398567953062021884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96a264a88ad789e41886758e19ff0f91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  image: {fileID: 7965844504459352918}
-  name: {fileID: 2226864491348499526}
-  Count: {fileID: 1095722019884221169}
-  Inventory: {fileID: 0}
 --- !u!114 &1810515734608528477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +432,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3453818581615159448}
+      - m_Target: {fileID: 2688031877695214426}
         m_TargetAssemblyTypeName: Cell, Assembly-CSharp
         m_MethodName: Clicked
         m_Mode: 1
@@ -461,6 +444,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2688031877695214426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4398567953062021884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc58bff3e1303a4fabb63c72a24c2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  count: 0
+  image: {fileID: 7965844504459352918}
+  name: {fileID: 2226864491348499526}
+  CountText: {fileID: 1095722019884221169}
+  Inventory: {fileID: 0}
 --- !u!1 &6806232000060131262
 GameObject:
   m_ObjectHideFlags: 0

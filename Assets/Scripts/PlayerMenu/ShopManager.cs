@@ -5,37 +5,39 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    public List<Item> itemsToBuy;
-    public Inventory Inventory;
     public GameObject panel;
     public GameObject shopCellPrefab;
     public DescriptionSpace space;
 
-    private void Start()
+    public void UdpdateShop(List<Item> toBuy)
     {
-        foreach (Item item in itemsToBuy)
+        foreach (Item item in toBuy)
         {
             GameObject cellObject = Instantiate(shopCellPrefab, panel.transform);
             ShopCell cell = cellObject.GetComponent<ShopCell>();
-            cell.InitialiseCell(item,Inventory,this);
+            cell.InitialiseCell(item,this);
         }
     }
 
     public void Buy(Item item)
     {
-        
         if (!item.consumable)
         {
-            if (Inventory.items.ContainsKey(item))
+            if (GameManager.Instance.items.ContainsKey(item))
             {
                 return;
             } 
         }
-        if (item.price <= Inventory.coinCount)
+        if (item.price <= GameManager.Instance.coin)
         {
-            Inventory.RemoveCoins(item.price);
-            Inventory.AddOneItem(item);
+            GameManager.Instance.RemoveCoins(item.price);
+            GameManager.Instance.AddOneItem(item);
         }
+    }
+
+    public void CloseShop()
+    {
+        GameManager.Instance.CloseShop();
     }
     
     

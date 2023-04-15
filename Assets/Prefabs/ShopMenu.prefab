@@ -145,7 +145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Light Guitare
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
   m_sharedMaterial: {fileID: -7294418382763209940, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.7
+  m_fontSize: 72
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -361,7 +361,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765857237971399421}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -371,8 +371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000091552734, y: -2.5637817}
-  m_SizeDelta: {x: -56.3954, y: -45.2478}
+  m_AnchoredPosition: {x: -0.0034942627, y: -2.703308}
+  m_SizeDelta: {x: -23.9552, y: -29.02768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &765857237971399418
 CanvasRenderer:
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 765857238118250718}
   - component: {fileID: 765857238118250719}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonCrossBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,22 +533,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765857238349079610}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 765857238349079609}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: CloseShop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -892,12 +880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f01f420de26a947b1705fe74bede75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToBuy:
-  - {fileID: 11400000, guid: 3244a85445440734980f0f7fec4ee264, type: 2}
-  - {fileID: 11400000, guid: a1c7f953ba2f5de44921cb8492167e60, type: 2}
-  - {fileID: 11400000, guid: bb05bd703e7b8494b88ea3543b8ff134, type: 2}
-  - {fileID: 11400000, guid: a17a67dd2cae4954da2887f84c6f0009, type: 2}
-  Inventory: {fileID: 0}
   panel: {fileID: 765857239096162397}
   shopCellPrefab: {fileID: 5207794597044622758, guid: abbceef51c785b2498ab5c6abf4298d2, type: 3}
   space: {fileID: 765857238350553484}
@@ -1064,7 +1046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 110
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c6043f09856b2d4e88587de698f26ff, type: 2}
   m_sharedMaterial: {fileID: -5762057190513127739, guid: 9c6043f09856b2d4e88587de698f26ff, type: 2}
@@ -1091,7 +1073,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.4
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1323,8 +1305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -128, y: 23.953}
-  m_SizeDelta: {x: 176.7007, y: -316.12912}
+  m_AnchoredPosition: {x: -125.2966, y: 26.656311}
+  m_SizeDelta: {x: 149.6671, y: -332.3492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &765857238725236403
 CanvasRenderer:
@@ -1538,7 +1520,7 @@ MonoBehaviour:
   m_fontSize: 42
   m_fontSizeBase: 42
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

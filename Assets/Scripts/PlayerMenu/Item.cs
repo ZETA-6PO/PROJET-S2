@@ -8,14 +8,15 @@ public class Item :ScriptableObject
     public Sprite image;
     public string name;
     public int price;
-    public string id;
     public string description;
     public bool consumable;
 
     public bool Equals(Item item)
     {
-        return id == item.id;
+        return name == item.name;
     }
+    
+    
 }
 
 

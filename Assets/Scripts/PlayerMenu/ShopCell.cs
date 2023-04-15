@@ -8,19 +8,23 @@ public class ShopCell : MonoBehaviour
 {
     public Image image;
     public TMP_Text Name;
-    public Inventory inventory;
     public Item item;
     public ShopManager Manager;
-    
-    public void InitialiseCell(Item i,Inventory inv,ShopManager manager)
+    public GameObject buyButton;
+
+    public void InitialiseCell(Item i,ShopManager manager)
     {
         Manager = manager;
         item = i;
-        inventory = inv;
         image.sprite = item.image;
         Name.text = item.name;
+        //if((!item.consumable)&GameManager.Instance.items.ContainsKey(item)) buyButton.SetActive(false);
     }
 
+    public void CellUpdate()
+    {
+        //if((!item.consumable)&GameManager.Instance.items.ContainsKey(item)) buyButton.SetActive(false);
+    }
     public void CellClicked()
     {
         Manager.space.Change(item);
@@ -29,6 +33,7 @@ public class ShopCell : MonoBehaviour
     public void BuyClicked()
     {
         Manager.Buy(item);
+        CellUpdate();
     }
 }
 

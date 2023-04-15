@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80f221755e89204a9df31cfe48c47ff, type: 3}
+  m_Name: Party Maracas
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: abc179886d346d34e99bc95cedf03bd0, type: 3}
+  name: Party Maracas
+  price: 300
+  description: Everyone Dance
+  consumable: 0
+  Rarity: 2
+  sound: {fileID: 8300000, guid: bc4f59827c8ae374b90077d9aac63da9, type: 3}
+  DialogWhenAttackFail: 
+  DialogWhenAttackSucceed: 

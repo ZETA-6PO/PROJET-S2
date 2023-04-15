@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e80f221755e89204a9df31cfe48c47ff, type: 3}
+  m_Name: Orchestra Trumpet
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: 56e25f02a37d6a348b3aebc2f98f317d, type: 3}
+  name: Orchestra Trumpet
+  price: 300
+  description: It. Just. Plays. In. Rythm.
+  consumable: 0
+  Rarity: 1
+  sound: {fileID: 8300000, guid: d14fe2e88b635d84eb880970af7b0372, type: 3}
+  DialogWhenAttackFail: 
+  DialogWhenAttackSucceed: 

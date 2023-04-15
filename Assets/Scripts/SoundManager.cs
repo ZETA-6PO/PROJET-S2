@@ -24,7 +24,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        effectsSource.PlayOneShot(clip);
+        if (effectsSource is not null) effectsSource.PlayOneShot(clip);
     }
 
     public void ChangeMasterVolume(float value)
@@ -35,13 +35,13 @@ public class SoundManager : MonoBehaviour
     public void MuteEffect(bool muted)
     {
         Debug.Log("MuteEffect called");
-        effectsSource.mute = muted;
+        if (effectsSource is not null)effectsSource.mute = muted;
     }
 
     public void MuteMusic(bool muted)
     {
         Debug.Log("MuteMusic called");
-        musicSource.mute = muted;
+        if (musicSource is not null)musicSource.mute = muted;
         
     }
 }
