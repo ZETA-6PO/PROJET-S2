@@ -29,11 +29,12 @@ public class GameData
     public GameData()
     {
         playerName = "Player";
-        lastMap = "IntFirstHouseScene";
-        lastPosition = new Vector3(0, 0, 0);
+        lastMap = "ExtFirstMap";
+        lastPosition = new Vector3(-69.5f, 17.5f, 0);
         quests = new[]
         {
-            new QuestData("Q0", true, false, Array.Empty<QuestData.QuestProperty>())
+            new QuestData("Q0", true, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q1", false, false, Array.Empty<QuestData.QuestProperty>())
         };
     }
     

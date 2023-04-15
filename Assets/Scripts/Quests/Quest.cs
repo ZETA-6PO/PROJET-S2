@@ -24,9 +24,9 @@ public abstract class Quest : ScriptableObject
     /// Stores the information required for the UI.
     /// </summary>
     [Header("Info")] public Info information;
-    
-    public bool Active { get;  set; }
-    public bool Completed { get;  set; }
+
+    public bool Active;
+    public bool Completed;
     
     /// <summary>
     /// Struct containing all basic Quest information such as the name and description.

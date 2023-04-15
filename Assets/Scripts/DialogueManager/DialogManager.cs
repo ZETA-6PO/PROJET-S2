@@ -49,11 +49,7 @@ public class DialogManager : MonoBehaviour
         {
             sentences.Enqueue(sentece);
         }
-
-        if (!sd.isNarration)
-            nameText.text = sd.name;
-        else
-            nameText.text = "";
+        
         
         DisplayNextSentence();
     }

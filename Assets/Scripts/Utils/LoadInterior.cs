@@ -21,7 +21,7 @@ public class LoadInterior : MonoBehaviour
             DataPersistenceManager.Instance.gameData.lastPosition = exitPoint.position;
             
             
-            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            SceneManager.LoadScene(sceneName);
             
         }
     }
