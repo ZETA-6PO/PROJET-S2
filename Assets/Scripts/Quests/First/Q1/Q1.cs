@@ -61,7 +61,7 @@ public class Q1 : Quest
             GameManager.Instance.AddCoins(20);
             Active = false;
             Completed = true;
-            //GameManager.Instance.quests[2].Active = true;
+            GameManager.Instance.quests[2].Active = true;
             
         }
         else

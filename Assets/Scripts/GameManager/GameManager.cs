@@ -218,7 +218,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void OnEnable()
     {
-        AddItems(invL);
+        //AddItems(invL);
     }
 
     public bool IsInInventory(string name)

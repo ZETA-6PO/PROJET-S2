@@ -34,7 +34,8 @@ public class GameData
         quests = new[]
         {
             new QuestData("Q0", true, false, Array.Empty<QuestData.QuestProperty>()),
-            new QuestData("Q1", false, false, Array.Empty<QuestData.QuestProperty>())
+            new QuestData("Q1", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q2", false, false, Array.Empty<QuestData.QuestProperty>())
         };
     }
     
