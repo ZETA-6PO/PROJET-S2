@@ -45,7 +45,9 @@ public class StatsManager : MonoBehaviour
         {
             img.gameObject.SetActive(false);
         }
-        resistanceBar.BarUpdate(GameManager.Instance.playerResistance,10);
+
+        var x = GameManager.Instance.playerResistance;
+        resistanceBar.BarUpdate(x,10);
         inspirationBar.BarUpdate(GameManager.Instance.playerInspiration,10);
         fameBar.BarUpdate(GameManager.Instance.playerFame,10);
         for (int i = 0; i < 4; i++)
