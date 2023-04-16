@@ -22,6 +22,10 @@ public class IntFirstHouseSceneController : SceneController
     public void OnExitScene()
     {
         
+        if (canGoOut)
+        {
+            SceneManager.LoadScene("ExtFirstScene");
+        }
     }
     
     

@@ -14,6 +14,8 @@ using UnityEngine;
         public GameObject cameraInstanciated;
         public GameObject dialogInstanciated;
         public DialogManager dialogManager;
+
+        public bool canGoOut;
         IEnumerator Start()
         {
             yield return new WaitUntil(() => DataPersistenceManager.Instance != null && GameManager.Instance!=null);
@@ -47,6 +49,6 @@ using UnityEngine;
         //set the variable prior the start
         public virtual void Init()
         {
-            //entryPoint.position = Vector3.zero;
+            entryPoint.position = DataPersistenceManager.Instance.gameData.lastPosition;
         }
     }

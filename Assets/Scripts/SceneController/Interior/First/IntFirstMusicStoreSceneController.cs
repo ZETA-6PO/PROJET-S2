@@ -12,4 +12,8 @@ public class IntFirstMusicStoreSceneController : SceneController
     {
         SceneManager.LoadScene("ExtFirstScene");
     }
+
+    public override void Init()
+    {
+    }
 }

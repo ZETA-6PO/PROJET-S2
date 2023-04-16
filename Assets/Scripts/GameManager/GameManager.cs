@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     
     public void OnSceneLoad()
     {
-        foreach (var quest in quests)
+        foreach (var quest in quests.Where(quest => quest.Active )) 
         {
             quest.OnLoadScene(SceneManager.GetActiveScene().name);
         }
@@ -144,6 +144,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         if (Input.GetKeyUp(KeyCode.A))
         {
+            Debug.Log(quests[0].Active);
             if (isPlayerMenuOpened)
             {
                 CloseInventory();
@@ -217,7 +218,32 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void OnEnable()
     {
-        AddItems(invL);
+        //AddItems(invL);
+    }
+
+    public bool IsInInventory(string name)
+    {
+        foreach (var it in items.Keys)
+        {
+            if (it.name == name)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void RemoveItemName(string name)
+    {
+        foreach (var it in items.Keys)
+        {
+            if (it.name == name)
+            {
+                RemoveItem(it);
+                return;
+            }
+        }
     }
 }
 

@@ -32,6 +32,8 @@ public class ShopManager : MonoBehaviour
         {
             GameManager.Instance.RemoveCoins(item.price);
             GameManager.Instance.AddOneItem(item);
+            
+            Debug.Log(GameManager.Instance.coin.ToString());
         }
     }
 

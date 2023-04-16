@@ -7,6 +7,7 @@ using System.Threading.Tasks.Sources;
 using Unity.VisualScripting;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "Q0", menuName = "Quest/Q0", order = 1)]
 public class Q0 : Quest
@@ -28,24 +29,26 @@ public class Q0 : Quest
 
     public override void OnLoadScene(string sceneName)
     {
-        Debug.Log($"Q0::onLoadScene(->'{sceneName}')");
         if (sceneName == "IntFirstHouseScene")
         {
             FindObjectOfType<DialogManager>().StartDialogue(
                 new Dialogue(new []
                 {
-                    new SingleDialogue("", false, new []
+                    new SingleDialogue("", new []
                     {
-                        "Welcom to hypepop",
+                        "Welcom to hypepop !", "You always wanted to become a famous artist and the time has come !",
+                        "From today, you will do everything that you can to grow in the world of music.",
+                        "However, you are still living with your parents, so you need to help them sometimes, even more if you want them to help you.",
+                        "Oh ! They call you to do them a favor, go see them."
                     })
                 }),
                 Array.Empty<string>(),
                 i => {});
-        }
-        FindObjectOfType<PlayerController>().teleportPlayerAt(playerPosition);
-        FindObjectOfType<parentsScript>().Enable(true, true, momPosition, dadPosition,
-            () => speakToParents(),
+            FindObjectOfType<PlayerController>().teleportPlayerAt(playerPosition);
+            FindObjectOfType<parentsScript>().Enable(true, true, momPosition, dadPosition,
+                () => speakToParents(),
                 () => { }, () => { }, () => { });
+        }
     }
 
     
@@ -54,27 +57,37 @@ public class Q0 : Quest
     /// </summary>
     public void speakToParents()
     {
-        FindObjectOfType<DialogManager>().StartDialogue(
-            new Dialogue(new[]
-            {
-                new SingleDialogue("Mom", false, new[]
+        if (Active)
+        {
+            FindObjectOfType<DialogManager>().StartDialogue(
+                new Dialogue(new[]
                 {
-                    "Hello son.",
-                }),
+                    new SingleDialogue("Dad", new[]
+                    {
+                        "Hi son ! Me and your mother need you.",
+                    }),
 
-                new SingleDialogue("Dad", false, new[]
-                {
-                    "Hello son.",
+                    new SingleDialogue("Mum", new[]
+                    {
+                        "Yes,we want you to buy us some bread.",
+                        "Here’s 10 HypeCoins for it. You could keep the money and you might get a reward after this favor."
+                    }),
+                    new SingleDialogue("", new[]
+                    {
+                        "Go to the bakery and buy bread for your parents. Then bring it to them.",
+                    }),
                 }),
-                new SingleDialogue("Mom", false, new[]
-                {
-                    "Bravo son, I am proud of you. You managed to beat the great champion of our city, that's very impressive! You have become a confirmed artist!",
-                }),
-            }),
-            Array.Empty<string>(),
-            i => { });
-        Active = false;
-        GameManager.Instance.quests[1].Active = true;
+                Array.Empty<string>(),
+                i => { });
+            
+            GameManager.Instance.AddCoins(10);
+            FindObjectOfType<SceneController>().canGoOut = true;
+            Active = false;
+            Completed = true;
+            GameManager.Instance.quests[1].Active = true;
+        }
+        Debug.Log($"Q0 is active : {Active}");
+        Debug.Log($"Q1 is Active : {GameManager.Instance.quests[1].Active}");
     }
     
 }

@@ -12,39 +12,18 @@ public class InventoryManager : MonoBehaviour
     public GameObject cellPrefab;
     public GameObject panel;
     public DescriptionSpace space;
-    public TMP_Text coinText;
     
 
     public void UpdateInventory(Dictionary<Item, int> items)
     {
-        foreach (Cell cell in panel.GetComponents<Cell>())
-        {
-            Destroy(cell);
-        }
-
         foreach (Item item in items.Keys)
         {
-            Cell cell = GetCell(item);
-            if (cell is null)
-            {
-                NewCell(item, items[item]);
-            }
+            int number = items[item];
+            if (number>0) NewCell(item,number);
         }
     }
 
-    public Cell GetCell(Item item)
-    {
-        foreach (Cell cell in panel.GetComponents<Cell>())
-        {
-            if (cell.item.Equals(item))
-            {
-                return cell;
-            }
-        }
-
-        return null;
-    }
-
+    
     public void NewCell(Item item, int number)
     {
         GameObject cellObject = Instantiate(cellPrefab, panel.transform);
@@ -52,8 +31,5 @@ public class InventoryManager : MonoBehaviour
         cell.InitialiseCell(item, number, this);
     }
 
-    public void UpdateCoin(int coin)
-    {
-        coinText.text = coin.ToString();
-    }
+    
 }

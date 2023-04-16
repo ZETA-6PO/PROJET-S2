@@ -15,13 +15,17 @@ public class LoadInterior : MonoBehaviour
     public Transform exitPoint;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"Entering a linker.");
         if (collision.CompareTag("Player"))
         {
-            //set the last position on map
+            Debug.Log($"Set the exit position at : {DataPersistenceManager.Instance.gameData.lastPosition}");
             DataPersistenceManager.Instance.gameData.lastPosition = exitPoint.position;
             
             
-            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            //set the last position on map
+            
+            
+            SceneManager.LoadScene(sceneName);
             
         }
     }
