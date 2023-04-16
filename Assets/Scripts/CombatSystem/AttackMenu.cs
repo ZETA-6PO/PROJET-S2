@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,46 +7,69 @@ public class AttackMenu : MonoBehaviour
 {
     private Action<AttackObject> OnAttackSelected;
     private AttackObject[] AttackList;
-    public Button Attack1;
-    public Button Attack2;
-    public Button Attack3;
-    public Button Attack4;
+    public GameObject cellPrefab;
+    private List<LaunchAttackCell> cells;
+    public GameObject panel;
+    private BattleSystem _system;
 
-    public void OpenMenu(Fighter player, Action<AttackObject> onAttackSelected)
+
+    public void OpenMenu(Fighter player,Action<AttackObject> onAttackSelected,BattleSystem system)
     {
+        AttackList = player.Attacks;
+        _system = system;
         gameObject.SetActive(true);
         OnAttackSelected = onAttackSelected;
-        AttackList = player.Attacks;
+    }
+    
+    public void Start()
+    {
+        if (AttackList is not null)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+            
+                AttackObject attack = AttackList[i];
+                if (attack is not null)
+                {
+                    NewCell(attack, _system._uses[i],i+1);
+                }
+            }
+        }
+    }
+    
+    private void NewCell(AttackObject item, int number,int index)
+    {
+        GameObject cellObject = Instantiate(cellPrefab, panel.transform);
+        LaunchAttackCell attackCell = cellObject.GetComponent<LaunchAttackCell>();
+        attackCell.Initialise(item,this,number,index);
     }
 
-    public void CloseMenu()
+    private int SetMaxUse(Rarity rarity)
     {
-        OnAttackSelected(null);
+        switch (rarity)
+        {
+            case Rarity.Common:
+                return 6;
+            case Rarity.Hyped:
+                return 4;
+            case Rarity.Legendary:
+                return 2;
+            default:
+                return 6;
+        }
+    }
+    private void CloseMenu()
+    {
         gameObject.SetActive(false);
+        OnAttackSelected(null);
     }
-
-    public void OnClickAttack1()
+    
+    public void OnclickAttack(int i)
     {
-        OnAttackSelected(AttackList[0]);
+        Debug.Log("OnclickAttack");
+        _system._uses[i - 1] -= 1;
+        OnAttackSelected(AttackList[i-1]);
         CloseMenu();
     }
     
-    public void OnClickAttack2()
-    {
-        OnAttackSelected(AttackList[1]);
-        CloseMenu();
-    }
-    public void OnClickAttack3()
-    {
-        OnAttackSelected(AttackList[2]);
-        CloseMenu();
-    }
-    public void OnClickAttack4()
-    {
-        OnAttackSelected(AttackList[4]);
-        CloseMenu();
-    }
-
-
-
 }

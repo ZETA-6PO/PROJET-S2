@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -18,13 +19,18 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private BattleUI ui;
     [SerializeField] private Fighter player;
     [SerializeField] private Fighter enemy;
+    [SerializeField] private AttackObject[] playerAttack;
+    [SerializeField] private AttackObject[] enemyAttack;
     [SerializeField] private AttackMenu attackMenu;
+    [SerializeField] private HealMenu healMenu;
     [SerializeField] private PerformAttack performAttack;
+
+    public int[] _uses = { 0, 0, 0, 0 };
     
     public Fighter Player => player;
     public Fighter Enemy => enemy;
     public BattleUI Interface => ui;
-
+    
     
     /// <summary>
     /// Represent the "life" of the player but it's a shared bar between player and enemy. 
@@ -103,6 +109,7 @@ public class BattleSystem : MonoBehaviour
         buttonCooldown = true;
         Invoke("ResetCooldown", 2f);
         if (_state != BattleState.PlayerTurn) return;
+        Debug.Log("OnAttackButton");
         PlayerAttack();
     }
 
@@ -115,7 +122,13 @@ public class BattleSystem : MonoBehaviour
         buttonCooldown = true;
         Invoke("ResetCooldown", 2.5f);
         if (_state != BattleState.PlayerTurn) return;
-        StartCoroutine(PlayerHeal());
+
+        void OnSelectHeal(Consumable consumable)
+        {
+            StartCoroutine(PlayerHeal(consumable));
+        }
+        
+        healMenu.OpenMenu(OnSelectHeal);
     }
 
     /// <summary>
@@ -152,7 +165,7 @@ public class BattleSystem : MonoBehaviour
         bool success = false;
         UnityEvent<bool> onCompleteAttack = new UnityEvent<bool>();
         onCompleteAttack.AddListener((arg0 => StartCoroutine(OnCompleteAttack(arg0))));
-        attackMenu.OpenMenu(Player, OnSelectAttack);
+        attackMenu.OpenMenu(player,OnSelectAttack,this);
 
         void OnSelectAttack(AttackObject a)
         {
@@ -161,6 +174,7 @@ public class BattleSystem : MonoBehaviour
                 return;
             }
             Debug.Log("Selected attack");
+            Debug.Log(a.input.sequence);
             StartCoroutine(performAttack.StartAttack(a.input.sequence.ToList(), 15, onCompleteAttack));
         }
         
@@ -188,11 +202,17 @@ public class BattleSystem : MonoBehaviour
         }
     }   
 
-    private IEnumerator PlayerHeal()
+    private IEnumerator PlayerHeal(Consumable consumable)
     {
-        Interface.SetDialogText($"{Player.unitName} feels renewed strength!");
-
-        DecreaseEnemyAppreciationBy(4);
+        if (consumable.addedResistance != 0)
+            Interface.SetDialogText($"{Player.unitName} used {consumable.name} and gain {consumable.addedResistance} resistance.");
+        else if (consumable.addedResistance != 0 && consumable.addedInspiration!= 0 )
+            Interface.SetDialogText($"{Player.unitName} used {consumable.name} and gain {consumable.addedResistance} resistance and also gain {consumable.addedInspiration} inspiration.");
+        else
+            Interface.SetDialogText($"{Player.unitName} used {consumable.name} and gain {consumable.addedInspiration} inspiration.");
+        
+        player.AddInspiration(consumable.addedInspiration);
+        player.AddResistance(consumable.addedResistance);
     
         yield return new WaitForSeconds(1f);
 
@@ -245,59 +265,15 @@ public class BattleSystem : MonoBehaviour
         IEnumerator tg()
         {
             yield return new WaitForSeconds(2);
-            StartABattle(new Fighter("A.NONYME", 10, 10, new []
-            {
-                new AttackObject(new []
-                {
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.UpArrow,
-                    KeyCode.DownArrow,
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow,
-                    KeyCode.UpArrow,
-                }, 10)
-            }),new Fighter("I.GNOBLE", 10, 10, new []
-            {
-                new AttackObject(new []
-                {
-                    KeyCode.LeftArrow,
-                    KeyCode.RightArrow
-                }, 10)
-            }));
+            StartABattle(new Fighter(
+                "player",
+                10,10,playerAttack
+                ), new Fighter(
+                "enemy",
+                10,10,enemyAttack
+                ));
         }
         
     }
+    
 }
