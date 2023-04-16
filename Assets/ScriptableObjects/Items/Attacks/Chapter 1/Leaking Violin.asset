@@ -18,7 +18,11 @@ MonoBehaviour:
   description: This violin was just found in a nearby lake, water is still flowing
     from its sodden wood.
   consumable: 0
-  Rarity: 0
+  MaxUse: 0
+  rarity: 0
   sound: {fileID: 8300000, guid: cecfcd31a3e2d5541b5d39b3eeb38e58, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 1301000013010000130100001301000013010000
+    time: 10

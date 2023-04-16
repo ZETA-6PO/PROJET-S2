@@ -9,11 +9,11 @@ public class AttackCell : MonoBehaviour
     public Image attackIcon;
     public TMP_Text attackName;
     public AttackSelector selector;
-    public Item attack;
+    public AttackObject attack;
 
-    public void InitialiseCell(Item item,AttackSelector manager)
+    public void InitialiseCell(AttackObject attack,AttackSelector manager)
     {
-        attack = item;
+        this.attack = attack;
         selector = manager;
         attackIcon.sprite = attack.image;
         attackName.text = attack.name;

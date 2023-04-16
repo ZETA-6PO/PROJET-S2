@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour, IDataPersistence
@@ -15,13 +16,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public PlayerMenuManager prefabPlayerMenu;
     private PlayerMenuManager refPlayerMenu;
 
+    public BattleSystem prefabCombat;
+    private BattleSystem refCombat;
+    
     public ShopManager prefabShop;
     private ShopManager refShop;
 
     public List<Item> invL = new List<Item>();
     private bool isPlayerMenuOpened = false;
     private bool isShopOpen = false;
-
+    
+    
     /// <summary>
     /// PlayerStats
     /// </summary>
@@ -29,7 +34,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public Dictionary<Item, int> items { get; set; } = new Dictionary<Item, int>();
 
-    public Item[] stuff { get; set; } = new Item[4];
+    public AttackObject[] stuff  = new AttackObject[4];
 
     public string playerName;
     public int playerResistance;
@@ -166,9 +171,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
                 //OpenShop(//laZikakaMixTape);
             }
         }
-        
-    }
 
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            StartACombat(new Fighter("Opponent", 10, 10, new AttackObject[]{}), (arg0 => Debug.Log($"Combat won by : {arg0}")));
+        }
+
+    }
+    
+    ////////////////////////////////////////////////////////
+    /// All those variable handle the Inventory and Shop.///
+    ////////////////////////////////////////////////////////
     public void OpenInventory()
     {
         if (isShopOpen)
@@ -211,7 +224,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         refShop = null;
     }
 
-    public void ChangeStuff(int i, Item item)
+    public void ChangeStuff(int i, AttackObject item)
     {
         if (stuff is not null && i > 0 & i < 5) stuff[i - 1] = item;
     }
@@ -245,5 +258,19 @@ public class GameManager : MonoBehaviour, IDataPersistence
             }
         }
     }
+    ////////////////////////////////////////////////////////
+    // ReSharper disable once InvalidXmlDocComment       ///
+    /// All those variable handle the CombatSystem       ///
+    ////////////////////////////////////////////////////////
+
+    public void StartACombat(Fighter enemy, UnityAction<bool> onCombatFinished)
+    {
+        refCombat = Instantiate(prefabCombat);
+        Fighter player = new Fighter("Player", playerResistance, playerInspiration, stuff);
+        refCombat.StartABattle(player, enemy, onCombatFinished);
+    }
+    
+    
+    
 }
 

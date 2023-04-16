@@ -15,6 +15,7 @@ public class AttackMenu : MonoBehaviour
 
     public void OpenMenu(Fighter player,Action<AttackObject> onAttackSelected,BattleSystem system)
     {
+        Debug.Log("AttackMenuOpened");
         AttackList = player.Attacks;
         _system = system;
         gameObject.SetActive(true);

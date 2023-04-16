@@ -104,18 +104,18 @@ public class StatsManager : MonoBehaviour
         refSelector = null;
     }
 
-    private List<Item> ToSelect()
+    private List<AttackObject> ToSelect()
     {
         equiped = GameManager.Instance.stuff;
-        List<Item> list = new List<Item>();
+        List<AttackObject> list = new List<AttackObject>();
         foreach (Item item in inventory.Keys)
         {
-            if (item is AttackObject && !equiped.Contains(item)) list.Add(item); 
+            if (item is AttackObject && !equiped.Contains(item)) list.Add((AttackObject)item); 
         }
         return list;
     }
 
-    private void OpenSelector(List<Item> toSelect, int i)
+    private void OpenSelector(List<AttackObject> toSelect, int i)
     {
         
         if (refSelector is null)
@@ -126,11 +126,11 @@ public class StatsManager : MonoBehaviour
         }
     }
 
-    public void ChangeAttack(int index,Item attack)
+    public void ChangeAttack(int index,AttackObject attack)
     {
         slots[index-1].gameObject.SetActive(true);
         slots[index - 1].sprite = attack.image;
-        GameManager.Instance.ChangeStuff(index,attack);
+        GameManager.Instance.ChangeStuff(index, attack);
         CloseSelector();
     }
 

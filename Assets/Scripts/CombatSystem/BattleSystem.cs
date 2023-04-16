@@ -24,7 +24,10 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private AttackMenu attackMenu;
     [SerializeField] private HealMenu healMenu;
     [SerializeField] private PerformAttack performAttack;
+    [SerializeField] public AudioClip soundAttackSucceeded;
+    [SerializeField] public AudioClip soundAttackFailed;
 
+    private UnityAction<bool> onCombatEnd;
     public int[] _uses = { 0, 0, 0, 0 };
     
     public Fighter Player => player;
@@ -44,11 +47,6 @@ public class BattleSystem : MonoBehaviour
         }
         set
         {
-            if (value < 0 || value > 100)
-            {
-                throw new InvalidDataException();
-            }
-
             appreciationPercentage = value / 100;
         }
     }
@@ -92,10 +90,11 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     /// <param name="player"></param>
     /// <param name="enemy"></param>
-    private void StartABattle(Fighter player, Fighter enemy)
+    public void StartABattle(Fighter player, Fighter enemy, UnityAction<bool> onEnd)
     {
         this.player = player;
         this.enemy = enemy;
+        this.onCombatEnd = onEnd;
         Interface.Initialize(player, enemy);
         Appreciation = 50;
         _state = BattleState.Beginning;
@@ -163,8 +162,8 @@ public class BattleSystem : MonoBehaviour
     private void PlayerAttack()
     {
         bool success = false;
-        UnityEvent<bool> onCompleteAttack = new UnityEvent<bool>();
-        onCompleteAttack.AddListener((arg0 => StartCoroutine(OnCompleteAttack(arg0))));
+        UnityEvent<bool, Rarity > onCompleteAttack = new UnityEvent<bool, Rarity>();
+        onCompleteAttack.AddListener(((arg0, arg1) => StartCoroutine(OnCompleteAttack(arg0,arg1))));
         attackMenu.OpenMenu(player,OnSelectAttack,this);
 
         void OnSelectAttack(AttackObject a)
@@ -175,18 +174,19 @@ public class BattleSystem : MonoBehaviour
             }
             Debug.Log("Selected attack");
             Debug.Log(a.input.sequence);
-            StartCoroutine(performAttack.StartAttack(a.input.sequence.ToList(), 15, onCompleteAttack));
+            
+            StartCoroutine(performAttack.StartAttack(a.input.sequence.ToList(), 15,a, onCompleteAttack));
         }
         
-        IEnumerator OnCompleteAttack(bool succeeded)
+        IEnumerator OnCompleteAttack(bool succeeded,Rarity rarity)
         {
-            
             Debug.Log("123");
             success = succeeded;
+            bool isEnemyAlive = true;
             if (success)
             {
                 Interface.SetDialogText("Attack succeeded !");
-                DecreaseEnemyAppreciationBy(10);
+                isEnemyAlive = DecreaseEnemyAppreciationBy(GetDamage(rarity));
                 Debug.Log("marche ta mere1");
             }
             else
@@ -196,11 +196,35 @@ public class BattleSystem : MonoBehaviour
             }
             Debug.Log("marche ta mere3");
             yield return new WaitForSeconds(2);
-            yield return StartCoroutine(EnemyTurn());
+            if (!isEnemyAlive)
+            {
+                _state = BattleState.Won;
+                yield return StartCoroutine(EndGame());
+            }
+            else
+            {
+                yield return StartCoroutine(EnemyTurn());
+            }
+            
             
             
         }
-    }   
+    }
+
+    private int GetDamage(Rarity rarity)
+    {
+        switch (rarity)
+        {
+            case Rarity.Common:
+                return 30;
+            case Rarity.Hyped:
+                return 60;
+            case Rarity.Legendary:
+                return 90;
+            default:
+                return 30;
+        }
+    }
 
     private IEnumerator PlayerHeal(Consumable consumable)
     {
@@ -247,33 +271,22 @@ public class BattleSystem : MonoBehaviour
         {
             case BattleState.Won:
                 Interface.SetDialogText("You won the battle!");
+                yield return new WaitForSeconds(5);
+                Destroy(gameObject);
+                onCombatEnd(true);
                 break;
             case BattleState.Lost:
                 Interface.SetDialogText("You were defeated.");
+                yield return new WaitForSeconds(5);
+                Destroy(gameObject);
+                onCombatEnd(false);
+                
                 break;
             default:
                 Interface.SetDialogText("The match was a stalemate!");
                 break;
         }
-        yield break;
     }
-
-    public void OnEnable()
-    {
-        StartCoroutine(tg());
-
-        IEnumerator tg()
-        {
-            yield return new WaitForSeconds(2);
-            StartABattle(new Fighter(
-                "player",
-                10,10,playerAttack
-                ), new Fighter(
-                "enemy",
-                10,10,enemyAttack
-                ));
-        }
-        
-    }
+    
     
 }

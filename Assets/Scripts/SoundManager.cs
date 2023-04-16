@@ -27,6 +27,11 @@ public class SoundManager : MonoBehaviour
         if (effectsSource is not null) effectsSource.PlayOneShot(clip);
     }
 
+    public void StopSound()
+    {
+        if (effectsSource is not null) effectsSource.Stop();
+    }
+
     public void ChangeMasterVolume(float value)
     {
         AudioListener.volume = value;

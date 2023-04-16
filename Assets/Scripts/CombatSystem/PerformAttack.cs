@@ -11,18 +11,20 @@ public class PerformAttack : MonoBehaviour
     public Text timer;
     public Text touch;
     private List<KeyCode> sequences;
-    private UnityEvent<bool> onCompleteAttack;
+    private UnityEvent<bool,Rarity> onCompleteAttack;
+    private AttackObject attack;
     private bool started;
     private bool end;
     private int timeLeft;
         /// <summary>
     /// This function start an attack
     /// </summary>
-    public IEnumerator StartAttack(List<KeyCode> touchSequences, int timeToComplete, UnityEvent<bool> onCompleteAttack)
+    public IEnumerator StartAttack(List<KeyCode> touchSequences, int timeToComplete, AttackObject attack, UnityEvent<bool,Rarity> onCompleteAttack)
     {
         sequences = touchSequences;
         this.onCompleteAttack = onCompleteAttack;
         timeLeft = timeToComplete;
+        this.attack = attack;
         gameObject.SetActive(true);
         timer.gameObject.SetActive(false); // on affiche pas le timer tant que ca a pas commemce
         int count = 5;
@@ -32,6 +34,7 @@ public class PerformAttack : MonoBehaviour
             yield return new WaitForSeconds(1);
             count -= 1;
         }
+        SoundManager.Instance.PlaySound(attack.sound);
         touch.text = sequences[0].ToString();
         started = true;
         timer.gameObject.SetActive(true);
@@ -152,16 +155,18 @@ public class PerformAttack : MonoBehaviour
         if (end)
         {
             end = false;
+            BattleSystem bs = FindObjectOfType<BattleSystem>();
             if (sequences.Count == 0)
             {
-                onCompleteAttack.Invoke(true);
-                
+                onCompleteAttack.Invoke(true, attack.rarity);
+                SoundManager.Instance.PlaySound(bs.soundAttackSucceeded);
                 gameObject.SetActive(false);
             }
             else
             {
-                onCompleteAttack.Invoke(false);
-                
+                onCompleteAttack.Invoke(false, attack.rarity);
+                SoundManager.Instance.StopSound();
+                SoundManager.Instance.PlaySound(bs.soundAttackFailed);
                 gameObject.SetActive(false);
             }
             

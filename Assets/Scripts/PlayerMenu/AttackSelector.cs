@@ -11,11 +11,11 @@ public class AttackSelector : MonoBehaviour
     private int index;
     private StatsManager manager;
 
-    public void Initialise(List<Item> toSelect,StatsManager m ,int i)
+    public void Initialise(List<AttackObject> toSelect,StatsManager m ,int i)
     {
         manager = m;
         index = i;
-        foreach (Item item in toSelect)
+        foreach (AttackObject item in toSelect)
         {
             GameObject cellObject = Instantiate(attackCellPrefab, panel.transform);
             AttackCell cell = cellObject.GetComponent<AttackCell>();
@@ -23,7 +23,7 @@ public class AttackSelector : MonoBehaviour
         }
     }
 
-    public void Select(Item item)
+    public void Select(AttackObject item)
     {
         manager.ChangeAttack(index,item);
     }

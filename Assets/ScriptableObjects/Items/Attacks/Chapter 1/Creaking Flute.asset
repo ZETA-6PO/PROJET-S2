@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 50
   description: A flute known by the whole neighborhood, but not for its sound qualities!
   consumable: 0
-  Rarity: 0
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: bc73d184ed51f1148890a6539cf07228, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 1201000013010000110100001401000011010000
+    time: 10
