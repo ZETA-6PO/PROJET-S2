@@ -28,6 +28,7 @@ public class GameData
     /// </summary>
     public GameData()
     {
+        Debug.Log("Setting new gameData");
         playerName = "Player";
         lastMap = "ExtFirstMap";
         lastPosition = new Vector3(-69.5f, 17.5f, 0);

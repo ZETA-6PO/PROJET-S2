@@ -44,7 +44,7 @@ public class DialogManager : MonoBehaviour
     public void DisplayNextDialogue(SingleDialogue sd)
     {
         sentences.Clear();
-        
+        nameText.text = sd.name;
         foreach (var sentece in sd.senteces)
         {
             sentences.Enqueue(sentece);

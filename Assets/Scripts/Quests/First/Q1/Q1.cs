@@ -31,6 +31,7 @@ public class Q1 : Quest
         Debug.Log(sceneName);
         if (sceneName == "IntFirstHouseScene")
         {
+            FindObjectOfType<SceneController>().canGoOut = true;
             Debug.Log("itWorks");
             FindObjectOfType<parentsScript>().Enable(true, true, momPosition, dadPosition,
                 () => speakToParents(),
