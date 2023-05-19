@@ -2251,8 +2251,35 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6245154386253088342, guid: 18ad10c403509594299fda3ae00a8960, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ad10c403509594299fda3ae00a8960, type: 3}
+--- !u!1 &1175454294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2214754643010925783, guid: 18ad10c403509594299fda3ae00a8960, type: 3}
+  m_PrefabInstance: {fileID: 1175454293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1175454295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175454294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de18da9f9985a6045aa997d9e8545e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnterZone:
+    m_PersistentCalls:
+      m_Calls: []
+  onExitZone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1216829090
 GameObject:
   m_ObjectHideFlags: 0

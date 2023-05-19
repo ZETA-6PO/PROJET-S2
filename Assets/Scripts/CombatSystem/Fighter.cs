@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fighter
+[CreateAssetMenu(fileName = "Fighter", menuName = "ScriptableObjects/Fighter", order = 3)]
+
+public class Fighter: ScriptableObject
 {
+    [SerializeField] public Sprite sprite;
+    
     public string unitName;
     public int resistance;
     public int inspiration;
     public AttackObject[] Attacks; // all ingame usable attacks
+    
+    
 
     /// <summary>
     /// Check inspiration, if < 0 then return false.

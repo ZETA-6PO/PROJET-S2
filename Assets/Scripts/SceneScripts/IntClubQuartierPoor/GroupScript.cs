@@ -15,10 +15,7 @@ public class GroupScript : MonoBehaviour
     public UnityEvent onEnterZone;
 
     public UnityEvent onExitZone;
-
-    public Vector3 momTransform;
-
-    public Vector3 dadTransform;
+    
     
     /// <summary>
     /// This function enable the parents object.
