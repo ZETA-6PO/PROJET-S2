@@ -5,8 +5,8 @@ using UnityEngine;
 public class Fighter
 {
     public string unitName;
-    public float resistance;
-    public float inspiration;
+    public int resistance;
+    public int inspiration;
     public AttackObject[] Attacks; // all ingame usable attacks
 
     /// <summary>
@@ -14,7 +14,7 @@ public class Fighter
     /// </summary>
     /// <param name="x"></param>
     /// <returns></returns>
-    public bool RemoveInspiration(float x)
+    public bool RemoveInspiration(int x)
     {
         inspiration -= x;
         if (inspiration < 0)
@@ -26,7 +26,7 @@ public class Fighter
         return true;
     }
 
-    public void AddInspiration(float x)
+    public void AddInspiration(int x)
     {
         inspiration += x;
         if (inspiration > 10)
@@ -35,7 +35,7 @@ public class Fighter
         }
     }
     
-    public void RemoveResistance(float x)
+    public void RemoveResistance(int x)
     {
         resistance -= x;
         if (resistance < 0)
@@ -44,7 +44,7 @@ public class Fighter
         }
     }
 
-    public void AddResistance(float x)
+    public void AddResistance(int x)
     {
         resistance += x;
         if (resistance > 10)
@@ -53,7 +53,7 @@ public class Fighter
         }
     }
 
-    public Fighter(string unitName, float resistance, float inspiration, AttackObject[] attack)
+    public Fighter(string unitName, int resistance, int inspiration, AttackObject[] attack)
     {
         this.unitName = unitName;
         this.inspiration = inspiration;

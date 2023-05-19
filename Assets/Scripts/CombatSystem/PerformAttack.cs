@@ -13,17 +13,17 @@ public class PerformAttack : MonoBehaviour
     private List<KeyCode> sequences;
     private UnityEvent<bool,Rarity> onCompleteAttack;
     private AttackObject attack;
+    public Animator animator;
     private bool started;
     private bool end;
-    private int timeLeft;
+    private float timeLeft;
         /// <summary>
     /// This function start an attack
     /// </summary>
-    public IEnumerator StartAttack(List<KeyCode> touchSequences, int timeToComplete, AttackObject attack, UnityEvent<bool,Rarity> onCompleteAttack)
+    public IEnumerator StartAttack(List<KeyCode> touchSequences, AttackObject attack, UnityEvent<bool,Rarity> onCompleteAttack)
     {
         sequences = touchSequences;
         this.onCompleteAttack = onCompleteAttack;
-        timeLeft = timeToComplete;
         this.attack = attack;
         gameObject.SetActive(true);
         timer.gameObject.SetActive(false); // on affiche pas le timer tant que ca a pas commemce
@@ -34,10 +34,12 @@ public class PerformAttack : MonoBehaviour
             yield return new WaitForSeconds(1);
             count -= 1;
         }
+        
         SoundManager.Instance.PlaySound(attack.sound);
         touch.text = sequences[0].ToString();
         started = true;
         timer.gameObject.SetActive(true);
+        timeLeft = attack.sound.length;
         yield return StartCoroutine(Timer());
         Debug.Log("merdeapute");
         
@@ -47,8 +49,8 @@ public class PerformAttack : MonoBehaviour
     {
         while (timeLeft > 0)
         {
-            yield return new WaitForSeconds(1);
-            timeLeft -= 1;
+            yield return new WaitForSeconds(0.1f);
+            timeLeft -= 0.1f;
             timer.text = $"{timeLeft}s";
         }
         end = true;
@@ -76,7 +78,7 @@ public class PerformAttack : MonoBehaviour
                     sequences.RemoveAt(0);
                     if (sequences.Count > 0)
                     {
-                        
+                        animator.SetTrigger("Start");
                         touch.text = sequences[0].ToString();
                     }
                 }
@@ -96,7 +98,7 @@ public class PerformAttack : MonoBehaviour
                     sequences.RemoveAt(0);
                     if (sequences.Count > 0)
                     {
-                        
+                        animator.SetTrigger("Start");
                         touch.text = sequences[0].ToString();
                     }
                 }
@@ -117,7 +119,7 @@ public class PerformAttack : MonoBehaviour
                     sequences.RemoveAt(0);
                     if (sequences.Count > 0)
                     {
-                        
+                        animator.SetTrigger("Start");
                         touch.text = sequences[0].ToString();
                     }
                 }
@@ -136,7 +138,7 @@ public class PerformAttack : MonoBehaviour
                     sequences.RemoveAt(0);
                     if (sequences.Count > 0)
                     {
-                        
+                        animator.SetTrigger("Start");
                         touch.text = sequences[0].ToString();
                     }
                 }
@@ -159,6 +161,7 @@ public class PerformAttack : MonoBehaviour
             if (sequences.Count == 0)
             {
                 onCompleteAttack.Invoke(true, attack.rarity);
+                SoundManager.Instance.StopSound();
                 SoundManager.Instance.PlaySound(bs.soundAttackSucceeded);
                 gameObject.SetActive(false);
             }

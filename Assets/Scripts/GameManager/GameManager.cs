@@ -1,18 +1,37 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// This class is one of the most important class of the game.
+/// It handles all the quest, menus, inventory system.
+/// </summary>
 public class GameManager : MonoBehaviour, IDataPersistence
 {
+    ///////////////////////////////////////
+    /// Singletons part do not edit pl. ///
+    ///////////////////////////////////////
     public static GameManager Instance { get; private set; }
-
+    public void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+    
+    
+    ///////////////////////////////////////
+    /// All the prefabs to instanciate. ///
+    ///////////////////////////////////////
     public PlayerMenuManager prefabPlayerMenu;
     private PlayerMenuManager refPlayerMenu;
 
@@ -21,15 +40,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
     
     public ShopManager prefabShop;
     private ShopManager refShop;
-
-    public List<Item> invL = new List<Item>();
+    
+    ///////////////////////////////
+    /// Menu related variables. ///
+    ///////////////////////////////
     private bool isPlayerMenuOpened = false;
     private bool isShopOpen = false;
     
     
-    /// <summary>
-    /// PlayerStats
-    /// </summary>
+    //////////////////////////////////
+    /// Player stats and inventory ///
+    //////////////////////////////////
     public int coin { get; private set; }
 
     public Dictionary<Item, int> items { get; set; } = new Dictionary<Item, int>();
@@ -40,6 +61,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int playerResistance;
     public int playerInspiration;
     public int playerFame;
+    
+    /// <summary>
+    /// Used to add a single item to the inventory.
+    /// </summary>
+    /// <param name="item"></param>
     public void AddOneItem(Item item)
     {
         if (items.Keys.Contains(item))
@@ -123,18 +149,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             dataQuest.questProperties = quests.First(quest => quest.QuestId == dataQuest.questId).SaveQuestProperties();
         }
     }
-    public void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+    
     
     public void OnSceneLoad()
     {
@@ -174,13 +189,16 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         if (Input.GetKeyUp(KeyCode.C))
         {
-            StartACombat(new Fighter("Opponent", 10, 10, new AttackObject[]{}), (arg0 => Debug.Log($"Combat won by : {arg0}")));
+            StartACombat(new Fighter("Opponent", 10, 10, new AttackObject[]{}), (arg0) =>
+            {
+                Debug.Log($"Combat end : win : {arg0}");
+            });
         }
 
     }
     
     ////////////////////////////////////////////////////////
-    /// All those variable handle the Inventory and Shop.///
+    /// All those methods handle the Inventory and Shop. ///
     ////////////////////////////////////////////////////////
     public void OpenInventory()
     {
@@ -266,8 +284,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void StartACombat(Fighter enemy, UnityAction<bool> onCombatFinished)
     {
         refCombat = Instantiate(prefabCombat);
-        Fighter player = new Fighter("Player", playerResistance, playerInspiration, stuff);
-        refCombat.StartABattle(player, enemy, onCombatFinished);
+        Fighter player = new Fighter(playerName, playerResistance, playerInspiration, stuff);
+        refCombat.StartABattle(player, enemy, onCombatEnd);
+        
+        void onCombatEnd(bool win, int resistance, int inspiration)
+        {
+            playerResistance = resistance;
+            playerInspiration = inspiration;
+            onCombatFinished(win);
+        }
     }
     
     

@@ -8,6 +8,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
 
     [SerializeField] private AudioSource musicSource, effectsSource;
+    public AudioClip gameMusic;
 
     private void Awake()
     {
@@ -30,6 +31,16 @@ public class SoundManager : MonoBehaviour
     public void StopSound()
     {
         if (effectsSource is not null) effectsSource.Stop();
+    }
+    
+    public void PlayMusic()
+    {
+        if (musicSource is not null) musicSource.UnPause();
+    }
+
+    public void StopMusic()
+    {
+        if (musicSource is not null) musicSource.Pause();
     }
 
     public void ChangeMasterVolume(float value)

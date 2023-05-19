@@ -108,13 +108,13 @@ RectTransform:
   m_Children:
   - {fileID: 1839512365436715859}
   m_Father: {fileID: 4216111683373078195}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.49999997, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 246, y: 2.2848}
+  m_SizeDelta: {x: -572.9733, y: -70.3915}
+  m_Pivot: {x: 0.5000007, y: 0.5}
 --- !u!222 &3011057003986089745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -185,8 +185,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6434876544521719068}
   - {fileID: 5209364073777410591}
+  - {fileID: 6434876544521719068}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -336,12 +336,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4216111683373078195}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.744, y: 2.6768}
-  m_SizeDelta: {x: 486.2887, y: 76.1148}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -65.38202, y: 2.2848}
+  m_SizeDelta: {x: -169.1714, y: -30.903}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5836192926280628428
 CanvasRenderer:
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bread For Dad
+  m_text: 'Bread For Dad '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
   m_sharedMaterial: {fileID: -7294418382763209940, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.75
+  m_fontSize: 57.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

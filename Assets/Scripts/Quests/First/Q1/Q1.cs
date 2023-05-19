@@ -1,11 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Threading.Tasks.Sources;
-using Unity.VisualScripting;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Q1", menuName = "Quest/Q1", order = 1)]

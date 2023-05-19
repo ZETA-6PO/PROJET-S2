@@ -27,7 +27,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] public AudioClip soundAttackSucceeded;
     [SerializeField] public AudioClip soundAttackFailed;
 
-    private UnityAction<bool> onCombatEnd;
+    private UnityAction<bool, int, int> onCombatEnd;
     public int[] _uses = { 0, 0, 0, 0 };
     
     public Fighter Player => player;
@@ -90,7 +90,7 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     /// <param name="player"></param>
     /// <param name="enemy"></param>
-    public void StartABattle(Fighter player, Fighter enemy, UnityAction<bool> onEnd)
+    public void StartABattle(Fighter player, Fighter enemy, UnityAction<bool, int, int> onEnd)
     {
         this.player = player;
         this.enemy = enemy;
@@ -98,6 +98,7 @@ public class BattleSystem : MonoBehaviour
         Interface.Initialize(player, enemy);
         Appreciation = 50;
         _state = BattleState.Beginning;
+        SoundManager.Instance.StopMusic();
         StartCoroutine(BeginBattle());
     }
 
@@ -174,8 +175,8 @@ public class BattleSystem : MonoBehaviour
             }
             Debug.Log("Selected attack");
             Debug.Log(a.input.sequence);
-            
-            StartCoroutine(performAttack.StartAttack(a.input.sequence.ToList(), 15,a, onCompleteAttack));
+            player.RemoveInspiration(GetRemovedInspiration(a.rarity));
+            StartCoroutine(performAttack.StartAttack(a.input.sequence.ToList(), a, onCompleteAttack));
         }
         
         IEnumerator OnCompleteAttack(bool succeeded,Rarity rarity)
@@ -225,6 +226,22 @@ public class BattleSystem : MonoBehaviour
                 return 30;
         }
     }
+    
+    private int GetRemovedInspiration(Rarity rarity)
+    {
+        switch (rarity)
+        {
+            case Rarity.Common:
+                return 1;
+            case Rarity.Hyped:
+                return 2;
+            case Rarity.Legendary:
+                return 3;
+            default:
+                return 4;
+        }
+    }
+
 
     private IEnumerator PlayerHeal(Consumable consumable)
     {
@@ -272,14 +289,16 @@ public class BattleSystem : MonoBehaviour
             case BattleState.Won:
                 Interface.SetDialogText("You won the battle!");
                 yield return new WaitForSeconds(5);
+                SoundManager.Instance.PlayMusic();
                 Destroy(gameObject);
-                onCombatEnd(true);
+                onCombatEnd(true, player.inspiration, player.resistance);
                 break;
             case BattleState.Lost:
                 Interface.SetDialogText("You were defeated.");
                 yield return new WaitForSeconds(5);
+                SoundManager.Instance.PlayMusic();
                 Destroy(gameObject);
-                onCombatEnd(false);
+                onCombatEnd(false, player.inspiration, player.resistance);
                 
                 break;
             default:
