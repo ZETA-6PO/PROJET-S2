@@ -47,7 +47,7 @@ public class Q1 : Quest
                 {
                     new SingleDialogue("Dad", new[]
                     {
-                        "Thanks son ! For helping us, we give you some money which could help you. Here’s 20 Hype Coins, make good use of them my boy.",
+                        "Thanks son ! For helping us, we give you some money which could help you. Here’s 20 Hype Coins, make good use of them my boy."
                     })
                 }),
                 Array.Empty<string>(),
