@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu(menuName = "Scriptable object/Item")] 
+[CreateAssetMenu(menuName = "ScriptableObject/Item")] 
 public class Item :ScriptableObject
 {
     [Header("On Cell")]
