@@ -41,14 +41,17 @@ public class Q2 : Quest
                     {
                         new SingleDialogue("", new[]
                         {
-                            "Good! Now you really can start making some music."
+                            "Good! Now you really can start making some music.",
+                            "In order to start your musical career, you must go to the youth center to do a " +
+                            "demonstration in front of the children."
                         })
+
                     }),
                     Array.Empty<string>(),
                     i => { });
                 Active = false;
-                Completed = false;
-                //GameManager.Instance.quests[3].Active = true;
+                Completed = true;
+                GameManager.Instance.quests[3].Active = true;
             }
         }
         else
