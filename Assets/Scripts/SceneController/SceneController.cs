@@ -1,8 +1,9 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
-    public class SceneController : MonoBehaviour
+public class SceneController : MonoBehaviour
     {
         
         public PlayerController playerController;
@@ -28,7 +29,7 @@ using UnityEngine;
         {
             
         }
-        
+
         //This function instanciate player, camera, dialogbox
         void PreStart()
         {
@@ -44,6 +45,17 @@ using UnityEngine;
             playerController = playerInstanciated.GetComponent<PlayerController>();
             playerController.canMove = true;
             GameManager.Instance.OnSceneLoad();
+            
+            //Set if the MiniMap appear or not if we are in Exterior or in Interior
+            
+            if (SceneManager.GetActiveScene().name.StartsWith("Ext"))
+            {
+                cf.MiniMapAnim.MiniMapAnimator.SetBool("IsOpen", true);
+            }
+            else
+            {
+                cf.MiniMapAnim.MiniMapAnimator.SetBool("IsOpen", false);
+            }
         }
         
         //set the variable prior the start
