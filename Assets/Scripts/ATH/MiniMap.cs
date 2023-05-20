@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class MiniMap : MonoBehaviour
 {
-    public Transform player;
+    public Animator MiniMapAnimator;
     
-    // Update is called once per frame
-    void LateUpdate()
+
+    public void EnableMiniMap()
     {
-        Vector3 newPosition = player.position;
-        newPosition.y = transform.position.y;
-        transform.position = newPosition;
+        MiniMapAnimator.SetBool("IsOpen", true);
     }
+
+    public void DisableMiniMap()
+    {
+        MiniMapAnimator.SetBool("IsOpen", false);
+    }
+    
 }

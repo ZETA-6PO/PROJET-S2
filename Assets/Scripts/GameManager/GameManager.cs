@@ -40,6 +40,12 @@ public class GameManager : MonoBehaviour, IDataPersistence
     
     public ShopManager prefabShop;
     private ShopManager refShop;
+
+    public ATH prefabATH;
+    private ATH refATH;
+
+
+    public GameObject debugMenu;
     
     ///////////////////////////////
     /// Menu related variables. ///
@@ -61,6 +67,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int playerResistance;
     public int playerInspiration;
     public int playerFame;
+
+    
     
     /// <summary>
     /// Used to add a single item to the inventory.
@@ -157,12 +165,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
         {
             quest.OnLoadScene(SceneManager.GetActiveScene().name);
         }
+        
+        // Instatiate the ATH for the coins
+        refATH = Instantiate(prefabATH);
     }
 
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.F3))
         {
             Debug.Log(quests[0].Active);
             if (isPlayerMenuOpened)
@@ -175,7 +186,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             }
         }
         
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.F2))
         {
             if (isShopOpen)
             {
@@ -185,9 +196,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
             {
                 //OpenShop(//laZikakaMixTape);
             }
+            
         }
 
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.F1))
+        {
+            Instantiate(debugMenu);
+        }
+
+        if (Input.GetKeyUp(KeyCode.F4))
         {
             StartACombat(new Fighter("Opponent", 10, 10, new AttackObject[]{}), (arg0) =>
             {
