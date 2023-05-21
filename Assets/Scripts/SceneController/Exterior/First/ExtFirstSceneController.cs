@@ -6,6 +6,6 @@ using UnityEngine;
 
 public class ExtFirstSceneController : SceneController
 {
-
+    
 
 }

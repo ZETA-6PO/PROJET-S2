@@ -68,8 +68,10 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int playerInspiration;
     public int playerFame;
 
-    
-    
+    public bool isWaypointActive = false;
+    public Vector3 displayedWaypoint;
+
+
     /// <summary>
     /// Used to add a single item to the inventory.
     /// </summary>
@@ -211,7 +213,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
                 Debug.Log($"Combat end : win : {arg0}");
             });
         }
-
+        
     }
     
     ////////////////////////////////////////////////////////

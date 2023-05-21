@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Q1", menuName = "Quest/Q1", order = 1)]
@@ -29,6 +30,23 @@ public class Q1 : Quest
             FindObjectOfType<parentsScript>().Enable(true, true, momPosition, dadPosition,
                 () => speakToParents(),
                 () => { }, () => { }, () => { });
+        }
+
+        if (sceneName == "ExtFirstScene")
+        {
+            GameManager.Instance.isWaypointActive = true;
+            if (GameManager.Instance.IsInInventory("Bread"))
+            {
+                GameManager.Instance.displayedWaypoint = waypoints[1];
+            }
+            else
+            {
+                GameManager.Instance.displayedWaypoint = waypoints[0];
+            }
+        }
+        else
+        {
+            GameManager.Instance.isWaypointActive = false;
         }
     }
 

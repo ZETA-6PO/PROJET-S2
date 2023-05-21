@@ -56,7 +56,7 @@ public class Q2 : Quest
                     {
                         new SingleDialogue("", new[]
                         {
-                            "With this money, you’ll be able to buy your first instrument at the music store, let’s check it out."
+                            "With this money, you’ll be able to buy a Fire Harmonica at the music store, let’s check it out."
                         })
                     }),
                     Array.Empty<string>(),
@@ -64,6 +64,25 @@ public class Q2 : Quest
             }
         }
         
+        
+        //Gestion des waypoints sur la MiniMap
+        if (sceneName == "ExtFirstScene")
+        {
+            GameManager.Instance.isWaypointActive = true;
+            if (GameManager.Instance.IsInInventory("Fire Harmonica"))
+            {
+                GameManager.Instance.displayedWaypoint = waypoints[1];
+            }
+            else
+            {
+                GameManager.Instance.displayedWaypoint = waypoints[0];
+            }
+        }
+        else
+        {
+            GameManager.Instance.isWaypointActive = false;
+        }
+    
     }
     
 

@@ -119,8 +119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -0, y: 2}
+  m_SizeDelta: {x: 340, y: 340}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5108120022657415459
 CanvasRenderer:
@@ -193,8 +193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -796, y: 376}
-  m_SizeDelta: {x: 320, y: 320}
+  m_AnchoredPosition: {x: -750, y: 334}
+  m_SizeDelta: {x: 370, y: 370}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8336609111055424855
 CanvasRenderer:
@@ -301,7 +301,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 119
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  MiniMapAnim: {fileID: 1337793060258267057}
+  MiniMapAnim: {fileID: 8921303122088999160}
   timeOffset: 0
   posOffset: {x: 0, y: 0, z: -15}
 --- !u!81 &7849791831099689549
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 7338777629973204729}
   - component: {fileID: 2848822543597571220}
   - component: {fileID: 1068404373944845047}
-  - component: {fileID: 1337793060258267057}
+  - component: {fileID: 8921303122088999160}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -460,7 +460,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1337793060258267057
+--- !u!114 &8921303122088999160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8085785097215470423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8e7c29278d2084597d0db3333567b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 16bf63bc6a56461a8763da8ff1bf1772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MiniMapAnimator: {fileID: 1068404373944845047}
