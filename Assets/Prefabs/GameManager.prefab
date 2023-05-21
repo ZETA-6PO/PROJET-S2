@@ -58,8 +58,12 @@ MonoBehaviour:
   playerResistance: 8
   playerInspiration: 10
   playerFame: 0
+  isWaypointActive: 0
+  displayedWaypoint: {x: 0, y: 0, z: 0}
   quests:
   - {fileID: 11400000, guid: 53d9f426901b1d54e92ea75c0c4d748d, type: 2}
   - {fileID: 11400000, guid: 32f5b458d5afd15449ca45f371582f11, type: 2}
   - {fileID: 11400000, guid: f4999ddd4c00a1e4d9f15eaba00a09a9, type: 2}
   - {fileID: 11400000, guid: 2ca3067bebaf31f47b610678782dc12f, type: 2}
+  - {fileID: 11400000, guid: 6e852b1d3449699479bb71f3d8e0a198, type: 2}
+  - {fileID: 11400000, guid: 0c44b966e57b2a644b2b508668076cfd, type: 2}

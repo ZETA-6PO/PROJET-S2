@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject cellPrefab;
     public GameObject panel;
     public DescriptionSpace space;
-    
+
 
     public void UpdateInventory(Dictionary<Item, int> items)
     {

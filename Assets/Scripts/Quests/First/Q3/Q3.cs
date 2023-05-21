@@ -69,16 +69,27 @@ public class Q3 : Quest
                     i => { });
                 Active = false;
                 Completed = true;
-                //GameManager.Instance.quests[4].Active = true;
+                GameManager.Instance.quests[4].Active = true;
             }
+        }
+        
+        
+        //Gestion Waypoints
+        if (sceneName == "ExtFirstScene")
+        {
+            GameManager.Instance.isWaypointActive = true;
+            GameManager.Instance.displayedWaypoint = waypoints[0];
+        }
+        else
+        {
+            GameManager.Instance.isWaypointActive = false;
         }
 
     }
 
     private void StartBattleDialogue()
     {
-        // Dialogue before Combat
-
+        //Dialogue before Battle
         FindObjectOfType<DialogManager>().StartDialogue(
             new Dialogue(new[]
             {
@@ -100,15 +111,24 @@ public class Q3 : Quest
                     "Good luck to you!"
                 })
             }),
-            Array.Empty<string>(),
-            i => { });
-        
-        StartBattle();
+            new string[]{"Let's Go!", "Can you repeat ?"},
+            i =>
+            {
+                if (i == 1)
+                {
+                    StartBattle();
+                }
+                else
+                {
+                    StartBattleDialogue();
+                }
+            });
     }
 
     private void StartBattle()
     {
         Fighter ennemy = new Fighter("Sam", 20, 20, new AttackObject[]{});
+        
         
         
         // Start Combat
@@ -130,12 +150,12 @@ public class Q3 : Quest
                         }),
                         new SingleDialogue("", new[]
                         {
-                            "Good job ! Here are 20 HypeCoins offered by the children to thank you for this performance."
+                            "Good job ! Here are 30 HypeCoins offered by the children to thank you for this performance."
                         })
                     }),
                     Array.Empty<string>(),
                     i => { });
-                FindObjectOfType<GameManager>().AddCoins(20);
+                FindObjectOfType<GameManager>().AddCoins(30);
                 Win = true;
             }
             else

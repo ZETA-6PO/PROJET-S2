@@ -8,7 +8,6 @@ public class IntBakeryPoor : SceneController
 //event function triggered when touching exiting point 
     public void OnExitScene(int i)
     {
-        Debug.Log("dkjlhgqsfd");
         SceneManager.LoadScene("ExtFirstScene");
     }
 

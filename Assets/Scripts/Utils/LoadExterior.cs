@@ -21,4 +21,6 @@ public class LoadExterior : MonoBehaviour
             onExit.Invoke(1);
         }
     }
+    
+    
 }

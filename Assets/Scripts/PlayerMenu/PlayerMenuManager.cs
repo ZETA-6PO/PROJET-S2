@@ -6,6 +6,7 @@ public class PlayerMenuManager : MonoBehaviour
     [SerializeField] private InventoryManager refInventoryManager;
     [SerializeField] private QuestManager refQuestManager;
     [SerializeField] private StatsManager refStatManager;
+
     
     
     public void UpdateAll(Dictionary<Item, int> items, List<Quest> quests,Item[] stuff)
@@ -14,6 +15,7 @@ public class PlayerMenuManager : MonoBehaviour
         refQuestManager.UpdateQuests(quests);
         refStatManager.UpdateStat(stuff,items);
     }
+    
     
     public void Close()
     {

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 /// <summary>
@@ -24,6 +25,9 @@ public abstract class Quest : ScriptableObject
     /// Stores the information required for the UI.
     /// </summary>
     [Header("Info")] public Info information;
+
+
+    [SerializeField] public List<Vector3> waypoints;
 
     public bool Active;
     public bool Completed;

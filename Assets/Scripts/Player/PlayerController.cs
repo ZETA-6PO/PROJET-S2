@@ -9,9 +9,19 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private Vector3 velocity;
     public bool canMove = true;
+    public DirectionalArrow refDirectionalArrow;
 
     void FixedUpdate()
     {
+        if (refDirectionalArrow.destination == Vector2.zero)
+        {
+            refDirectionalArrow.gameObject.SetActive(false);
+        }
+        else
+        {
+            refDirectionalArrow.gameObject.SetActive(true);
+        }
+        
         float h_move = canMove? Input.GetAxis("Horizontal") : 0;
         float v_move = canMove? Input.GetAxis("Vertical") : 0;
         
@@ -31,6 +41,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("SpeedX", rb.velocity.x);
         animator.SetFloat("SpeedY", rb.velocity.y);
     }
+    
     
     void MovePlayer(float _horizontalMovement, float _verticvalMovement)
     {
