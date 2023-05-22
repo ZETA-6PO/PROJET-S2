@@ -1,16 +1,32 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+    public TMP_Text shopName;
     public GameObject panel;
     public GameObject shopCellPrefab;
     public DescriptionSpace space;
-
+    
     public void UdpdateShop(List<Item> toBuy)
     {
+        shopName.text = "shop";
+        space.Change(toBuy[0]);
+        foreach (Item item in toBuy)
+        {
+            GameObject cellObject = Instantiate(shopCellPrefab, panel.transform);
+            ShopCell cell = cellObject.GetComponent<ShopCell>();
+            cell.InitialiseCell(item,this);
+        }
+    }
+    
+    public void UdpdateShop(List<Item> toBuy,string shop)
+    {
+        shopName.text = shop;
+        space.Change(toBuy[0]);
         foreach (Item item in toBuy)
         {
             GameObject cellObject = Instantiate(shopCellPrefab, panel.transform);

@@ -16,6 +16,11 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateInventory(Dictionary<Item, int> items)
     {
+        if (items.Count > 0)
+        {
+            Item first = items.Keys.First();
+            space.Change(first);
+        }
         foreach (Item item in items.Keys)
         {
             int number = items[item];
