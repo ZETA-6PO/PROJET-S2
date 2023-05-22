@@ -1,20 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ButcherScript : MonoBehaviour
 {
-    private UnityEvent onEnter;
+
+    public List<Item> toBuy;
     
-    public void Enable(Vector3 butcherTransform, UnityEvent onSpeak)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        transform.position = butcherTransform;
-        gameObject.SetActive(true);
-
-        onEnter = onSpeak;
-    }
-
-    public void OnTriggerEnter2D(Collider2D col)
-    {
-        onEnter?.Invoke();
+        GameManager.Instance.OpenShop(toBuy);
     }
 }

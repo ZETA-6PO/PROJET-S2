@@ -18,11 +18,11 @@ MonoBehaviour:
   description: This drum isn't made of the optimal material for an instrument, so
     you're going to have to hit hard!
   consumable: 0
-  MaxUse: 0
+  MaxUse: 20
   rarity: 0
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 6b163f8ea3af3b94daa054936d2b7391, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
   input:
-    sequence: 120100001201000012010000120100001201000012010000
-    time: 10
+    sequence: 110100001201000013010000130100001401000014010000
+    time: 8

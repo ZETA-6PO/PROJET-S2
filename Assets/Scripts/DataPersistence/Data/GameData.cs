@@ -39,7 +39,9 @@ public class GameData
             new QuestData("Q2", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q3", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q4", false, false, Array.Empty<QuestData.QuestProperty>()),
-            new QuestData("Q5", false, false, Array.Empty<QuestData.QuestProperty>())
+            new QuestData("Q5", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q6", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q7", false, false, Array.Empty<QuestData.QuestProperty>()),
         };
     }
     

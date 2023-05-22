@@ -78,6 +78,14 @@ public class GameManager : MonoBehaviour, IDataPersistence
     /// <param name="item"></param>
     public void AddOneItem(Item item)
     {
+        if (item is AttackObject)
+        {
+            int slot = FindSlot();
+            if (slot < 5)
+            {
+                stuff[slot] = (AttackObject)item;
+            }
+        }
         if (items.Keys.Contains(item))
         {
             if (item.consumable)
@@ -91,6 +99,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
             items[item] = 1;
             
         }
+    }
+
+    private int FindSlot()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (stuff[i] == null) return i;
+        }
+        return 5;
     }
 
     /// <summary>

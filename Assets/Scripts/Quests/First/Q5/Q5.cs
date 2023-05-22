@@ -24,8 +24,8 @@ public class Q5 : Quest
     {
         return null;
     }
-    
-    
+
+    public Vector3 positionLuv_Restla;
     
     public override void OnLoadScene(string sceneName)
     {
@@ -36,6 +36,7 @@ public class Q5 : Quest
 
         if (sceneName == "IntFirstStudioScene")
         {
+            FindObjectOfType<Luv_Restla>().TeleportAt(positionLuv_Restla);
             FindObjectOfType<DialogManager>().StartDialogue(
                 new Dialogue(new[]
                 {
@@ -114,7 +115,7 @@ public class Q5 : Quest
     public bool Win = false;
     private void StartBattle()
     {
-        Fighter ennemy = new Fighter("Luv Restla", 50, 30, attackLuv_Restla);
+        Fighter ennemy = new Fighter("Luv Restla", 50, 200, attackLuv_Restla);
         
         
         
@@ -149,7 +150,7 @@ public class Q5 : Quest
                 
                 Active = false;
                 Completed = true;
-                //GameManager.Instance.quests[6].Active = true;
+                GameManager.Instance.quests[6].Active = true;
                 
             }
             else
