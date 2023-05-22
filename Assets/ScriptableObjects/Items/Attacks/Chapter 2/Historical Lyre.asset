@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 1000
   description: Legend has it that Julius Caesar played with this Lyre!
   consumable: 0
-  Rarity: 2
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: 97a090e5776d9784ebe2bab9dce11bc5, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 
+    time: 0

@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 1000
   description: The honeyed sound of this cello will help you more than any other.
   consumable: 0
-  Rarity: 2
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: b57150487bb74d1498dc503581cca7c8, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 
+    time: 0

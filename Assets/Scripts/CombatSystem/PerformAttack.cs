@@ -11,7 +11,7 @@ public class PerformAttack : MonoBehaviour
     public Text timer;
     public Text touch;
     private List<KeyCode> sequences;
-    private UnityEvent<bool,Rarity> onCompleteAttack;
+    private UnityEvent<bool,AttackObject> onCompleteAttack;
     private AttackObject attack;
     public Animator animator;
     private bool started;
@@ -20,7 +20,7 @@ public class PerformAttack : MonoBehaviour
         /// <summary>
     /// This function start an attack
     /// </summary>
-    public IEnumerator StartAttack(List<KeyCode> touchSequences, AttackObject attack, UnityEvent<bool,Rarity> onCompleteAttack)
+    public IEnumerator StartAttack(List<KeyCode> touchSequences, AttackObject attack, UnityEvent<bool,AttackObject> onCompleteAttack)
     {
         sequences = touchSequences;
         this.onCompleteAttack = onCompleteAttack;
@@ -41,8 +41,7 @@ public class PerformAttack : MonoBehaviour
         timer.gameObject.SetActive(true);
         timeLeft = attack.sound.length;
         yield return StartCoroutine(Timer());
-        Debug.Log("merdeapute");
-        
+
     }
 
     public IEnumerator  Timer()
@@ -160,14 +159,14 @@ public class PerformAttack : MonoBehaviour
             BattleSystem bs = FindObjectOfType<BattleSystem>();
             if (sequences.Count == 0)
             {
-                onCompleteAttack.Invoke(true, attack.rarity);
+                onCompleteAttack.Invoke(true, attack);
                 SoundManager.Instance.StopSound();
                 SoundManager.Instance.PlaySound(bs.soundAttackSucceeded);
                 gameObject.SetActive(false);
             }
             else
             {
-                onCompleteAttack.Invoke(false, attack.rarity);
+                onCompleteAttack.Invoke(false, attack);
                 SoundManager.Instance.StopSound();
                 SoundManager.Instance.PlaySound(bs.soundAttackFailed);
                 gameObject.SetActive(false);

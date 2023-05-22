@@ -3,8 +3,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-
-
 /// <summary>
 /// This class is one of the most important class of the game.
 /// It handles all the quest, menus, inventory system.
@@ -165,6 +163,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             q.Completed = dataQuest.completed;
             q.LoadQuestProperties(dataQuest.questProperties);
         }
+
     }
 
     public void SaveData(GameData data)
@@ -176,8 +175,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
             dataQuest.questProperties = quests.First(quest => quest.QuestId == dataQuest.questId).SaveQuestProperties();
         }
     }
-    
-    
+
+
     public void OnSceneLoad()
     {
         foreach (var quest in quests.Where(quest => quest.Active )) 
