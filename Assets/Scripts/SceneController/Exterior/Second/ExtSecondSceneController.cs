@@ -4,7 +4,5 @@ using UnityEngine;
 
 public class ExtSecondSceneController : SceneController
 {
-    public override void Init()
-    {
-    }
+    
 }
