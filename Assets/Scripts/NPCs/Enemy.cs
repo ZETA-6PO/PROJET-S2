@@ -15,10 +15,13 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (refScreen is null)
+        if (GameManager.Instance.stuff[0] is not null)
         {
-            refScreen = Instantiate(screenPrefab,gameObject.transform);
-            refScreen.Initialise(this);
+            if (refScreen is null)
+            {
+                refScreen = Instantiate(screenPrefab,gameObject.transform);
+                refScreen.Initialise(this);
+            }
         }
     }
 
