@@ -11,6 +11,7 @@ public class QuestManager : MonoBehaviour
     
     public void UpdateQuests(List<Quest> quests)
     {
+        if (quests.Count>0) space.Change(quests[0]);
         QuestCell[] list = panel.GetComponents<QuestCell>();
         foreach (QuestCell cell in list)
         {

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
+  m_Name: Freeze_Fighter
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -1909728481, guid: 1ce2a59ff32979a4686e4dd75155eead, type: 3}
+  unitName: Chen Zen
+  resistance: 20
+  inspiration: 20
+  Attacks:
+  - {fileID: 11400000, guid: 44db0550388f58245bd3616dc3ffdab4, type: 2}
+  - {fileID: 11400000, guid: c4fb82e0dcba82647a584ff8c146d395, type: 2}
+  - {fileID: 11400000, guid: b217e8b8dc5609e4884269b1318a6317, type: 2}
+  - {fileID: 11400000, guid: ebe19e96d896ff940ae6e3d4ae744945, type: 2}

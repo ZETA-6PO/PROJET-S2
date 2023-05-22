@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
+  m_Name: Luv_Fighter
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -124227352, guid: 967aed4cd74275440acdaffceace99d2, type: 3}
+  unitName: Young Vador
+  resistance: 15
+  inspiration: 15
+  Attacks:
+  - {fileID: 11400000, guid: 9a144e4f039a71d41870d03b3a0d6f6d, type: 2}
+  - {fileID: 11400000, guid: 914d6ada3b0a5a6489eb3839252a8ef2, type: 2}
+  - {fileID: 11400000, guid: 43b5a09e385876e4ab93a60013b607d4, type: 2}
+  - {fileID: 11400000, guid: 4511329b79740a04bb63fabad67c8236, type: 2}
