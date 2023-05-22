@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 300
   description: This banjo is your best friend for any duel !
   consumable: 0
-  Rarity: 1
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: 6c9457ac7d934e340b2545ade6e5aea3, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 
+    time: 0

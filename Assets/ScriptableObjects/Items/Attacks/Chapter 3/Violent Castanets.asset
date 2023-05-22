@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 1000
   description: Watch your fingers !
   consumable: 0
-  Rarity: 2
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: 5a850902dcbd6ba45876f9ff85d9f86a, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 
+    time: 0

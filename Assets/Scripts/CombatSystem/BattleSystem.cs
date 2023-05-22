@@ -163,7 +163,7 @@ public class BattleSystem : MonoBehaviour
     private void PlayerAttack()
     {
         bool success = false;
-        UnityEvent<bool, Rarity > onCompleteAttack = new UnityEvent<bool, Rarity>();
+        UnityEvent<bool, AttackObject> onCompleteAttack = new UnityEvent<bool, AttackObject>();
         onCompleteAttack.AddListener(((arg0, arg1) => StartCoroutine(OnCompleteAttack(arg0,arg1))));
         attackMenu.OpenMenu(player,OnSelectAttack,this);
 
@@ -179,7 +179,7 @@ public class BattleSystem : MonoBehaviour
             StartCoroutine(performAttack.StartAttack(a.input.sequence.ToList(), a, onCompleteAttack));
         }
         
-        IEnumerator OnCompleteAttack(bool succeeded,Rarity rarity)
+        IEnumerator OnCompleteAttack(bool succeeded,AttackObject attack)
         {
             Debug.Log("123");
             success = succeeded;
@@ -187,7 +187,7 @@ public class BattleSystem : MonoBehaviour
             if (success)
             {
                 Interface.SetDialogText("Attack succeeded !");
-                isEnemyAlive = DecreaseEnemyAppreciationBy(GetDamage(rarity));
+                isEnemyAlive = DecreaseEnemyAppreciationBy(GetDamage(attack.rarity));
                 Debug.Log("marche ta mere1");
             }
             else

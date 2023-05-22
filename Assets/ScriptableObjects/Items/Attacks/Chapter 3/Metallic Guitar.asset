@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 300
   description: The guitar you have always dreamed of.
   consumable: 0
-  Rarity: 1
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: 60946fd7e9d00174db5fe710fc75fd2d, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 
+    time: 0

@@ -17,7 +17,11 @@ MonoBehaviour:
   price: 300
   description: Everyone Dance
   consumable: 0
-  Rarity: 2
+  MaxUse: 6
+  rarity: 0
   sound: {fileID: 8300000, guid: bc4f59827c8ae374b90077d9aac63da9, type: 3}
   DialogWhenAttackFail: 
   DialogWhenAttackSucceed: 
+  input:
+    sequence: 
+    time: 0
