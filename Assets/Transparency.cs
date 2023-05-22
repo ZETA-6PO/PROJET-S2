@@ -14,7 +14,7 @@ public class Transparency : MonoBehaviour
         {
             
             Color color = myMaterial.color;
-            color.a = 0.7f; 
+            color.a = 0.5f; 
             myMaterial.color = color; 
         }
         
