@@ -28,7 +28,7 @@ public class Q0 : Quest
                 {
                     new SingleDialogue("", new []
                     {
-                        "Welcom to hypepop !", "You always wanted to become a famous artist and the time has come !",
+                        "Welcome to HypePop !", "You always wanted to become a famous artist and the time has come !",
                         "From today, you will do everything that you can to grow in the world of music.",
                         "However, you are still living with your parents, so you need to help them sometimes, even more if you want them to help you.",
                         "Oh ! They call you to do them a favor, go see them."

@@ -290,16 +290,12 @@ public class Q6 : Quest
             });
     }
 
-    public AttackObject[] attackBoobsBas;
-    
+    public Fighter boobsBas;
+
     private void StartBattle()
     {
-        Fighter ennemy = new Fighter("Boobs Bas", 70, 40, attackBoobsBas);
-        
-        
-        
         // Start Combat
-        FindObjectOfType<GameManager>().StartACombat(ennemy, isWin =>
+        FindObjectOfType<GameManager>().StartACombat(boobsBas, isWin =>
         {
             if (isWin)
             {

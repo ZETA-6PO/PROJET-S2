@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Q0
   m_EditorClassIdentifier: 
   QuestId: Q0
-  dialogues:
-  - 
+  dialogues: []
   gameObjects: []
   information:
     name: INTRODUCTION
-    description: Va parler papa maman la
-  Active: 0
-  Completed: 1
+    description: Go speak to your parents.
+  waypoints: []
+  Active: 1
+  Completed: 0
   playerPosition: {x: 5, y: 1, z: 0}
   momPosition: {x: 1.38, y: -5.7, z: 0}
   dadPosition: {x: 0.35, y: -6.89, z: 0}

@@ -123,15 +123,12 @@ public class Q3 : Quest
                 }
             });
     }
-
+    
+    
     private void StartBattle()
     {
-        Fighter ennemy = new Fighter("Sam", 20, 20, new AttackObject[]{});
-        
-        
-        
         // Start Combat
-        FindObjectOfType<GameManager>().StartACombat(ennemy, isWin =>
+        FindObjectOfType<GameManager>().StartACombat(sam, isWin =>
         {
             if (isWin)
             {

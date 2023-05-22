@@ -35,4 +35,5 @@ public class GroupScript : MonoBehaviour
     {
         onExitZone.Invoke();
     }
+    
 }

@@ -111,16 +111,12 @@ public class Q5 : Quest
             });
     }
 
-    public AttackObject[] attackLuv_Restla;
+    public Fighter Luv_Restla;
     public bool Win = false;
     private void StartBattle()
     {
-        Fighter ennemy = new Fighter("Luv Restla", 50, 200, attackLuv_Restla);
-        
-        
-        
         // Start Combat
-        FindObjectOfType<GameManager>().StartACombat(ennemy, isWin =>
+        FindObjectOfType<GameManager>().StartACombat(Luv_Restla, isWin =>
         {
             if (isWin)
             {
