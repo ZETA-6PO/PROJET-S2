@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Enemy", menuName = "ScriptableObjects/Enemy", order = 4)]
+
 public class Enemy : MonoBehaviour
 {
     public Fighter fighter; //sprite waiting
