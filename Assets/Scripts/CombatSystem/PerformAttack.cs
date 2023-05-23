@@ -20,13 +20,14 @@ public class PerformAttack : MonoBehaviour
         /// <summary>
     /// This function start an attack
     /// </summary>
-    public IEnumerator StartAttack(List<KeyCode> touchSequences, AttackObject attack, UnityEvent<bool,AttackObject> onCompleteAttack)
+    public IEnumerator StartAttack(List<KeyCode> touchSequences, AttackObject attack, UnityEvent<bool,AttackObject> onCompleteAttack, bool isStressed)
     {
         sequences = touchSequences;
         this.onCompleteAttack = onCompleteAttack;
         this.attack = attack;
         gameObject.SetActive(true);
-        timer.gameObject.SetActive(false); // on affiche pas le timer tant que ca a pas commemce
+        timer.gameObject.SetActive(false);
+        timer.color = Color.black;// on affiche pas le timer tant que ca a pas commemce
         int count = 5;
         while (count > 0)
         {
@@ -34,12 +35,19 @@ public class PerformAttack : MonoBehaviour
             yield return new WaitForSeconds(1);
             count -= 1;
         }
-        
+
+        SoundManager.Instance.effectsSource.pitch = 2;
         SoundManager.Instance.PlaySound(attack.sound);
         touch.text = sequences[0].ToString();
         started = true;
         timer.gameObject.SetActive(true);
-        timeLeft = attack.sound.length;
+
+        if (isStressed)
+            timeLeft = attack.sound.length;
+        else
+            timeLeft = this.attack.sound.length / 2;
+        
+        
         yield return StartCoroutine(Timer());
 
     }
@@ -51,10 +59,12 @@ public class PerformAttack : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             timeLeft -= 0.1f;
             timer.text = $"{timeLeft}s";
+            if (timeLeft <= 3f && timer.color != Color.red)
+            {
+                timer.color = Color.red;
+            }
         }
         end = true;
-
-        
     }
 
     private void Update()
@@ -161,6 +171,7 @@ public class PerformAttack : MonoBehaviour
             {
                 onCompleteAttack.Invoke(true, attack);
                 SoundManager.Instance.StopSound();
+                SoundManager.Instance.effectsSource.pitch = 1;
                 SoundManager.Instance.PlaySound(bs.soundAttackSucceeded);
                 gameObject.SetActive(false);
             }
@@ -168,6 +179,7 @@ public class PerformAttack : MonoBehaviour
             {
                 onCompleteAttack.Invoke(false, attack);
                 SoundManager.Instance.StopSound();
+                SoundManager.Instance.effectsSource.pitch = 1;
                 SoundManager.Instance.PlaySound(bs.soundAttackFailed);
                 gameObject.SetActive(false);
             }

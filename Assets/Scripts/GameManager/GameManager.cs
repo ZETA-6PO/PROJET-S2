@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public ATH prefabATH;
     private ATH refATH;
 
+    public Sprite playerSprite;
+
 
     public GameObject debugMenu;
     
@@ -57,9 +60,27 @@ public class GameManager : MonoBehaviour, IDataPersistence
     //////////////////////////////////
     public int coin { get; private set; }
 
+    //lTHE INVENTORY AS A DICTIONNARY
     public Dictionary<Item, int> items { get; set; } = new Dictionary<Item, int>();
 
+    public Dictionary<Consumable, int> heal
+    {
+        get
+        {
+            Dictionary<Consumable, int> dico = new Dictionary<Consumable, int>();
+            foreach (Item item in items.Keys)
+            {
+                if (item is Consumable)
+                {
+                    dico[(Consumable)item] = items[item];
+                }
+            }
+            return dico;
+        }
+    }
+
     public AttackObject[] stuff  = new AttackObject[4];
+    public Fighter opponent;
 
     public string playerName;
     public int playerResistance;
@@ -107,6 +128,45 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
         return 5;
     }
+
+    /// <summary>
+    /// This function check wether or not the player has inspiration heal item in his inventory.
+    /// </summary>
+    public bool HasInspirationConsumable()
+    {
+        return items.Keys.Any((item =>
+        {
+            if (item is Consumable)
+            {
+                Consumable c = (Consumable)item;
+                return c.addedInspiration > 0;
+            }
+
+            return false;
+        }));
+    }
+    /// <summary>
+    /// This function check wether or not the player has resistance heal item in his inventory.
+    /// </summary>
+    public bool HasResistanceConsumable()
+    {
+        return items.Keys.Any((item =>
+        {
+            if (item is Consumable)
+            {
+                Consumable c = (Consumable)item;
+                return c.addedInspiration > 0;
+            }
+
+            return false;
+        }));
+    }
+
+    public bool HasConsumable()
+    {
+        return HasInspirationConsumable() || HasResistanceConsumable();
+    }
+    
 
     /// <summary>
     /// Used to remove an item from the player's inventory.
@@ -224,7 +284,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
         if (Input.GetKeyUp(KeyCode.F4))
         {
-            StartACombat(new Fighter("Opponent", 10, 10, new AttackObject[]{}), (arg0) =>
+            StartACombat(opponent, (arg0) =>
             {
                 Debug.Log($"Combat end : win : {arg0}");
             });
@@ -319,7 +379,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void StartACombat(Fighter enemy, UnityAction<bool> onCombatFinished)
     {
         refCombat = Instantiate(prefabCombat);
-        Fighter player = new Fighter(playerName, playerResistance, playerInspiration, stuff);
+        Fighter player = new Fighter(playerName, playerResistance, playerInspiration, stuff, playerSprite);
         refCombat.StartABattle(player, enemy, onCombatEnd);
         
         void onCombatEnd(bool win, int resistance, int inspiration)
