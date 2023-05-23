@@ -5,60 +5,135 @@ using UnityEngine;
 
 public class CarsAnimation : MonoBehaviour
 {
-    [Header("Car settings")] 
-    public float accelerationFactor = 30.0f;
-    public float turnFactor = 3.5f;
+    public float speed;
+    public Transform[] waypoints;
+
+    private Transform target;
+    private int destPoint = 0;
+
+    public Animator animator;
+    private Vector2 mouvement;
+
+    private bool is_Waiting;
     
-    // Local variables
-    private float accelerationInput = 0;
-    private float steeringInput = 0;
-    private float rotationAngle = 0;
-
-    private Rigidbody2D carRigidbody2D;
-
-    private void Awake()
-    {
-        carRigidbody2D = GetComponent<Rigidbody2D>();
-    }
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        target = waypoints[0];
     }
-
+    
+    IEnumerator tempWait()
+    {
+        speed = 0;
+        yield return new WaitForSeconds(0.5f);
+        animator.SetInteger("Rotation", 0);
+        speed = 5;
+        is_Waiting = false;
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        Vector3 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * (speed * Time.deltaTime), Space.World);
 
-    void ApplyEngineForce()
-    {
-        //create a force for the engine
-        Vector2 engineForceVector = transform.up * (accelerationInput * accelerationFactor);
-        
-        //Apply forces and pushes the car forward
-        carRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
-    }
+        if (Vector3.Distance(transform.position, target.position) < 0.3f && !is_Waiting)
+        {
+            Transform precedent = new RectTransform(); 
+            if (destPoint == 0)
+            {
+                precedent = waypoints[waypoints.Length - 1];
+            }
+            else
+            {
+                precedent = waypoints[destPoint - 1];
+            }
 
-    void ApplySteering()
-    {
-        //update the rotation angle based on input
-        rotationAngle -= steeringInput * turnFactor;
-        
-        //Apply steering by rotating the car object
-        carRigidbody2D.MoveRotation(rotationAngle);
-    }
-    private void FixedUpdate()
-    {
-        ApplyEngineForce();
-        ApplySteering();
-    }
+            Transform act = target;
+            
+            destPoint = (destPoint + 1) % waypoints.Length;
+            target = waypoints[destPoint];
 
-    public void SetInputVector(Vector2 inputVector)
-    {
-        steeringInput = inputVector.x;
-        accelerationInput = inputVector.y;
+            if (precedent.position.x > target.position.x)
+            {
+                if (precedent.position.y < target.position.y)
+                {
+                    if (precedent.position.x > act.position.x)
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 1); //Right ->  UP
+                        StartCoroutine(tempWait());
+                    }
+                    else
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 2); //Down -> Left   
+                        StartCoroutine(tempWait());
+                    }
+                }
+
+                if (precedent.position.y > target.position.y)
+                {
+                    if (precedent.position.x > act.position.x)
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 3); // Right -> Down
+                        StartCoroutine(tempWait());
+                    }
+                    else
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 4); // Up - > Left
+                        StartCoroutine(tempWait());
+                    }
+                }
+                // else : Right-Left Pas d'Anim
+            }
+
+            if (precedent.position.x < target.position.x)
+            {
+                if (precedent.position.y < target.position.y)
+                {
+                    if (precedent.position.x < act.position.x)
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 5); // Left -> Up
+                        StartCoroutine(tempWait());
+                    }
+                    else
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 6); // Down -> Right
+                        StartCoroutine(tempWait());
+                    }
+                }
+
+                if (precedent.position.y > target.position.y)
+                {
+                    if (precedent.position.x < act.position.x)
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 7); // Left -> Down
+                        StartCoroutine(tempWait());
+                    }
+                    else
+                    {
+                        is_Waiting = true;
+                        animator.SetInteger("Rotation", 8); // Up -> Right
+                        StartCoroutine(tempWait());
+                    }
+                }
+                // else : Left -> Right
+            }
+            // else : precedent.x = target.x Up -> Down // Down -> Up
+
+        }
+
+        mouvement.x = Vector3.Normalize(dir).x;
+        mouvement.y = Vector3.Normalize(dir).y;
+        if (!is_Waiting)
+        {
+            animator.SetFloat("Horizontal", mouvement.x);
+            animator.SetFloat("Vertical", mouvement.y);   
+        }
     }
 }

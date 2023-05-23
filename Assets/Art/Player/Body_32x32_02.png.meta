@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -11630,17 +11654,17 @@ TextureImporter:
       Body_32x32_02_265: 1008985725
       Body_32x32_02_154: 383847080
       Body_32x32_02_340: -539082829
-      Body_32x32_02_342: 1373516663
+      Body_32x32_02_346: 2039512735
       Body_32x32_02_17: -1556880278
       Body_32x32_02_296: -608505357
+      Body_32x32_02_342: 1373516663
       Body_32x32_02_23: -1074475146
       Body_32x32_02_392: -1117955489
-      Body_32x32_02_346: 2039512735
       Body_32x32_02_185: -329682851
-      Body_32x32_02_403: -1636984932
       Body_32x32_02_377: -1193531320
       Body_32x32_02_78: -1716635703
       Body_32x32_02_507: 948381930
+      Body_32x32_02_403: -1636984932
       Body_32x32_02_165: -1563426125
       Body_32x32_02_357: -327203127
       Body_32x32_02_184: 421400025
@@ -11751,45 +11775,45 @@ TextureImporter:
       Body_32x32_02_157: 767217292
       Body_32x32_02_384: -1283373807
       Body_32x32_02_458: 2034277651
-      Body_32x32_02_102: -1467111091
       Body_32x32_02_344: -726095330
+      Body_32x32_02_102: -1467111091
       Body_32x32_02_107: 1946467812
       Body_32x32_02_228: -1953257570
       Body_32x32_02_141: -1635475373
       Body_32x32_02_33: -1755513907
-      Body_32x32_02_81: 1486938935
-      Body_32x32_02_176: -1042747953
-      Body_32x32_02_130: -191484688
+      Body_32x32_02_353: -230886995
       Body_32x32_02_453: -1167840086
+      Body_32x32_02_130: -191484688
+      Body_32x32_02_81: 1486938935
       Body_32x32_02_376: 248976230
       Body_32x32_02_76: -1518791613
       Body_32x32_02_208: -916847679
       Body_32x32_02_32: 661903487
       Body_32x32_02_8: -1908337721
-      Body_32x32_02_66: 666671015
       Body_32x32_02_188: -1447162816
+      Body_32x32_02_416: 980307306
       Body_32x32_02_113: -1303242178
       Body_32x32_02_30: -1641517617
       Body_32x32_02_117: -1260841489
-      Body_32x32_02_274: 1172329038
+      Body_32x32_02_66: 666671015
+      Body_32x32_02_391: 1611737615
       Body_32x32_02_206: 1258746341
       Body_32x32_02_400: -689268669
       Body_32x32_02_328: 501841552
       Body_32x32_02_359: -80119582
       Body_32x32_02_459: -463520778
       Body_32x32_02_207: -1604836927
-      Body_32x32_02_391: 1611737615
       Body_32x32_02_18: -1852921173
-      Body_32x32_02_416: 980307306
+      Body_32x32_02_176: -1042747953
+      Body_32x32_02_274: 1172329038
       Body_32x32_02_148: 1034243503
       Body_32x32_02_485: -1373733219
       Body_32x32_02_484: -1809610022
-      Body_32x32_02_353: -230886995
       Body_32x32_02_82: -1211220727
       Body_32x32_02_197: -795198698
       Body_32x32_02_355: -1144244330
-      Body_32x32_02_237: 662771999
       Body_32x32_02_499: 857534541
+      Body_32x32_02_237: 662771999
       Body_32x32_02_45: 1264573447
       Body_32x32_02_467: -88121338
       Body_32x32_02_339: -1497170913
@@ -11806,21 +11830,21 @@ TextureImporter:
       Body_32x32_02_232: -483568118
       Body_32x32_02_284: 1874239116
       Body_32x32_02_36: -2078959693
+      Body_32x32_02_75: 933653207
       Body_32x32_02_6: 720916289
       Body_32x32_02_396: 323643297
-      Body_32x32_02_75: 933653207
-      Body_32x32_02_54: 1255711727
       Body_32x32_02_145: -1249585093
       Body_32x32_02_290: -1053563999
       Body_32x32_02_46: -966125689
-      Body_32x32_02_164: 974326347
+      Body_32x32_02_466: 996746164
       Body_32x32_02_10: -2112892090
       Body_32x32_02_150: 953839052
-      Body_32x32_02_466: 996746164
-      Body_32x32_02_490: 103304613
+      Body_32x32_02_54: 1255711727
       Body_32x32_02_289: 2115718536
       Body_32x32_02_378: -2113007614
+      Body_32x32_02_164: 974326347
       Body_32x32_02_108: -378364159
+      Body_32x32_02_490: 103304613
       Body_32x32_02_227: 1133377969
       Body_32x32_02_515: -610496215
       Body_32x32_02_210: 476491761
