@@ -1,4 +1,4 @@
-public enum BattleState
+public enum EBattleState
 {
     Beginning, 
     PlayerTurn, 

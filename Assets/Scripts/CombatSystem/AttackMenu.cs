@@ -11,6 +11,7 @@ public class AttackMenu : MonoBehaviour
     private List<LaunchAttackCell> cells;
     public GameObject panel;
     private BattleSystem _system;
+    public DescriptionSpace space;
 
 
     public void OpenMenu(Fighter player,Action<AttackObject> onAttackSelected,BattleSystem system)
@@ -20,6 +21,7 @@ public class AttackMenu : MonoBehaviour
         _system = system;
         gameObject.SetActive(true);
         OnAttackSelected = onAttackSelected;
+        space.Change(AttackList[0]);
     }
     
     public void Start()
@@ -32,10 +34,11 @@ public class AttackMenu : MonoBehaviour
                 AttackObject attack = AttackList[i];
                 if (attack is not null)
                 {
-                    NewCell(attack, _system._uses[i],i+1);
+                    NewCell(attack, 1,i+1);
                 }
             }
         }
+        
     }
     
     private void NewCell(AttackObject item, int number,int index)
@@ -68,7 +71,6 @@ public class AttackMenu : MonoBehaviour
     public void OnclickAttack(int i)
     {
         Debug.Log("OnclickAttack");
-        _system._uses[i - 1] -= 1;
         OnAttackSelected(AttackList[i-1]);
         CloseMenu();
     }

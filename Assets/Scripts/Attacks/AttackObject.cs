@@ -13,11 +13,47 @@ public class AttackObject: Item
 
     public int MaxUse;
     public Rarity rarity; // image in combat
+    public Effect effect;
+    public int InspirationCost
+    {
+        get
+        {
+            switch (rarity)
+            {
+                case Rarity.Common:
+                    return 1;
+                case Rarity.Hyped:
+                    return 2;
+                case Rarity.Legendary:
+                    return 3;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+    }
+    
+    public int ResistanceImpact
+    {
+        get
+        {
+            switch (rarity)
+            {
+                case Rarity.Common:
+                    return 1;
+                case Rarity.Hyped:
+                    return 2;
+                case Rarity.Legendary:
+                    return 3;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+    }
 
     public AudioClip sound;
+
+    public int damage;//the amount of damage made
     
-    public string DialogWhenAttackFail; //le text mis quand un player rate lattack
-    public string DialogWhenAttackSucceed; //le text mis quand un player reussi lattack
 
     [Serializable]
     public struct AttackInput
@@ -35,6 +71,10 @@ public class AttackObject: Item
         input.sequence = touchSequences;
         input.time = seconds;
     }
+    
+    
+    
+    
 }
 
 public enum Rarity
@@ -42,4 +82,14 @@ public enum Rarity
     Common, //unrarest
     Hyped,
     Legendary//rarest
+}
+
+
+// effets de status
+public enum Effect
+{
+    FreakOut, //effet de panic qui fait que le personnage ne pourra pas jouer pendant (RANDOM : 1 - 3 tours)
+    Mistake, //effet de fausse note qui fait que le joueur va jouer faux et fait qu'il prends un malus d'appreciation a chq++++ (RANDOM : 1 - 3 tours)
+    Stressed, //effet de stress qui fait que vous le joueur doit jouer toutes ces attaques en moitier moins de temps (RANDOM : 1 - 3 tours)
+    None
 }

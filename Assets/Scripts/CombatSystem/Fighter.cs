@@ -4,14 +4,16 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Fighter", menuName = "ScriptableObjects/Fighter", order = 3)]
 
-public class Fighter: ScriptableObject
+public class Fighter : ScriptableObject
 {
-    [SerializeField] public Sprite sprite;
+    public Sprite sprite;
     
     public string unitName;
     public int resistance;
     public int inspiration;
     public AttackObject[] Attacks; // all ingame usable attacks
+
+    public Difficulty difficulty;
     
     
 
@@ -22,14 +24,18 @@ public class Fighter: ScriptableObject
     /// <returns></returns>
     public bool RemoveInspiration(int x)
     {
-        inspiration -= x;
-        if (inspiration < 0)
+        
+        if (inspiration-x < 0)
         {
-            inspiration = 0;
             return false;
         }
+        else
+        {
+            inspiration -= x;
+            return true;
+        }
 
-        return true;
+        
     }
 
     public void AddInspiration(int x)
@@ -59,11 +65,22 @@ public class Fighter: ScriptableObject
         }
     }
 
-    public Fighter(string unitName, int resistance, int inspiration, AttackObject[] attack)
+    public Fighter(string unitName, int resistance, int inspiration, AttackObject[] attack, Sprite sprite)
     {
         this.unitName = unitName;
         this.inspiration = inspiration;
         this.resistance = resistance;
         this.Attacks = attack;
     }
+}
+
+
+/// <summary>
+/// level of difficulty of a fighter
+/// </summary>
+public enum Difficulty {
+    Easy = 0,
+    Normal = 1,
+    Difficult = 2,
+    Hard = 3,
 }

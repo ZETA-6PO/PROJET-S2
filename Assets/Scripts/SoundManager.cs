@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField] private AudioSource musicSource, effectsSource;
+    public AudioSource musicSource, effectsSource;
     public AudioClip gameMusic;
 
     private void Awake()
@@ -42,6 +42,23 @@ public class SoundManager : MonoBehaviour
     {
         if (musicSource is not null) musicSource.Pause();
     }
+
+    public void PlayDefaultMusic()
+    {
+        if (musicSource is null) return;
+        musicSource.clip = gameMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+    
+    public void PlayCertainMusic(AudioClip audio)
+    {
+        if (musicSource is null) return;
+        musicSource.clip = audio;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+    
 
     public void ChangeMasterVolume(float value)
     {

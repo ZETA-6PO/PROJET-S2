@@ -39,6 +39,11 @@ public class LaunchAttackCell : MonoBehaviour
 
     public void CellClicked()
     {
+        _launcher.space.Change(_attack);
+    }
+
+    public void PlayClicked()
+    {
         if (_number>0)
         {
             _number -= 1;

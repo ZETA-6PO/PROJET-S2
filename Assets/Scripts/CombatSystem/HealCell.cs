@@ -28,6 +28,11 @@ public class HealCell : MonoBehaviour
     
     public void CellClicked()
     {
+        _launcher.space.Change(_consumable);
+    }
+
+    public void UseClicked()
+    {
         if (number>0)
         {
             number -= 1;

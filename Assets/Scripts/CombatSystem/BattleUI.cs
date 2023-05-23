@@ -5,13 +5,9 @@ using UnityEngine.UI;
 public class BattleUI : MonoBehaviour
 {
     [SerializeField]
-    private GameObject playerPrefab;
+    private SpriteRenderer playerSprite;
     [SerializeField]
-    private GameObject enemyPrefab;
-    [SerializeField]
-    private Transform playerParent;
-    [SerializeField]
-    private Transform enemyParent;
+    private SpriteRenderer enemySprite;
     [SerializeField]
     private Text playerText;
     [SerializeField]
@@ -52,35 +48,41 @@ public class BattleUI : MonoBehaviour
     private void InitializePlayer(Fighter fighter)
     {
         playerText.text = fighter.unitName;
-        GameObject go = Instantiate(playerPrefab, playerParent, false);
+        playerSprite.sprite = fighter.sprite;
     }
         
     private void InitializeEnemy(Fighter fighter)
     {
         enemyText.text = fighter.unitName;
-            
-        var go = Instantiate(enemyPrefab, enemyParent, false);
+        enemySprite.sprite = fighter.sprite;
     }
 
     private void InitializeBar(Fighter player)
     {
-        inspiration.value = player.inspiration/10;
+        inspiration.value = player.inspiration / 10;
         resistance.value = player.resistance / 10;
         appreciation.value = 0.5f;
     }
 
-    public void UpdateAppreciation(float appreciation)
+    public void UpdateAppreciation(float _appreciation)
     {
-        this.appreciation.value = appreciation;
+        if (_appreciation>1)
+            this.appreciation.value = _appreciation/100;
+        else
+        {
+            this.appreciation.value = _appreciation;
+        }
     }
     
     public void UpdateInspiration(float inspiration)
     {
-        this.inspiration.value = inspiration;
+        Debug.LogError($"updt inspi = {inspiration}");
+        this.inspiration.value = inspiration/10;
     }
     
     public void UpdateResistance(float resistance)
     {
-        this.resistance.value = resistance;
+        Debug.LogError($"updt inspi = {resistance}");
+        this.resistance.value = resistance/10;
     }
 }
