@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using Vector3 = UnityEngine.Vector3;
+
 /// <summary>
 /// This class is one of the most important class of the game.
 /// It handles all the quest, menus, inventory system.
@@ -67,7 +70,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int playerFame;
 
     public bool isWaypointActive = false;
-    public Vector3 displayedWaypoint;
+    public Vector3 displayedWaypoint = Vector3.zero;
 
 
     /// <summary>
