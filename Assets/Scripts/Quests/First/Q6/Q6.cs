@@ -110,8 +110,7 @@ public class Q6 : Quest
                     if (GameManager.Instance.coin == 140)
                     {
                         FindObjectOfType<DialogManager>().StartDialogue(
-                            new Dialogue(new[]
-                            {
+                            new Dialogue(new[] {
                                 new SingleDialogue("", new[]
                                 {
                                     "Go to the Butchery!"

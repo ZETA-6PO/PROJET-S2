@@ -1,6 +1,7 @@
 ﻿
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class DescriptionSpace : MonoBehaviour
     public TMP_Text attackRarity;
     public TMP_Text healInspi;
     public TMP_Text healResist;
+    public TMP_Text healDescription;
     
     public void Change(Item item)
     {
@@ -35,6 +37,8 @@ public class DescriptionSpace : MonoBehaviour
         {
             if (healInspi is not null) healInspi.text = ((Consumable)item).addedInspiration.ToString();
             if (healResist is not null) healResist.text = ((Consumable)item).addedResistance.ToString();
+            if (healDescription is not null) healDescription.text = ((Consumable)item).description;
+            if (refImage is not null) refImage.sprite = item.image;
         }
     }
 

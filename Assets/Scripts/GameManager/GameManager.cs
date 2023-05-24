@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public ATH prefabATH;
     private ATH refATH;
 
+
+    public Item TempAddSingleItem;
+    
+    
+
     public Sprite playerSprite;
 
 
@@ -86,7 +91,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public int playerResistance;
     public int playerInspiration;
     public int playerFame;
-
     public bool isWaypointActive = false;
     public Vector3 displayedWaypoint;
 
@@ -203,10 +207,12 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void AddCoins(int n)
     {
         coin += n;
+        refATH.UpdateCoin();
     }
     public void RemoveCoins(int n)
     {
         coin -= n;
+        refATH.UpdateCoin();
     }
 
 
@@ -251,6 +257,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void Update()
     {
+        
+        // THOSE ARE THE DEBUG KEY
+
         if (Input.GetKeyUp(KeyCode.F3))
         {
             Debug.Log(quests[0].Active);
@@ -266,14 +275,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         
         if (Input.GetKeyUp(KeyCode.F2))
         {
-            if (isShopOpen)
-            {
-                CloseShop();
-            }
-            else
-            {
-                //OpenShop(//laZikakaMixTape);
-            }
+            AddOneItem(TempAddSingleItem);
             
         }
 
@@ -378,14 +380,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     public void StartACombat(Fighter enemy, UnityAction<bool> onCombatFinished)
     {
+        refATH.DisableATH();
         refCombat = Instantiate(prefabCombat);
         Fighter player = new Fighter(playerName, playerResistance, playerInspiration, stuff, playerSprite);
         refCombat.StartABattle(player, enemy, onCombatEnd);
-        
         void onCombatEnd(bool win, int resistance, int inspiration)
         {
             playerResistance = resistance;
             playerInspiration = inspiration;
+            refATH.EnableATH();
             onCombatFinished(win);
         }
     }
