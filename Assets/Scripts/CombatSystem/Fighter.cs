@@ -71,6 +71,7 @@ public class Fighter : ScriptableObject
         this.inspiration = inspiration;
         this.resistance = resistance;
         this.Attacks = attack;
+        this.sprite = sprite;
     }
 }
 

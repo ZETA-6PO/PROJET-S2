@@ -126,7 +126,6 @@ public class BattleSystem : MonoBehaviour
         {
             var _tmpCombatState = combatState; 
             yield return new WaitForSeconds(2f); //wait time between each turn
-            Debug.LogError(combatState);
             if (playerEffects[Effect.Mistake] > 0)
             {
                 refUi.SetDialogText($"{Player.unitName} will play wrong for {playerEffects[Effect.Mistake]-1} more rounds. As a result, the public appreciates him less, you lose appreciation.");
@@ -156,7 +155,6 @@ public class BattleSystem : MonoBehaviour
                 StartCoroutine(BeginBattle());
             }else if (combatState == EBattleState.PlayerTurn)
             {
-                Debug.LogError("Entered playerturn");
                 if (playerEffects[Effect.FreakOut] == 0)
                 {
                     StartCoroutine(PlayerTurn());
@@ -171,7 +169,6 @@ public class BattleSystem : MonoBehaviour
                 
             }else if (combatState == EBattleState.EnemyTurn)
             {
-                Debug.LogError("Entered enemyturn");
                 if (enemyEffects[Effect.FreakOut] == 0)
                 {
                     StartCoroutine(EnemyTurn());
@@ -196,7 +193,6 @@ public class BattleSystem : MonoBehaviour
                     enemyEffects[keyValuePair.Key] -= 1;
             }
             yield return new WaitUntil((() => combatState != _tmpCombatState));
-            Debug.LogError("new round");
         }
         StartCoroutine(EndGame());
     }
@@ -267,7 +263,9 @@ public class BattleSystem : MonoBehaviour
             refUi.SetDialogText("Forfeiting has never been a winning strategy.");
             yield return new WaitForSeconds(3f);
             combatState = EBattleState.Lost;
+            StartCoroutine(EndGame());
         }
+        StartCoroutine(LostMessage());
     }
     
     
@@ -294,6 +292,7 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     private IEnumerator PlayerTurn()
     {
+        refUi.EnableButtonForfeit();
         if (playerEffects[Effect.Stressed] > 0)
         {
             Interface.SetDialogText($"{player.unitName} is stressed for two more rounds.");
@@ -355,7 +354,6 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-                Debug.LogError("ddd");
                 combatState = EBattleState.EnemyTurn;
             }
             
@@ -372,7 +370,9 @@ public class BattleSystem : MonoBehaviour
             Interface.SetDialogText($"{Player.unitName} used {consumable.name} and gain {consumable.addedInspiration} inspiration.");
         
         player.AddInspiration(consumable.addedInspiration);
+        refUi.UpdateInspiration(player.inspiration);
         player.AddResistance(consumable.addedResistance);
+        refUi.UpdateResistance(player.resistance);
     
         yield return new WaitForSeconds(1f);
 
@@ -386,6 +386,7 @@ public class BattleSystem : MonoBehaviour
     /// <returns></returns>
     private IEnumerator EnemyTurn()
     {
+        refUi.DisableButtonForfeit();
         // if enemy has no inspiration, boost enemy inspiration
         if (enemy.inspiration  < 4)
         {
@@ -397,7 +398,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         // if enemy has the advantage and is low on resistance, he uses a consumable
-        if (appreciation < 30 && enemy.resistance < 5)
+        else if (appreciation < 30 && enemy.resistance < 5)
         {
             refUi.SetDialogText($"{player.unitName} uses an consumable to boost his resistance.");
             enemy.AddResistance(Random.Range(2,5));
@@ -407,7 +408,7 @@ public class BattleSystem : MonoBehaviour
         }
         
         // if the enemy is ultra low, he use his best attack
-        if (appreciation > 80 && enemy.difficulty == Difficulty.Difficult || enemy.difficulty == Difficulty.Hard)
+        else if (appreciation > 80 && enemy.difficulty == Difficulty.Difficult || enemy.difficulty == Difficulty.Hard)
         {
             AttackObject usedAttack = enemy.Attacks.OrderByDescending((o => o.rarity)).ToArray()[0];
 
@@ -460,7 +461,7 @@ public class BattleSystem : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-
+        refUi.DisableButtonForfeit();
         string RandomWinningMessage()
         {
             string[] winningMessages = new[]
