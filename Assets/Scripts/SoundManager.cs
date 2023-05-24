@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioSource musicSource, effectsSource;
     public AudioClip gameMusic;
+    public float volume;
 
     private void Awake()
     {

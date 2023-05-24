@@ -3402,7 +3402,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 6, z: 5, w: 6}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3423,7 +3423,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 6, z: 6, w: 8}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -3444,7 +3444,7 @@ TextureImporter:
         height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 5, z: 5, w: 6}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -5828,6 +5828,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Fullscreen_Off
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 904
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49542dbe1a91cd946ba31d10bf70a71f
+      internalID: -457380720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Fullscreen_Of
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 904
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b7c846e93f6ab4295774f7cd5ac573
+      internalID: -681650774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -5856,12 +5898,12 @@ TextureImporter:
       Modern_UI_Style_2_32x32_218: 1258857715
       Modern_UI_Style_2_32x32_509: -1754870272
       UI_Scrollbar_Handle_Horizontal: -1916907207
-      UI_MButton_Plus_2: -1537753567
-      Modern_UI_Style_2_32x32_81: 544337179
-      Modern_UI_Style_2_32x32_104: 1313765810
       UI_MButton_Write_3: -1017162956
-      Modern_UI_Style_2_32x32_54: 1403672414
+      UI_MButton_Plus_2: -1537753567
+      Modern_UI_Style_2_32x32_104: 1313765810
       Modern_UI_Style_2_32x32_599: -342148358
+      Modern_UI_Style_2_32x32_54: 1403672414
+      Modern_UI_Style_2_32x32_81: 544337179
       UI_MButton_Home_1: -857004449
       UI_Arrow_Down: 329098787
       UUI_Bar_Green_6: 617032284
@@ -5923,6 +5965,7 @@ TextureImporter:
       UI_Bar_Brown_5: -1315789945
       UI_Bar_Var_Red_4: 1507934080
       Modern_UI_Style_2_32x32_474: 1016417869
+      UI_Fullscreen_Off: -457380720
       Modern_UI_Style_2_32x32_87: 1866299646
       Modern_UI_Style_2_32x32_418: 464904314
       UI_Bar_Green_9: 2096278915
@@ -6371,6 +6414,7 @@ TextureImporter:
       UI_Bar_Yellow_7: -1790586307
       Modern_UI_Style_2_32x32_500: 841578069
       UI_Bar_Yellow_1: -974903440
+      UI_Fullscreen_Of: -681650774
       Modern_UI_Style_2_32x32_56: -1092371381
       Modern_UI_Style_2_32x32_174: -1927121577
       Modern_UI_Style_2_32x32_575: -787784080

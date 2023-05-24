@@ -9,7 +9,7 @@ public class VolumeSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SoundManager.Instance.ChangeMasterVolume(_slider.value);
+        _slider.value = SoundManager.Instance.volume;
         _slider.onValueChanged.AddListener(val => SoundManager.Instance.ChangeMasterVolume(val));
     }
 
