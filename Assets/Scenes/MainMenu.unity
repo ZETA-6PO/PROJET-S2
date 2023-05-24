@@ -4174,19 +4174,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1397261105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 96679361}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: ChargeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1397261105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4953,7 +4941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CHARGE GAME
+  m_text: MULTIPLAYER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09e4cea8a1fbc9041adc0d804df7b8e8, type: 2}
   m_sharedMaterial: {fileID: -4740976545775900547, guid: 09e4cea8a1fbc9041adc0d804df7b8e8, type: 2}
