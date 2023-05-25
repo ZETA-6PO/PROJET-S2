@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
   m_Name: Fighter
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  unitName: 
-  resistance: 0
-  inspiration: 0
-  Attacks: []
+  sprite: {fileID: -1173394310, guid: 74ca561df84ec2e40bf7c124742661cc, type: 3}
+  unitName: Kaaris
+  resistance: 100
+  inspiration: 50
+  Attacks:
+  - {fileID: 11400000, guid: c2d43448faecf18409fea829465ffc83, type: 2}
+  - {fileID: 11400000, guid: 5645652e0bf149a44805bd8f2587f736, type: 2}
+  - {fileID: 11400000, guid: 1fd336319839f2542ad0634e67099d97, type: 2}
+  - {fileID: 11400000, guid: b4a4cbdd02d7ae3408929faaca1cf434, type: 2}
+  difficulty: 1

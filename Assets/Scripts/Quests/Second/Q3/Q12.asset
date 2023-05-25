@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffca521aa32fdc4c9f6f7dc1ac2c640, type: 3}
+  m_Name: Q12
+  m_EditorClassIdentifier: 
+  QuestId: Q12
+  dialogues: []
+  gameObjects: []
+  information:
+    name: Creation Time!
+    description: Go to the studio boss in this neighborhood.
+  waypoints:
+  - {x: 31.5, y: 40.6, z: 0}
+  Active: 0
+  Completed: 0
+  mousePosition: {x: -1.0146412, y: 3.193069, z: 0}
+  toGive: {fileID: 11400000, guid: 4a00ea61fd400e743a6381662b1014f5, type: 2}

@@ -5,7 +5,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class MiniGraphControl : MonoBehaviour {
+public class MiniGraphControl : MonoBehaviour 
+{
 
 
     public enum GraphValueType

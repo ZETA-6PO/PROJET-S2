@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181e63168d0f2a342a33b5c6a1581f6d, type: 3}
+  m_Name: Q11
+  m_EditorClassIdentifier: 
+  QuestId: Q11
+  dialogues: []
+  gameObjects: []
+  information:
+    name: The new music store
+    description: Go see what the new music store has to offer !
+  waypoints:
+  - {x: 31.52, y: 9.76, z: 0}
+  Active: 0
+  Completed: 0
+  enemy: {fileID: 0}
