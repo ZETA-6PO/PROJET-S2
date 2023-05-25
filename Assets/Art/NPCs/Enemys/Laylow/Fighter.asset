@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
   m_Name: Fighter
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  unitName: 
-  resistance: 0
-  inspiration: 0
-  Attacks: []
+  sprite: {fileID: -1284104522, guid: 0c1b32130adce924bb0a03f6d48a80eb, type: 3}
+  unitName: Laylow
+  resistance: 50
+  inspiration: 50
+  Attacks:
+  - {fileID: 11400000, guid: aa573f406b9209a4890627def6167238, type: 2}
+  - {fileID: 11400000, guid: adebafc9d316d564195b11ea9b295284, type: 2}
+  - {fileID: 11400000, guid: 1f668154782faf34dbf85d7cb48ef54e, type: 2}
+  - {fileID: 11400000, guid: cbc897284fb2e3e4bb5729951b84ca3c, type: 2}
+  difficulty: 2
