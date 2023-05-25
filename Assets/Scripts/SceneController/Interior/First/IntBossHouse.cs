@@ -7,7 +7,7 @@ public class IntBossHouse : SceneController
 {
     public void OnExitScene(int i)
     {
-        SceneManager.LoadScene("ExtSecondScene");
+        SceneManager.LoadScene("ExtLastScene");
     }
     
     public override void Init()
