@@ -23,10 +23,11 @@ public class CarsAnimation : MonoBehaviour
     
     IEnumerator tempWait()
     {
+        float temp = speed;
         speed = 0;
         yield return new WaitForSeconds(0.5f);
         animator.SetInteger("Rotation", 0);
-        speed = 5;
+        speed = temp;
         is_Waiting = false;
     }
     
