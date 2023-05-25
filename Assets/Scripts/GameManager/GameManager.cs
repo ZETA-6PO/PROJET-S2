@@ -291,7 +291,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
                 Debug.Log($"Combat end : win : {arg0}");
             });
         }
-        
+
     }
     
     ////////////////////////////////////////////////////////
@@ -392,8 +392,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
             onCombatFinished(win);
         }
     }
-    
-    
-    
+
 }
 

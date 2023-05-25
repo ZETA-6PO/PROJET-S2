@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[CreateAssetMenu(fileName = "Enemy", menuName = "ScriptableObjects/Enemy", order = 4)]
 public class Enemy : MonoBehaviour
 {
     public Fighter fighter; //sprite waiting
@@ -15,13 +15,13 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (GameManager.Instance.stuff[0] is not null)
+        if (GameManager.Instance.stuff[0] != null)
         {
             if (refScreen is null)
             {
                 refScreen = Instantiate(screenPrefab,gameObject.transform);
                 refScreen.Initialise(this);
-            }
+            } 
         }
     }
 

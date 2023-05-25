@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
  
-using TMPro; // using text mesh for the clock display
+using TMPro;
+using UnityEngine.Events; // using text mesh for the clock display
  
 using UnityEngine.Rendering; // used to access the volume component
  
 public class DayNightScript : MonoBehaviour
 {
-    public TMP_Text timeDisplay; // Display Time
-    public TextMeshProUGUI dayDisplay; // Display Day
     public Volume ppv; // this is the post processing volume
- 
-    public float tick; // Increasing the tick, increases second rate
-    public float seconds; 
+    
     public int mins;
     public int hours;
-    public int days = 1;
- 
+
+    public UnityEvent<int> onUpdateMinute;
+
     public bool activateLights; // checks if lights are on
     public GameObject[] lights; // all the lights we want on when its dark
     public SpriteRenderer[] stars; // star sprites 
@@ -30,35 +28,11 @@ public class DayNightScript : MonoBehaviour
     // Update is called once per frame
     public void Update() // we used fixed update, since update is frame dependant. 
     {
-        CalcTime();
-        DisplayTime();
-     
+        mins = GameManager.Instance.GetComponent<Time_Gestion>().mins;
+        hours = GameManager.Instance.GetComponent<Time_Gestion>().hours;
+        ControlPPV();
     }
- 
-    public void CalcTime() // Used to calculate sec, min and hours
-    {
-        seconds += Time.fixedDeltaTime * tick; // multiply time between fixed update by tick
- 
-        if (seconds >= 60) // 60 sec = 1 min
-        {
-            seconds = 0;
-            mins += 1;
-        }
- 
-        if (mins >= 60) //60 min = 1 hr
-        {
-            mins = 0;
-            hours += 1;
-        }
- 
-        if (hours >= 24) //24 hr = 1 day
-        {
-            hours = 0;
-            days += 1;
-        }
-        ControlPPV(); // changes post processing volume after calculation
-    }
- 
+
     public void ControlPPV() // used to adjust the post processing slider.
     {
         //ppv.weight = 0;
@@ -80,6 +54,19 @@ public class DayNightScript : MonoBehaviour
                     }
                     activateLights = true;
                 }
+            }
+        }
+
+        if (hours >= 22 || hours < 6)
+        {
+            ppv.weight = 1;
+            if (activateLights == false) // if lights havent been turned on
+            {
+                for (int i = 0; i < lights.Length; i++)
+                {
+                    lights[i].SetActive(true); // turn them all on
+                }
+                activateLights = true;
             }
         }
      
@@ -104,9 +91,5 @@ public class DayNightScript : MonoBehaviour
             }
         }
     }
- 
-    public void DisplayTime() // Shows time and day in ui
-    {
-        timeDisplay.text = string.Format("{0:00}", hours); // The formatting ensures that there will always be 0's in empty spaces
-    }
+
 }
