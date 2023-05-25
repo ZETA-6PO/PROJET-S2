@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8751515485797064763}
   - component: {fileID: 8798312871100492427}
+  - component: {fileID: 548155471791403391}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52,10 +53,10 @@ MonoBehaviour:
   playerSprite: {fileID: 928704214, guid: 165d476367561834ca316d978695caea, type: 3}
   debugMenu: {fileID: 3056471417896715908, guid: a969b4daa7b5ba64da379ed818c66160, type: 3}
   stuff:
-  - {fileID: 11400000, guid: 130143eaf9728f246b005a9b11ac298c, type: 2}
-  - {fileID: 11400000, guid: 792b5f7b34ff5cd4eab64f28ec850f57, type: 2}
-  - {fileID: 11400000, guid: 42cfccc5a4cb96748bb3ef6184b9a9b4, type: 2}
-  - {fileID: 11400000, guid: ebd8fdda9021bb249b4d29e304ee2e18, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   opponent: {fileID: 11400000, guid: fd58fecdb5293fb479692378e1a18ba2, type: 2}
   playerName: Michel
   playerResistance: 10
@@ -74,3 +75,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2cbd914609b563546a82da256d868f2d, type: 2}
   - {fileID: 11400000, guid: 6786b7c5f2688dc44a7841961390addc, type: 2}
   - {fileID: 11400000, guid: 628a41bf970eaf14baf4dfcfe61672b1, type: 2}
+--- !u!114 &548155471791403391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3474935102350648821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db237ddd34b3bd54aa37df0ca5255181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tick: 120
+  seconds: 0
+  mins: 0
+  hours: 8
+  onUpdateMinute:
+    m_PersistentCalls:
+      m_Calls: []
