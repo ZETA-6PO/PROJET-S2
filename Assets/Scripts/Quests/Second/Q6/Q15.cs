@@ -182,7 +182,7 @@ public class Q15 : Quest
                         }),
                         new SingleDialogue("", new[]
                         {
-                            "Well done ! By beating this artist, you earn 100 HypeCoins and his instrument."
+                            "Well done ! By beating this artist, you earn 1000 HypeCoins and his instrument."
                         }),
                         new SingleDialogue("Producer", new[]
                         {
@@ -196,7 +196,7 @@ public class Q15 : Quest
                 GameManager.Instance.AddOneItem(toGive);
                 Active = false;
                 Completed = true;
-                //GameManager.Instance.quests[16].Active = true;
+                GameManager.Instance.quests[16].Active = true;
                 
             }
             else

@@ -64,6 +64,10 @@ public class GameData
             new QuestData("Q11", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q12", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q13", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q14", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q15", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q16", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q17", false, false, Array.Empty<QuestData.QuestProperty>()),
         };
         coin = 0;
         inspiration = 10;
