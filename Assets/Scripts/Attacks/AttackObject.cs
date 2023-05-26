@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using UnityEngine;
+using UnityEngine; 
 
 [CreateAssetMenu(fileName = "Attack", menuName = "ScriptableObjects/Item/AttackObject", order = 1)]
 public class AttackObject: Item
