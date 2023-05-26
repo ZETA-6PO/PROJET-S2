@@ -16,9 +16,10 @@ public class DescriptionSpace : MonoBehaviour
     public TMP_Text attackCost;
     public TMP_Text attackEffect;
     public TMP_Text attackRarity;
+    public TMP_Text attackResist;
+    public TMP_Text attackMaxUse;
     public TMP_Text healInspi;
     public TMP_Text healResist;
-    public TMP_Text healDescription;
     
     public void Change(Item item)
     {
@@ -32,12 +33,13 @@ public class DescriptionSpace : MonoBehaviour
             if (attackCost is not null) attackCost.text = ((AttackObject)item).InspirationCost.ToString();
             if (attackEffect is not null) attackEffect.text = ((AttackObject)item).effect.ToString();
             if (attackRarity is not null) attackRarity.text = ((AttackObject)item).rarity.ToString();
+            if (attackResist is not null) attackResist.text = ((AttackObject)item).ResistanceImpact.ToString();
+            if (attackMaxUse is not null) attackMaxUse.text = ((AttackObject)item).MaxUse.ToString();
         }
         if (item is Consumable)
         {
             if (healInspi is not null) healInspi.text = ((Consumable)item).addedInspiration.ToString();
             if (healResist is not null) healResist.text = ((Consumable)item).addedResistance.ToString();
-            if (healDescription is not null) healDescription.text = ((Consumable)item).description;
             if (refImage is not null) refImage.sprite = item.image;
         }
     }
