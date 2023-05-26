@@ -7,6 +7,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 
@@ -30,7 +31,9 @@ public class BattleSystem : MonoBehaviour
     public AudioClip soundAttackSucceeded;
     public AudioClip soundAttackFailed;
     private UnityAction<bool, int, int> onCombatEnd;
-    
+
+
+
     /// <summary>
     /// STATS
     /// </summary>
@@ -330,7 +333,7 @@ public class BattleSystem : MonoBehaviour
                 refUi.SetDialogText("You don't have the needed inspiration to launch this attack, heal or loose by forfeit.");
                 return;
             }
-            StartCoroutine(refPerformAttack.StartAttack(a.input.sequence.ToList(), a, onCompleteAttack, playerEffects[Effect.Stressed] > 0));
+            StartCoroutine(refPerformAttack.StartAttack( a, onCompleteAttack, playerEffects[Effect.Stressed] > 0));
         }
         
         IEnumerator OnCompleteAttack(bool succeeded,AttackObject attack)

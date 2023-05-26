@@ -477,6 +477,7 @@ public class GameManager : MonoBehaviour{
 
         foreach (var dataQuest in data.quests)
         {
+            
             var q = quests.First(quest => quest.QuestId == dataQuest.questId);
             Debug.Log($"q active : {q.Active} ");
             q.Active = dataQuest.active;

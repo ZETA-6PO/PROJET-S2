@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f707e96e76a9d94187aef1bb81ed4f1, type: 3}
   m_Name: Q17
   m_EditorClassIdentifier: 
-  QuestId: 
+  QuestId: Q17
   dialogues: []
   gameObjects: []
   information:
@@ -22,7 +22,6 @@ MonoBehaviour:
   Active: 0
   Completed: 0
   producerPosition: {x: 0, y: 0, z: 0}
-  disciplePosition: {x: 0, y: 0, z: 0}
   bossPosition: {x: 0, y: 0, z: 0}
-  disciple: {fileID: 0}
+  boss: {fileID: 0}
   toGive: {fileID: 0}

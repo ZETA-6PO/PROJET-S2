@@ -58,7 +58,6 @@ public class AttackObject: Item
     [Serializable]
     public struct AttackInput
     {
-        public KeyCode[] sequence;
         public int time;
     }
 
@@ -68,7 +67,6 @@ public class AttackObject: Item
         int seconds
         )
     {
-        input.sequence = touchSequences;
         input.time = seconds;
     }
     

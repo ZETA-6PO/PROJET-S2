@@ -1,28 +1,37 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PerformAttack : MonoBehaviour
 {
     public Text timer;
     public Text touch;
-    private List<KeyCode> sequences;
+    private List<KeyCode> sequences = new List<KeyCode>();
     private UnityEvent<bool,AttackObject> onCompleteAttack;
     private AttackObject attack;
     public Animator animator;
     private bool started;
     private bool end;
     private float timeLeft;
+    
+    public Sprite leftArrow;
+    public Sprite rightArrow;
+    public Sprite upArrow;
+    public Sprite downArrow;
+    public Image refRenderedArrow;
+    
         /// <summary>
     /// This function start an attack
     /// </summary>
-    public IEnumerator StartAttack(List<KeyCode> touchSequences, AttackObject attack, UnityEvent<bool,AttackObject> onCompleteAttack, bool isStressed)
+    public IEnumerator StartAttack( AttackObject attack, UnityEvent<bool,AttackObject> onCompleteAttack, bool isStressed)
     {
-        sequences = touchSequences;
+        refRenderedArrow.gameObject.SetActive(false);
         this.onCompleteAttack = onCompleteAttack;
         this.attack = attack;
         gameObject.SetActive(true);
@@ -38,15 +47,46 @@ public class PerformAttack : MonoBehaviour
 
         SoundManager.Instance.effectsSource.pitch = 2;
         SoundManager.Instance.PlaySound(attack.sound);
-        touch.text = sequences[0].ToString();
+        int coef = 0;
+        switch (attack.rarity)
+        {
+            case Rarity.Common:
+                coef = 1;
+                break;
+            case Rarity.Hyped:
+                coef = 3;
+                break;
+            case Rarity.Legendary:
+                coef = 4;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
+        int nbInput = (int)(coef * this.attack.sound.length);
+        KeyCode[] availableKey = new[]
+        {
+            KeyCode.UpArrow,
+            KeyCode.DownArrow,
+            KeyCode.LeftArrow,
+            KeyCode.RightArrow
+        };
+        for (int i = 0; i < nbInput; i++)
+        {
+            sequences.Add(availableKey[Random.Range(0,4)]);
+        }
+        touch.gameObject.SetActive(false);
         started = true;
         timer.gameObject.SetActive(true);
+        refRenderedArrow.gameObject.SetActive(true);
+        SetArrow(sequences[0]);
 
         if (isStressed)
             timeLeft = attack.sound.length;
         else
             timeLeft = this.attack.sound.length / 2;
-        
+
+
         
         yield return StartCoroutine(Timer());
 
@@ -88,7 +128,7 @@ public class PerformAttack : MonoBehaviour
                     if (sequences.Count > 0)
                     {
                         animator.SetTrigger("Start");
-                        touch.text = sequences[0].ToString();
+                        SetArrow(sequences[0]);
                     }
                 }
                 else
@@ -108,7 +148,7 @@ public class PerformAttack : MonoBehaviour
                     if (sequences.Count > 0)
                     {
                         animator.SetTrigger("Start");
-                        touch.text = sequences[0].ToString();
+                        SetArrow(sequences[0]);
                     }
                 }
                 else
@@ -129,7 +169,7 @@ public class PerformAttack : MonoBehaviour
                     if (sequences.Count > 0)
                     {
                         animator.SetTrigger("Start");
-                        touch.text = sequences[0].ToString();
+                        SetArrow(sequences[0]);
                     }
                 }
                 else
@@ -148,7 +188,7 @@ public class PerformAttack : MonoBehaviour
                     if (sequences.Count > 0)
                     {
                         animator.SetTrigger("Start");
-                        touch.text = sequences[0].ToString();
+                        SetArrow(sequences[0]);
                     }
                 }
                 else
@@ -174,6 +214,8 @@ public class PerformAttack : MonoBehaviour
                 SoundManager.Instance.effectsSource.pitch = 1;
                 SoundManager.Instance.PlaySound(bs.soundAttackSucceeded);
                 gameObject.SetActive(false);
+                touch.gameObject.SetActive(true);
+                timer.gameObject.SetActive(false);
             }
             else
             {
@@ -182,8 +224,36 @@ public class PerformAttack : MonoBehaviour
                 SoundManager.Instance.effectsSource.pitch = 1;
                 SoundManager.Instance.PlaySound(bs.soundAttackFailed);
                 gameObject.SetActive(false);
+                touch.gameObject.SetActive(true);
+                timer.gameObject.SetActive(false);
             }
             
+        }
+    }
+
+
+    void SetArrow(KeyCode arrow)
+    {
+        if (refRenderedArrow is null)
+            return;
+
+        switch (arrow)
+        {
+            case KeyCode.UpArrow:
+                refRenderedArrow.sprite = upArrow;
+                break;
+            case KeyCode.DownArrow:
+                refRenderedArrow.sprite = downArrow;
+                break;
+            case KeyCode.RightArrow:
+                refRenderedArrow.sprite = rightArrow;
+                break;
+            case KeyCode.LeftArrow:
+                refRenderedArrow.sprite = leftArrow;
+                break;
+            default:
+                throw new InvalidEnumArgumentException();
+
         }
     }
 }

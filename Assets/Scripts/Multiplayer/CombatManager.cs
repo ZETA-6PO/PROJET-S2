@@ -147,7 +147,7 @@ public class CombatManager : MonoBehaviour
             refAttackMenu.OpenMenu(me, (AttackObject a) =>
             {
                 menuOpened = false;
-                StartCoroutine(refPerformAttack.StartAttack(a.input.sequence.ToList(), a, onAttackComplete));
+                //StartCoroutine(refPerformAttack.StartAttack(a.input.sequence.ToList(), a, onAttackComplete));
             });
         }
     }

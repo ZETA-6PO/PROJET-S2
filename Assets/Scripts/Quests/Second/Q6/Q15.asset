@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8407f44ef94201d4f83eb680d8216422, type: 3}
   m_Name: Q15
   m_EditorClassIdentifier: 
-  QuestId: 
+  QuestId: Q15
   dialogues: []
   gameObjects: []
   information:
@@ -22,6 +22,7 @@ MonoBehaviour:
   Active: 0
   Completed: 0
   producerPosition: {x: 0, y: 0, z: 0}
-  damsoPosition: {x: 0, y: 0, z: 0}
+  freezPosition: {x: 0, y: 0, z: 0}
   enemy: {fileID: 0}
   toGive: {fileID: 0}
+  hadPaid: 0
