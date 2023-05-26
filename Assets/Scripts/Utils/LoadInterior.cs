@@ -23,8 +23,6 @@ public class LoadInterior : MonoBehaviour
             
             
             //set the last position on map
-            
-            
             SceneManager.LoadScene(sceneName);
             
         }

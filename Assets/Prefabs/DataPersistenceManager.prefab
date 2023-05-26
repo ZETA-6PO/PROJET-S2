@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a90052238abb64496e687d3d17796d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initializeDataIfNull: 0
+  initializeDataIfNull: 1
   fileName: data.gg
   useEncryption: 0
   gameData:
@@ -52,3 +52,65 @@ MonoBehaviour:
     playerLevel: 0
     lastMap: IntFirstHouseScene
     lastPosition: {x: 0, y: 0, z: 0}
+    quests:
+    - questId: Q0
+      active: 1
+      completed: 0
+      questProperties: []
+    - questId: Q1
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q2
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q3
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q4
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q5
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q6
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q7
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q8
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q9
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q10
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q11
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q12
+      active: 0
+      completed: 0
+      questProperties: []
+    - questId: Q13
+      active: 0
+      completed: 0
+      questProperties: []
+    coin: 0
+    inspiration: 0
+    resistance: 0
+    fame: 0
+    inventory: 

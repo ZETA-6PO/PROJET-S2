@@ -18,22 +18,15 @@ public class MainMenuSceneController : MonoBehaviour
 	
 	public void StartNewGame()
 	{
-		Debug.Log("StartNewGame");
-		//create a newgame files 
-		DataPersistenceManager.Instance.NewGame();
-		
-		//change scene to first scene where the intro will popup
-		SceneManager.LoadScene("IntFirstHouseScene");
+		if (DataPersistenceManager.Instance.LoadGame())
+		{
+			SceneManager.LoadScene(DataPersistenceManager.Instance.gameData.lastMap);
+		}
+		else
+		{
+			SceneManager.LoadScene("IntFirstHouseScene");	
+		}
 	}
-	
-	public void ChargeGame()
-    {
-	    Debug.Log("StartNewGame");
-	    //create a newgame files 
-	    DataPersistenceManager.Instance.LoadGame();
-	    SceneManager.LoadScene(DataPersistenceManager.Instance.gameData.lastMap);
-
-    }
 	
     public void QuitGame()
     {

@@ -17,6 +17,8 @@ public class ATH : MonoBehaviour
         dnScript = FindObjectOfType<Time_Gestion>();
         if (dnScript is not null)
             dnScript.onUpdateMinute.AddListener(UpdateTime);
+
+        UpdateCoin();
     }
 
     // Update is called once per frame

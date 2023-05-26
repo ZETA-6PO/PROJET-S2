@@ -1,15 +1,15 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+
 /// <summary>
 /// This class is one of the most important class of the game.
 /// It handles all the quest, menus, inventory system.
 /// </summary>
-public class GameManager : MonoBehaviour, IDataPersistence
-{
+public class GameManager : MonoBehaviour{
     ///////////////////////////////////////
     /// Singletons part do not edit pl. ///
     ///////////////////////////////////////
@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour, IDataPersistence
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    private string lastMap; //this string represent the last ext map the player where on
+    private string lastPositionOnLastMap; //this strings represent the last position of the player on the ext map
+
+
+    public Item[] existingItem;
     
     
     ///////////////////////////////////////
@@ -220,27 +226,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     /// All those variable handle the state of the quest.///
     ////////////////////////////////////////////////////////
     public List<Quest> quests;
-    public void LoadData(GameData data)
-    {
-        foreach (var dataQuest in data.quests)
-        {
-            var q = quests.First(quest => quest.QuestId == dataQuest.questId);
-            q.Active = dataQuest.active;
-            q.Completed = dataQuest.completed;
-            q.LoadQuestProperties(dataQuest.questProperties);
-        }
 
-    }
 
-    public void SaveData(GameData data)
-    {
-        foreach (var dataQuest in data.quests)
-        {
-            dataQuest.active = quests.First(quest => quest.QuestId == dataQuest.questId).Active;
-            dataQuest.completed = quests.First(quest => quest.QuestId == dataQuest.questId).Completed;
-            dataQuest.questProperties = quests.First(quest => quest.QuestId == dataQuest.questId).SaveQuestProperties();
-        }
-    }
 
 
     public void OnSceneLoad()
@@ -390,6 +377,112 @@ public class GameManager : MonoBehaviour, IDataPersistence
             playerInspiration = inspiration;
             refATH.EnableATH();
             onCombatFinished(win);
+        }
+    }
+    
+    ////////////////////////////////////////////////////////
+    // ReSharper disable once InvalidXmlDocComment       ///
+    /// Save and Load                                    ///
+    ////////////////////////////////////////////////////////
+    
+    public void SaveData(GameData data)
+    {
+        data.coin = coin;
+        data.fame = playerFame;
+        data.inspiration = playerInspiration;
+        data.resistance = playerResistance;
+
+        
+        int i = 0;
+        foreach (var kv in items)
+        {
+            int e = 0;
+            foreach (var kv2 in existingItem)
+            {
+                if (kv2 == kv.Key)
+                {
+                    data.inventory[e] = kv.Value;
+                }
+
+                e += 1;
+            }
+
+            i += 1;
+        }
+
+        i = 0;
+        foreach (var obj in stuff)
+        {
+            if (obj == null)
+            {
+                data.stuff[i] = -1;
+                continue;
+            }
+            int e = 0;
+            foreach (var kv2 in existingItem)
+            {
+                if (kv2 == obj)
+                {
+                    data.stuff[i] = e;
+                }
+                e += 1;
+            }
+            i += 1;
+        }
+
+        PlayerController pc = FindObjectOfType<PlayerController>();
+
+        if (pc is not null && SceneManager.GetActiveScene().name.StartsWith("Ext"))
+        {
+            data.lastPosition = pc.gameObject.transform.position;
+            data.lastMap = SceneManager.GetActiveScene().name;
+        }
+        
+        foreach (var dataQuest in data.quests)
+        {
+            dataQuest.active = quests.First(quest => quest.QuestId == dataQuest.questId).Active;
+            dataQuest.completed = quests.First(quest => quest.QuestId == dataQuest.questId).Completed;
+            dataQuest.questProperties = quests.First(quest => quest.QuestId == dataQuest.questId).SaveQuestProperties();
+        }
+    }
+    
+    public void LoadData(GameData data)
+    {
+        playerFame = data.fame;
+        playerInspiration = data.inspiration;
+        playerResistance = data.resistance;
+        coin = data.coin;
+
+
+        int i = 0;
+        foreach (var kv in data.inventory)
+        {
+            
+            if (kv > 0)
+            {
+                AddOneItem(existingItem[i]);
+                items[existingItem[i]] += kv - 1;
+            }
+            i += 1;
+        }
+
+        i = 0;
+        for (int j = 0; j < 4; j++)
+        {
+            if (data.stuff[i] != -1)
+                stuff[i] = (AttackObject)existingItem[data.stuff[i]];
+        }
+        
+        
+
+        foreach (var dataQuest in data.quests)
+        {
+            var q = quests.First(quest => quest.QuestId == dataQuest.questId);
+            Debug.Log($"q active : {q.Active} ");
+            q.Active = dataQuest.active;
+            Debug.Log($"q active : {q.Active} ");
+            q.Completed = dataQuest.completed;
+            q.LoadQuestProperties(dataQuest.questProperties);
         }
     }
 

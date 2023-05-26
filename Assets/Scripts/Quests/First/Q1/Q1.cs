@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,14 +11,22 @@ public class Q1 : Quest
     [SerializeField] public Vector3 dadPosition;
     [SerializeField] public Vector3 playerSpawn;
 
+
+    private bool test = false;
+    
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        return;
+        test = questProperties.First((property => property.name == "test")).value == "1";
     }
 
     public override QuestData.QuestProperty[] SaveQuestProperties()
     {
-        return null;
+        QuestData.QuestProperty _test = new QuestData.QuestProperty()
+        {
+            name = "test",
+            value = test ? "1" : "0"
+        };
+        return new[] { _test };
     }
 
     public override void OnLoadScene(string sceneName)
@@ -38,6 +47,7 @@ public class Q1 : Quest
             if (GameManager.Instance.IsInInventory("Bread"))
             {
                 GameManager.Instance.displayedWaypoint = waypoints[1];
+                test = true;
             }
             else
             {

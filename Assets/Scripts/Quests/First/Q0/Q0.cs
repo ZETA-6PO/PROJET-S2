@@ -9,6 +9,7 @@ public class Q0 : Quest
     [SerializeField] public Vector3 momPosition;
     [SerializeField] public Vector3 dadPosition;
     
+    
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         return;

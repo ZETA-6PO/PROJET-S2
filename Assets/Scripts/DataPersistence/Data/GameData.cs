@@ -12,6 +12,7 @@ public class GameData
 {
     //GLOBAL VARIABLE
     public string playerName;
+    
     public int playerLevel;
 
     //PROGRESSIONS VARIABLES
@@ -20,7 +21,23 @@ public class GameData
 
     //PROGRESSIONS STATES
     public QuestData[] quests;
+
+    public int coin;
     
+    public int inspiration;
+
+    public int resistance;
+    
+    public int fame;
+    
+    
+    
+    
+    public int[] inventory;
+
+    public int[] stuff;
+
+
 
     /// <summary>
     /// This constructor is responsible for all the default value when
@@ -28,14 +45,13 @@ public class GameData
     /// </summary>
     public GameData()
     {
-        Debug.Log("Setting new gameData");
         playerName = "Player";
-        lastMap = "ExtFirstMap";
+        lastMap = "ExtFirstScene";
         lastPosition = new Vector3(-69.5f, 17.5f, 0);
         quests = new[]
         {
             new QuestData("Q0", true, false, Array.Empty<QuestData.QuestProperty>()),
-            new QuestData("Q1", false, false, Array.Empty<QuestData.QuestProperty>()),
+            new QuestData("Q1", false, false, new [] { new QuestData.QuestProperty(){name = "test", value = "0"} }),
             new QuestData("Q2", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q3", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q4", false, false, Array.Empty<QuestData.QuestProperty>()),
@@ -49,6 +65,12 @@ public class GameData
             new QuestData("Q12", false, false, Array.Empty<QuestData.QuestProperty>()),
             new QuestData("Q13", false, false, Array.Empty<QuestData.QuestProperty>()),
         };
+        coin = 0;
+        inspiration = 10;
+        resistance = 10;
+        fame = 0;
+        inventory = new int[26];
+        stuff = new []{-1,-1,-1,-1};
     }
     
 }
