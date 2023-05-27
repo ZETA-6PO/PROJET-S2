@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource musicSource, effectsSource;
     public AudioClip gameMusic;
+    public float volume;
 
     private void Awake()
     {

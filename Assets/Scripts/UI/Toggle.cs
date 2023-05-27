@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class Toggle : MonoBehaviour
 {
-    [SerializeField] private Image soundOnIcon;
-    [SerializeField] private Image soundOffIcon;
+    [SerializeField] private Image onIcon;
+    [SerializeField] private Image offIcon;
 
     private bool _muted = false;
 
-    [SerializeField] private bool toggleMusic, toggleEffects;
+    [SerializeField] private bool toggleMusic, toggleEffects, toggleFullscreen;
 
     private void Start()
     {
@@ -33,12 +33,15 @@ public class Toggle : MonoBehaviour
         Mute();
         Save();
         UpdateIcon();
+        
     }
+    
+    
 
     private void UpdateIcon()
     {
-        soundOnIcon.enabled = !_muted;
-        soundOffIcon.enabled = _muted;
+        onIcon.enabled = !_muted;
+        offIcon.enabled = _muted;
     }
 
     private void Load()
@@ -50,12 +53,13 @@ public class Toggle : MonoBehaviour
     {
         PlayerPrefs.SetInt("muted",_muted ? 1 : 0);
     }
-
+    
     private void Mute()
     {
         Debug.Log("Mute called");
         if (toggleEffects) SoundManager.Instance.MuteEffect(_muted);
         if (toggleMusic) SoundManager.Instance.MuteMusic(_muted);
+        if (toggleFullscreen) Screen.fullScreen = _muted;
     }
     
 }
