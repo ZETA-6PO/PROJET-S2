@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,19 +11,24 @@ public class Q15 : Quest
 
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        return;
+        had_pay = questProperties.First((property => property.name == "had_pay")).value == "1";
     }
 
     public override QuestData.QuestProperty[] SaveQuestProperties()
     {
-        return null;
+        QuestData.QuestProperty _had_pay = new QuestData.QuestProperty()
+        {
+            name = "had_pay",
+            value = had_pay ? "1" : "0"
+        };
+        return new[] { _had_pay };
     }
 
     public Vector3 producerPosition;
     public Vector3 freezPosition;
     public Fighter enemy;
     public Item toGive;
-    public bool hadPaid;
+    public bool had_pay;
     public override void OnLoadScene(string sceneName)
     {
         if (sceneName == "IntFirstHouseScene")
@@ -98,9 +104,9 @@ public class Q15 : Quest
     
     private void StartBattleDialogue()
     {
-        if (GameManager.Instance.coin >= 500 || hadPaid)
+        if (GameManager.Instance.coin >= 500 || had_pay)
         {
-            if (hadPaid)
+            if (had_pay)
             {
                 if (GameManager.Instance.coin >= 100)
                 {
