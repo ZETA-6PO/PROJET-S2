@@ -95,7 +95,7 @@ public class Q5 : Quest
         FindObjectOfType<DialogManager>().StartDialogue(
             new Dialogue(new[]
             {
-                new SingleDialogue("Studio Boss", new[]
+                new SingleDialogue("Kore", new[]
                 {
                     "I understand that you would like to work on your music with me. I’m not against this idea, " +
                     "however not everyone can work with me like that, you have to bring me some money. " +
@@ -132,9 +132,9 @@ public class Q5 : Quest
                         {
                             "Noo! How is it possible that an artist of my quality loses to a stranger like you! " +
                             "You were lucky! You don't lose anything by waiting. " +
-                            "Anyway it's only temporary, you can be sure that I will take my revenge!"
+                            "Anyway it's only temporary, you can be sure that I will take my revenge!" + "Next time I call my BIG Brother"
                         }),
-                        new SingleDialogue("Studio Boss", new[]
+                        new SingleDialogue("Kore", new[]
                         {
                             "Wow ! I appreciate your talent, it will be a pleasure to work with you when you " +
                             "have enough money to pay me."
@@ -161,7 +161,7 @@ public class Q5 : Quest
                     {
                         new SingleDialogue(enemy.unitName, new[]
                         {
-                            "Ah! Ah! I knew you just couldn't beat me! But if you want to continue to be humiliated you can try again."
+                            "Ah! Ah! I knew you just couldn't beat me! But if you want to continue to be humiliated you can try again." + "Let's make a minute of music for you"
                         })
                     }),
                     new string[]{"I will beat you this time!", "No I prefer to stop the massacre..."},

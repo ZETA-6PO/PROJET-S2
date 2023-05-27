@@ -52,7 +52,7 @@ public class Q9 : Quest
                     FindObjectOfType<DialogManager>().StartDialogue(
                         new Dialogue(new[]
                         {
-                            new SingleDialogue("Studio Boss", new[]
+                            new SingleDialogue("Kore", new[]
                             {
                                 "There you are! Do you have the money? Ok then let the battle begin!"
                             })
@@ -67,7 +67,7 @@ public class Q9 : Quest
                     FindObjectOfType<DialogManager>().StartDialogue(
                         new Dialogue(new[]
                         {
-                            new SingleDialogue("Studio Boss", new[]
+                            new SingleDialogue("Kore", new[]
                             {
                                 "Don't come back until you have the money!"
                             })
@@ -85,7 +85,7 @@ public class Q9 : Quest
                     FindObjectOfType<DialogManager>().StartDialogue(
                         new Dialogue(new[]
                         {
-                            new SingleDialogue("Studio Boss", new[]
+                            new SingleDialogue("Kore", new[]
                             {
                                 "There you are! Do you have the money? Ok then let the battle begin!"
                             })
@@ -158,8 +158,7 @@ public class Q9 : Quest
             {
                 new SingleDialogue(enemy.unitName, new[]
                 {
-                    "Because you really think you have a chance against me? I don't even know why the producer " +
-                    "agreed to work with someone like you."
+                    "Because you really think you have a chance against me? I'm an O.G. so you don't have any chance against me."
                 })
             }),
             new string[]{"Let's Go!", "Can you repeat ?"},
@@ -189,9 +188,9 @@ public class Q9 : Quest
                     {
                         new SingleDialogue(enemy.unitName, new[]
                         {
-                            "I will never get over such humiliation. You are truly a great artist."
+                            "I will never get over such humiliation. I'm going back with my Doudou."
                         }),
-                        new SingleDialogue("Studio Boss", new[]
+                        new SingleDialogue("Kore", new[]
                         {
                             "You might have been lucky but hey. Here you go as promised."
                         }),
@@ -219,7 +218,7 @@ public class Q9 : Quest
                     {
                         new SingleDialogue(enemy.unitName, new[]
                         {
-                            "Honestly easy I didn't even have to force it."
+                            "Honestly easy I didn't even have to force it. See you in the Room 122."
                         })
                     }),
                     new string[]{"I will beat you this time!", "No I prefer to stop the massacre..."},
