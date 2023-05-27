@@ -25,14 +25,13 @@ public class MSetter : MonoBehaviour
             AddSlot(fighter);
         }
         OpenPanel();
-        OpenPrinter();
-        OpenSpace();
         _fighter = fighters[0];
         ShowFighter();
     }
 
     private void OpenPrinter()
     {
+        if (_printer is not null) Destroy(_printer.gameObject);
         GameObject obj = Instantiate(printerPrefab,transform);
         _printer = obj.GetComponent<MListPrinter>();
         _printer.Initialize(this);
@@ -40,9 +39,9 @@ public class MSetter : MonoBehaviour
 
     private void OpenSpace()
     {
+        if (_space is not null) Destroy(_space.gameObject);
         GameObject obj = Instantiate(spacePrefab,transform);
         _space = obj.GetComponent<MDescriptionSpace>();
-        _space.Initialize(this);
     }
 
     private void OpenPanel()
@@ -59,12 +58,16 @@ public class MSetter : MonoBehaviour
     }
     private void ShowFighter()
     {
+        OpenPrinter();
+        OpenSpace();
         _panel.Change(_fighter);
         _printer.UpdateList(_fighter.Inventory);
+        _space.Change(_fighter.attacks[0]);
     }
 
     public void ChangeSpace(Item item)
     {
+        OpenSpace();
         _space.Change(item);
     }
     public void ChangeCurrentFighter(MultiplayerFighter fighter)

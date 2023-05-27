@@ -17,8 +17,8 @@ public class MCharacterPanel : MonoBehaviour
         img.sprite = fighter.image;
         fighterName.text = fighter.nickName;
         fighterSurname.text = fighter.surname;
-        resist.text = fighter.resistance.ToString();
-        inspi.text = fighter.inspiration.ToString();
+        resist.text = fighter.maxResistance.ToString();
+        inspi.text = fighter.maxInspiration.ToString();
     }
     
 }

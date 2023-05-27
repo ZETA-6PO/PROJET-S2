@@ -8,9 +8,13 @@ using UnityEngine;
 public class MultiplayerFighter : ScriptableObject
 {
     //resistance
-    public float resistance;
+    [NonSerialized]public float resistance;
+    //max resistance
+    public int maxResistance;
     //inspiration
-    public float inspiration;
+    [NonSerialized]public float inspiration;
+    //max Inspiration
+    public int maxInspiration;
     //nickname
     public string nickName;
     //attacks
@@ -30,10 +34,6 @@ public class MultiplayerFighter : ScriptableObject
         inspiration = 10;
         nickName = nickname;
         attacks = attackObjects;
-        foreach (var i in attacksUsage)
-        {
-            Debug.Log(i);
-        }
     }
     public Dictionary<Item,int> Inventory 
     {
@@ -60,4 +60,65 @@ public class MultiplayerFighter : ScriptableObject
             return dico;
         }
     }
+
+
+
+    public void AddInspiration(int inspi)
+    {
+        inspiration += inspi;
+        if (inspiration > maxInspiration) inspiration = maxInspiration;
+    }
+
+    public void AddResistance(int resistance)
+    {
+        this.resistance += resistance;
+        if (this.resistance > maxResistance) this.resistance = maxInspiration;
+    }
+
+    /// <summary>
+    ///  Remove inspiration point.
+    /// </summary>
+    /// <param name="inspi"></param>
+    /// <returns>True if player has no more inspiration. False if there is inspiration remaining.</returns>
+    public bool RemoveInspiration(int inspi)
+    {
+        this.inspiration -= inspiration;
+        if (inspiration < 0)
+        {
+            this.inspiration = 0;
+            return true;
+        }
+
+        return false;
+    }
+    
+    /// <summary>
+    ///  Remove resistance point.
+    /// </summary>
+    /// <param name="resistance"></param>
+    /// <returns>True if player has no more resistance. False if there is resistance remaining.</returns>
+    public bool RemoveResistance(int resistance)
+    {
+        this.resistance -= resistance;
+        if (this.resistance < 0)
+        {
+            this.resistance = 0;
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Use a consumable.
+    /// </summary>
+    /// <param name="cons"></param>
+    public void UseConsumable(Consumable cons)
+    {
+        AddInspiration(cons.addedInspiration);
+        AddResistance(cons.addedResistance);
+    }
+    
+    
+    
 }

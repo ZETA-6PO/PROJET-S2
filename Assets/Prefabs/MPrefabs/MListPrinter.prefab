@@ -289,7 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060facf4b58c58a41b68d1c895ad028c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spacePrefab: {fileID: 1657868985308570407, guid: e580fafe58741f54e8b40ec4348e977e, type: 3}
   _cellPrefab: {fileID: 1527121495155090872, guid: 38162650738a6d54ea7ffd0d46015597, type: 3}
   _content: {fileID: 2650294258324433538}
 --- !u!1 &5167717200611335597
@@ -425,11 +424,11 @@ MonoBehaviour:
   m_Content: {fileID: 2131034446188832450}
   m_Horizontal: 1
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 25
   m_Viewport: {fileID: 8500016883414758782}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}

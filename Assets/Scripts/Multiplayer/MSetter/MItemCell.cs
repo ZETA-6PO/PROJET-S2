@@ -14,6 +14,7 @@ public class MItemCell : MonoBehaviour
 
     public void Initialize(Item item, int number, MListPrinter printer)
     {
+        _item = item;
         _itemName.text = item.name;
         if (number < 2)
         {
