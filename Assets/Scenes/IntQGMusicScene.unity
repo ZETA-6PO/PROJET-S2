@@ -4960,7 +4960,7 @@ GameObject:
   - component: {fileID: 708087429}
   - component: {fileID: 708087428}
   m_Layer: 0
-  m_Name: Producer
+  m_Name: Feneu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5019,7 +5019,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -991511925, guid: cd9a08c5145aa694fa2c3d38a1ff7f92, type: 3}
+  m_Sprite: {fileID: 667556393, guid: 8fc6fcccd510c3f448bde5a5bd10a21e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8893,7 +8893,7 @@ GameObject:
   - component: {fileID: 1914281248}
   - component: {fileID: 1914281247}
   m_Layer: 0
-  m_Name: Playboi
+  m_Name: Shay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8926,6 +8926,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa79aa6dc1455b409ba8cfd03e3dfaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onEnter:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
 --- !u!212 &1914281248
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8967,7 +8971,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1690839865, guid: ac28f70f7fea53747b85bd6b1b19b1a4, type: 3}
+  m_Sprite: {fileID: 427328991, guid: 828a4a99e9e56c14f9503e12f99bd48f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

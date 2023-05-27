@@ -69,7 +69,7 @@ public class Q15 : Quest
             FindObjectOfType<DialogManager>().StartDialogue(
                 new Dialogue(new[]
                 {
-                    new SingleDialogue("Producer", new[]
+                    new SingleDialogue("Feneu", new[]
                     {
                         "I saw all your battles and you did a good job. Now it’s time to really prove to me what you can do. " +
                         "It’s not the difficulty you’ve had so far. Beat him and I’ll take your career even further."
@@ -131,8 +131,7 @@ public class Q15 : Quest
                     {
                         new SingleDialogue(enemy.name, new[]
                         {
-                            "Because you really think you have a chance against me? I don't even know why the producer " +
-                            "agreed to work with someone like you. "
+                            "Because you really think you have a chance against me? You're gonna pop then disapear like Desiigner."
                         })
                     }),
                     new string[]{"Let's Go!", "Can you repeat ?"},
@@ -178,7 +177,7 @@ public class Q15 : Quest
                     {
                         new SingleDialogue(enemy.name, new[]
                         {
-                            "I will never get over such humiliation. You are truly a great artist."
+                            "I must take you for some rap catechism, say less."
                         }),
                         new SingleDialogue("", new[]
                         {
@@ -206,7 +205,7 @@ public class Q15 : Quest
                     {
                         new SingleDialogue(enemy.name, new[]
                         {
-                            "Honestly easy I didn't even have to force it."
+                            "Honestly easy I didn't even have to force it," + "even Lester and Fredo Santana can beat you."
                         })
                     }),
                     new string[]{"I will beat you this time!", "No I prefer to stop the massacre..."},

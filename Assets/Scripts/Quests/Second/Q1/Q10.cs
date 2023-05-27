@@ -50,7 +50,7 @@ public class Q10 : Quest
                     new SingleDialogue("", new[]
                     {
                         "This is the city! This is where your adventure must continue. " +
-                        "ndeed, all the greatest artists known to date have come to this city " +
+                        "Indeed, all the greatest artists known to date have come to this city " +
                         "to perform and try to demonstrate their talent.",
                         "But I must warn you. Many have failed and come out changed. But with hard work, determination " +
                         "and talent, I think you will be able to stand out among the greats in this industry.",
@@ -95,9 +95,9 @@ public class Q10 : Quest
         FindObjectOfType<DialogManager>().StartDialogue(
             new Dialogue(new[]
             {
-                new SingleDialogue("Producer", new[]
+                new SingleDialogue("Feneu", new[]
                 {
-                    "Hi. I introduce myself, i’m Tony Chonba, and i'm an artist's producer from the city.",
+                    "Hi. I introduce myself, i’m Feneu, and i'm an artist's producer from the city.", "I did Handball.",
                     "I saw your performance beat the best artist in your neighborhood and i’m interested in you.",
                     "I know everybody here, so I can find you many contacts in order to develop your career in a " +
                     "better war. But for that, you have to earn my truth."
@@ -106,7 +106,7 @@ public class Q10 : Quest
                 {
                     "To gain his truth, you’ll have to beat every artist he offers you to face."
                 }),
-                new SingleDialogue("Producer", new[]
+                new SingleDialogue("Feneu", new[]
                 {
                     "There is a first challenge for you. Beat this artist to prove to me that you are competent " +
                     "enough to be an artist."
@@ -139,7 +139,7 @@ public class Q10 : Quest
                     new SingleDialogue(enemy.name, new[]
                     {
                         "Because you really think you have a chance against me? I don't even know why the producer " +
-                        "agreed to work with someone like you. "
+                        "agreed to work with someone like you. 2.7 2.7 ", "I'm gonna break your bones and drink your blood"
                     })
                 }),
                 new string[]{"Let's Go!", "Can you repeat ?"},
@@ -169,7 +169,8 @@ public class Q10 : Quest
                         {
                             new SingleDialogue(enemy.name, new[]
                             {
-                                "I will never get over such humiliation. You are truly a great artist."
+                                "I will never get over such humiliation. You are truly a great artist.", 
+                                "Come to Sevran when you have time."
                             }),
                             new SingleDialogue("Studio Boss", new[]
                             {
@@ -195,7 +196,7 @@ public class Q10 : Quest
                         {
                             new SingleDialogue(enemy.name, new[]
                             {
-                                "Honestly easy I didn't even have to force it."
+                                "Honestly easy I didn't even have to force it.", "Even the worst musician of Sevran could beat you."
                             })
                         }),
                         new string[]{"I will beat you this time!", "No I prefer to stop the massacre..."},
