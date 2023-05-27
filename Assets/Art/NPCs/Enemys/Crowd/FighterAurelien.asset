@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
+  m_Name: FighterAurelien
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -666796798, guid: 249b387775447d94e9ebac04e03c87a9, type: 3}
+  unitName: "Aur\xE9lien"
+  resistance: 10
+  inspiration: 20
+  Attacks:
+  - {fileID: 11400000, guid: aa364ddba1d110e48bd7743a2a3d71b0, type: 2}
+  difficulty: 1

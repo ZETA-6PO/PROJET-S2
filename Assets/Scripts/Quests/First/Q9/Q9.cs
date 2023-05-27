@@ -18,12 +18,17 @@ public class Q9 : Quest
     
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        return;
+        had_pay = questProperties.First((property => property.name == "had_pay")).value == "1";
     }
 
     public override QuestData.QuestProperty[] SaveQuestProperties()
     {
-        return null;
+        QuestData.QuestProperty _had_pay = new QuestData.QuestProperty()
+        {
+            name = "had_pay",
+            value = had_pay ? "1" : "0"
+        };
+        return new[] { _had_pay };
     }
 
     public bool had_pay;
@@ -151,7 +156,7 @@ public class Q9 : Quest
         FindObjectOfType<DialogManager>().StartDialogue(
             new Dialogue(new[]
             {
-                new SingleDialogue("KoBalaD", new[]
+                new SingleDialogue(enemy.unitName, new[]
                 {
                     "Because you really think you have a chance against me? I don't even know why the producer " +
                     "agreed to work with someone like you."
@@ -182,7 +187,7 @@ public class Q9 : Quest
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("KoBalaD", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "I will never get over such humiliation. You are truly a great artist."
                         }),
@@ -204,7 +209,7 @@ public class Q9 : Quest
                 GameManager.Instance.AddOneItem(item);
                 Active = false;
                 Completed = true;
-                //GameManager.Instance.quests[10].Active = true;
+                GameManager.Instance.quests[10].Active = true;
                 
             }
             else
@@ -212,7 +217,7 @@ public class Q9 : Quest
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("KoBalaD", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "Honestly easy I didn't even have to force it."
                         })

@@ -47,17 +47,17 @@ public class PerformAttack : MonoBehaviour
 
         SoundManager.Instance.effectsSource.pitch = 2;
         SoundManager.Instance.PlaySound(attack.sound);
-        int coef = 0;
+        float coef = 0;
         switch (attack.rarity)
         {
             case Rarity.Common:
-                coef = 1;
+                coef = 0.25f;
                 break;
             case Rarity.Hyped:
-                coef = 3;
+                coef = 0.75f;
                 break;
             case Rarity.Legendary:
-                coef = 4;
+                coef = 1.5f;
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

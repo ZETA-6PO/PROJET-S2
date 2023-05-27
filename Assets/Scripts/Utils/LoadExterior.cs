@@ -16,7 +16,7 @@ public class LoadExterior : MonoBehaviour
     // Start is called before the first frame update
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") )
         {
             onExit.Invoke(1);
         }

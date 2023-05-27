@@ -13,17 +13,22 @@ using UnityEngine.Events;
 public class Q3 : Quest
 {
 
-    private bool Win = false;
-    [SerializeField] public Fighter sam;
+    private bool Win;
+    [SerializeField] public Fighter enemy;
 
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        return;
+        Win = questProperties.First((property => property.name == "Win")).value == "1";
     }
 
     public override QuestData.QuestProperty[] SaveQuestProperties()
     {
-        return null;
+        QuestData.QuestProperty _Win = new QuestData.QuestProperty()
+        {
+            name = "Win",
+            value = Win ? "1" : "0"
+        };
+        return new[] { _Win };
     }
 
     public override void OnLoadScene(string sceneName)
@@ -88,54 +93,57 @@ public class Q3 : Quest
 
     private void StartBattleDialogue()
     {
-        //Dialogue before Battle
-        FindObjectOfType<DialogManager>().StartDialogue(
-            new Dialogue(new[]
-            {
-                new SingleDialogue("Children", new[]
+        if (!Win)
+        {
+            //Dialogue before Battle
+            FindObjectOfType<DialogManager>().StartDialogue(
+                new Dialogue(new[]
                 {
-                    "Ooh! Hi, are you new here?"
+                    new SingleDialogue("Children", new[]
+                    {
+                        "Ooh! Hi, are you new here?"
+                    }),
+                    new SingleDialogue("Sam", new[]
+                    {
+                        "Great, my name is Sam and I've been in this group for 2 years. I'll tell you how we operate here. ",
+                        "Every week we write our songs at home. Then once we get to our meeting here, we compete in a 1 on 1 format. ",
+                        "Whoever wins gets the prize money. Since it's your first time, I suggest that I put money on the line for both of us. " +
+                        "If you win, you get the money. Are you ready? Let's get started!"
+                    }),
+                    new SingleDialogue("", new[]
+                    {
+                        "Now you're going to duel with Sam. The music is about to start so remember to turn up the sound on " +
+                        "your computer. Once the music starts, all you have to do is press the ask key on your keyboard. " +
+                        "Good luck to you!"
+                    })
                 }),
-                new SingleDialogue("Sam", new[]
+                new string[]{"Let's Go!", "Can you repeat ?"},
+                i =>
                 {
-                    "Great, my name is Sam and I've been in this group for 2 years. I'll tell you how we operate here. ",
-                    "Every week we write our songs at home. Then once we get to our meeting here, we compete in a 1 on 1 format. ",
-                    "Whoever wins gets the prize money. Since it's your first time, I suggest that I put money on the line for both of us. " +
-                    "If you win, you get the money. Are you ready? Let's get started!"
-                }),
-                new SingleDialogue("", new[]
-                {
-                    "Now you're going to duel with Sam. The music is about to start so remember to turn up the sound on " +
-                    "your computer. Once the music starts, all you have to do is press the ask key on your keyboard. " +
-                    "Good luck to you!"
-                })
-            }),
-            new string[]{"Let's Go!", "Can you repeat ?"},
-            i =>
-            {
-                if (i == 1)
-                {
-                    StartBattle();
-                }
-                else
-                {
-                    StartBattleDialogue();
-                }
-            });
+                    if (i == 1)
+                    {
+                        StartBattle();
+                    }
+                    else
+                    {
+                        StartBattleDialogue();
+                    }
+                });
+        }
     }
     
     
     private void StartBattle()
     {
         // Start Combat
-        FindObjectOfType<GameManager>().StartACombat(sam, isWin =>
+        FindObjectOfType<GameManager>().StartACombat(enemy, isWin =>
         {
             if (isWin)
             {
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("Sam", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "Wow you are really well done! I didn't expect to be beaten by a newbie... " +
                             "I still have to practice. As for you, you seem to have a lot of talent. ",
@@ -159,7 +167,7 @@ public class Q3 : Quest
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("Sam", new[]
+                        new SingleDialogue(enemy.name, new[]
                         {
                             "Don't worry about it, it happens to everyone. Let's try again, I'm sure you'll have better luck this time."
                         })

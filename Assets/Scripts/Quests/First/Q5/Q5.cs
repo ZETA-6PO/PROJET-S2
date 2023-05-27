@@ -17,15 +17,22 @@ public class Q5 : Quest
 
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        return;
+        Win = questProperties.First((property => property.name == "Win")).value == "1";
     }
 
     public override QuestData.QuestProperty[] SaveQuestProperties()
     {
-        return null;
+        QuestData.QuestProperty _Win = new QuestData.QuestProperty()
+        {
+            name = "Win",
+            value = Win ? "1" : "0"
+        };
+        return new[] { _Win };
     }
 
     public Vector3 positionLuv_Restla;
+    public Fighter enemy;
+    public bool Win;
     
     public override void OnLoadScene(string sceneName)
     {
@@ -110,20 +117,18 @@ public class Q5 : Quest
                 }
             });
     }
-
-    public Fighter Luv_Restla;
-    public bool Win = false;
+    
     private void StartBattle()
     {
         // Start Combat
-        FindObjectOfType<GameManager>().StartACombat(Luv_Restla, isWin =>
+        FindObjectOfType<GameManager>().StartACombat(enemy, isWin =>
         {
             if (isWin)
             {
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("Luv Restla", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "Noo! How is it possible that an artist of my quality loses to a stranger like you! " +
                             "You were lucky! You don't lose anything by waiting. " +
@@ -154,7 +159,7 @@ public class Q5 : Quest
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("Luv Restla", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "Ah! Ah! I knew you just couldn't beat me! But if you want to continue to be humiliated you can try again."
                         })

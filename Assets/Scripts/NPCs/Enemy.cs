@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (GameManager.Instance.stuff[0] != null)
+        if (GameManager.Instance.stuff[0] != null && GameManager.Instance.quests[6].Completed)
         {
             if (refScreen is null)
             {
@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
 
     public void LaunchBattle()
     {
-        Debug.Log("LauchBattle");
         GameManager.Instance.StartACombat(fighter, win =>
         {
             Destroy(refScreen.gameObject);

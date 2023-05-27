@@ -17,16 +17,24 @@ public class Q6 : Quest
 
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
-        return;
+        alreadySpeak = questProperties.First((property => property.name == "alreadySpeak")).value == "1";
     }
 
     public override QuestData.QuestProperty[] SaveQuestProperties()
     {
-        return null;
+        QuestData.QuestProperty _alreadySpeak = new QuestData.QuestProperty()
+        {
+            name = "alreadySpeak",
+            value = alreadySpeak ? "1" : "0"
+        };
+        return new[] { _alreadySpeak };
     }
 
 
     public Vector3 momPosition;
+    public Fighter enemy;
+    private bool alreadySpeak;
+
 
     public override void OnLoadScene(string sceneName)
     {
@@ -220,8 +228,7 @@ public class Q6 : Quest
         GameManager.Instance.AddCoins(20);
     }
 
-
-    private bool alreadySpeak;
+    
     private void speakToMom() // Before the butcher
     {
         if (alreadySpeak)
@@ -288,20 +295,18 @@ public class Q6 : Quest
                 }
             });
     }
-
-    public Fighter boobsBas;
-
+    
     private void StartBattle()
     {
         // Start Combat
-        FindObjectOfType<GameManager>().StartACombat(boobsBas, isWin =>
+        FindObjectOfType<GameManager>().StartACombat(enemy, isWin =>
         {
             if (isWin)
             {
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("BoobsBas", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "How can the Duke, the Prince, the Phoenix who has been around for years like me lose to " +
                             "a youngster like you? Take care of yourself. See you at Orly Airport. " +
@@ -325,7 +330,7 @@ public class Q6 : Quest
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("Boobs Bas", new[]
+                        new SingleDialogue(enemy.unitName, new[]
                         {
                             "At the same time it is logical that you lose. I am a much better artist. " +
                             "But if you want to come back, I'll be happy to beat you up again."

@@ -13,7 +13,14 @@ public class SingleDialogue
 
     public SingleDialogue(string name, string[] senteces)
     {
-        this.name = name;
+        if (name.Length == 0)
+        {
+            this.name = "Narrator";
+        }
+        else
+        {
+            this.name = name;   
+        }
         this.senteces = senteces;
     }
 
