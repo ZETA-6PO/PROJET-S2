@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2002811894f0d90b521b02f92603a, type: 3}
+  m_Name: MFighter_Damso
+  m_EditorClassIdentifier: 
+  resistance: 5
+  inspiration: 20
+  nickName: Damso
+  attacks:
+  - {fileID: 11400000, guid: 4c53dcd366f096b4384652dcd812c4d7, type: 2}
+  - {fileID: 11400000, guid: 6c0d5cbbd11d85e4897dd7e989318ec4, type: 2}
+  - {fileID: 11400000, guid: 4ae54306b45815e47afc9f4bb89ec785, type: 2}
+  - {fileID: 11400000, guid: f40b6ed342a16c446ae5dc816170ba66, type: 2}
+  consumables:
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: 81615ee8a1cca4248b877f4a01f02f29, type: 2}
+  attacksUsage: 
+  image: {fileID: 1532798393, guid: cd532ca123fba2941bf41c7cd450f498, type: 3}
+  surname: The vantablack
