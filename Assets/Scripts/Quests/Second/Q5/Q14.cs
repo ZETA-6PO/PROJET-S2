@@ -24,9 +24,9 @@ public class Q14 : Quest
     public Vector3 laylowPosition;
     public Fighter enemyVald;
     public Fighter enemyLaylow;
-    public Fighter enemyPlaiboy;
+    public Fighter enemyShay;
     public Item toGiveLaylow;
-    public Item toGivePlaiboy;
+    public Item toGiveShay;
     public Item toGiveVald;
     private bool winP;
     private bool winV;
@@ -106,7 +106,7 @@ public class Q14 : Quest
             FindObjectOfType<ProducerScript>().Enable(producerPosition, () => {});
             FindObjectOfType<Vald>().Enable(valdPosition, () => StartBattleDialogue(enemyVald));
             FindObjectOfType<Laylow>().Enable(laylowPosition, () => StartBattleDialogue(enemyLaylow));
-            FindObjectOfType<Plaiboy>().Enable(plaiboyPosition, () => StartBattleDialogue(enemyPlaiboy));
+            FindObjectOfType<Plaiboy>().Enable(plaiboyPosition, () => StartBattleDialogue(enemyShay));
 
         }
         
@@ -129,27 +129,79 @@ public class Q14 : Quest
             {
                 GameManager.Instance.AddCoins(-100);
                 //Dialogue before Battle
-                FindObjectOfType<DialogManager>().StartDialogue(
-                    new Dialogue(new[]
-                    {
-                        new SingleDialogue(enemy.name, new[]
+                if (enemy.name == "Layleau")
+                {
+                    FindObjectOfType<DialogManager>().StartDialogue(
+                        new Dialogue(new[]
                         {
-                            "Because you really think you have a chance against me? I don't even know why the producer " +
-                            "agreed to work with someone like you. "
-                        })
-                    }),
-                    new string[]{"Let's Go!", "Can you repeat ?"},
-                    i =>
-                    {
-                        if (i == 1)
+                            new SingleDialogue(enemy.name, new[]
+                            {
+                                "I'm sure I can beat you in 10', I'm so Special and you know it." + "VAMONOS"
+                            })
+                        }),
+                        new string[]{"Let's Go!", "Can you repeat ?"},
+                        i =>
                         {
-                            StartBattle(enemy);
-                        }
-                        else
+                            if (i == 1)
+                            {
+                                StartBattle(enemy);
+                            }
+                            else
+                            {
+                                StartBattleDialogue(enemy);
+                            }
+                        });
+                }
+
+                if (enemy.name == "Vlad")
+                {
+                    FindObjectOfType<DialogManager>().StartDialogue(
+                        new Dialogue(new[]
                         {
-                            StartBattleDialogue(enemy);
-                        }
-                    });
+                            new SingleDialogue(enemy.name, new[]
+                            {
+                                "You dare disturb me while I'm in my rocking chair ?" + 
+                                "Never mind, I wish to you an Happy End my friend, maybe offshore but become awesome !"
+                            })
+                        }),
+                        new string[]{"Let's Go!", "Can you repeat ?"},
+                        i =>
+                        {
+                            if (i == 1)
+                            {
+                                StartBattle(enemy);
+                            }
+                            else
+                            {
+                                StartBattleDialogue(enemy);
+                            }
+                        });
+                }
+                else // shay
+                {
+                    FindObjectOfType<DialogManager>().StartDialogue(
+                        new Dialogue(new[]
+                        {
+                            new SingleDialogue(enemy.name, new[]
+                            {
+                                "Because you really think you have a chance against me? You're just gonna waste my time...", "I don't even know why the producer " +
+                                "agreed to work with someone like you. "
+                            })
+                        }),
+                        new string[]{"Let's Go!", "Can you repeat ?"},
+                        i =>
+                        {
+                            if (i == 1)
+                            {
+                                StartBattle(enemy);
+                            }
+                            else
+                            {
+                                StartBattleDialogue(enemy);
+                            }
+                        });
+                }
+                
             }
             else
             {
@@ -174,6 +226,8 @@ public class Q14 : Quest
             {
                 if (isWin)
                 {
+                    if (enemy.name == "Vlad")
+                    {
                     FindObjectOfType<DialogManager>().StartDialogue(
                         new Dialogue(new[]
                         {
@@ -191,7 +245,53 @@ public class Q14 : Quest
                             })
                         }),
                         Array.Empty<string>(),
-                        i => { });
+                            i => { });
+                    }
+
+                    if (enemy.name == "Layleau")
+                    {
+                        FindObjectOfType<DialogManager>().StartDialogue(
+                        new Dialogue(new[]
+                        {
+                            new SingleDialogue(enemy.name, new[]
+                            {
+                                "What a strange story ! I give you a Visa to go to a Digital Vice City."
+                            }),
+                            new SingleDialogue("", new[]
+                            {
+                                "Well done ! By beating this artist, you earn 100 HypeCoins and his instrument."
+                            }),
+                            new SingleDialogue("Feneu", new[]
+                            {
+                                "I saw your battle, I’m impressed by your job, continue like it."
+                            })
+                        }),
+                        Array.Empty<string>(),
+                            i => { });
+                    }
+                    else // shay
+                    {
+                        FindObjectOfType<DialogManager>().StartDialogue(
+                            new Dialogue(new[]
+                            {
+                                new SingleDialogue(enemy.name, new[]
+                                {
+                                    "You are as good as Thibaut Courtois, I'm so impressed !"
+                                }),
+                                new SingleDialogue("", new[]
+                                {
+                                    "Well done ! By beating this artist, you earn 100 HypeCoins and his instrument."
+                                }),
+                                new SingleDialogue("Feneu", new[]
+                                {
+                                    "I saw your battle, I’m impressed by your job, continue like it."
+                                })
+                            }),
+                            Array.Empty<string>(),
+                            i => { });
+                    }
+                    
+                    
                     GameManager.Instance.AddCoins(100);
                     if (enemy.name == "Vlad")
                     {
@@ -200,7 +300,7 @@ public class Q14 : Quest
                     }
                     if (enemy.name == "Plaiboy Carti")
                     {
-                        GameManager.Instance.AddOneItem(toGivePlaiboy);
+                        GameManager.Instance.AddOneItem(toGiveShay);
                         winP = true;
                     }
                     if (enemy.name == "Laylow")

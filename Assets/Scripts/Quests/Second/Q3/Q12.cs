@@ -79,11 +79,11 @@ public class Q12 : Quest
         FindObjectOfType<DialogManager>().StartDialogue(
             new Dialogue(new[]
             {
-                new SingleDialogue("Mouse Boss", new[]
+                new SingleDialogue("Mr.Anderson", new[]
                 {
                     "As the rumors say, I’m very interested in working with you. " +
                     "If you want, I propose to you this beautiful instrument which can help you a lot for your next battles." +
-                    "I also offer you some money which will allow you to develop your career faster."
+                    "I also offer you some money which will allow you to develop your career faster.", "Now, make your own strange history"
                 })
             }),
             Array.Empty<string>(),
