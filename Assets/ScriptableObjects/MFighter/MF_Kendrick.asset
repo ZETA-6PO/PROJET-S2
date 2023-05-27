@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2002811894f0d90b521b02f92603a, type: 3}
+  m_Name: MF_Kendrick
+  m_EditorClassIdentifier: 
+  maxResistance: 15
+  maxInspiration: 10
+  nickName: Kendrick
+  attacks:
+  - {fileID: 11400000, guid: 2a9596a088ba1a4429717d519d1fb336, type: 2}
+  - {fileID: 11400000, guid: 4a00ea61fd400e743a6381662b1014f5, type: 2}
+  - {fileID: 11400000, guid: 35a25f5154e76ed49b11dfebdddbfb78, type: 2}
+  - {fileID: 11400000, guid: 91cc6bc8a148c0245982211adad5600e, type: 2}
+  consumables:
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
+  - {fileID: 11400000, guid: 81615ee8a1cca4248b877f4a01f02f29, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: 6074fdb1e59faef41b1dec76d8612485, type: 2}
+  - {fileID: 11400000, guid: 6074fdb1e59faef41b1dec76d8612485, type: 2}
+  attacksUsage: 
+  image: {fileID: -339612315, guid: 68fab56510ee7be4e98422cbf83405de, type: 3}
+  surname: The Humble

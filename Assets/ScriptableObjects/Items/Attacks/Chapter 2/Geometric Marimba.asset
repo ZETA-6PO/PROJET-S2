@@ -17,11 +17,9 @@ MonoBehaviour:
   price: 300
   description: Hit it symmetrically for better efficiency.
   consumable: 0
-  MaxUse: 6
-  rarity: 0
+  rarity: 1
+  effect: 3
   sound: {fileID: 8300000, guid: 2dfdffaeea51cfd4b8ebe3ece232fd7b, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 13
   input:
-    sequence: 
     time: 0

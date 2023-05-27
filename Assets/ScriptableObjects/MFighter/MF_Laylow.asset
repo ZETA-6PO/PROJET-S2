@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2002811894f0d90b521b02f92603a, type: 3}
+  m_Name: MF_Laylow
+  m_EditorClassIdentifier: 
+  maxResistance: 8
+  maxInspiration: 10
+  nickName: Laylow
+  attacks:
+  - {fileID: 11400000, guid: 06b558be560c98f48834e0eabb783aa3, type: 2}
+  - {fileID: 11400000, guid: 731aca5552eb0024abfbb24934b1250a, type: 2}
+  - {fileID: 11400000, guid: 0e683039db420414192aa51e340dee40, type: 2}
+  - {fileID: 11400000, guid: c6acf48e11ed33d42b0f8f13e2a30c25, type: 2}
+  consumables:
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: 6074fdb1e59faef41b1dec76d8612485, type: 2}
+  - {fileID: 11400000, guid: ff092339386db9c41ad67928bab83e10, type: 2}
+  - {fileID: 11400000, guid: c6853fa8195d5364abf224483127cbd4, type: 2}
+  attacksUsage: 
+  image: {fileID: -824404580, guid: 0c1b32130adce924bb0a03f6d48a80eb, type: 3}
+  surname: Mr.Anderson

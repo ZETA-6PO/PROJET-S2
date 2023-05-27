@@ -18,11 +18,9 @@ MonoBehaviour:
   description: 'A harmonica like no other: the fire option is included. Beware whoever
     uses it!'
   consumable: 0
-  MaxUse: 30
   rarity: 0
+  effect: 3
   sound: {fileID: 8300000, guid: 26e48089cef563d479d9bee47d9c0a9a, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 10
   input:
-    sequence: 1201000011010000140100001301000012010000
     time: 10

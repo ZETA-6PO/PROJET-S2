@@ -17,11 +17,9 @@ MonoBehaviour:
   price: 1000
   description: The only synth that when used well can beat everyone.
   consumable: 0
-  MaxUse: 6
-  rarity: 0
+  rarity: 2
+  effect: 1
   sound: {fileID: 8300000, guid: 272e45072ebc53d4e8c7ae9259d8a302, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 22
   input:
-    sequence: 
     time: 0

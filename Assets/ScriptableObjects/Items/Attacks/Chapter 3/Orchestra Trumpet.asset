@@ -17,11 +17,9 @@ MonoBehaviour:
   price: 300
   description: It. Just. Plays. In. Rythm.
   consumable: 0
-  MaxUse: 6
-  rarity: 0
+  rarity: 1
+  effect: 3
   sound: {fileID: 8300000, guid: d14fe2e88b635d84eb880970af7b0372, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 17
   input:
-    sequence: 
     time: 0

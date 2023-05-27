@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2002811894f0d90b521b02f92603a, type: 3}
+  m_Name: MF_Kaaris
+  m_EditorClassIdentifier: 
+  maxResistance: 10
+  maxInspiration: 7
+  nickName: Kaaris
+  attacks:
+  - {fileID: 11400000, guid: 792b5f7b34ff5cd4eab64f28ec850f57, type: 2}
+  - {fileID: 11400000, guid: 731aca5552eb0024abfbb24934b1250a, type: 2}
+  - {fileID: 11400000, guid: 0e683039db420414192aa51e340dee40, type: 2}
+  - {fileID: 11400000, guid: b99eaaf63356d724fb718ac041d24b3f, type: 2}
+  consumables:
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
+  - {fileID: 11400000, guid: 6074fdb1e59faef41b1dec76d8612485, type: 2}
+  - {fileID: 11400000, guid: ff092339386db9c41ad67928bab83e10, type: 2}
+  - {fileID: 11400000, guid: c6853fa8195d5364abf224483127cbd4, type: 2}
+  - {fileID: 11400000, guid: c6853fa8195d5364abf224483127cbd4, type: 2}
+  - {fileID: 11400000, guid: c6853fa8195d5364abf224483127cbd4, type: 2}
+  attacksUsage: 
+  image: {fileID: 429666551, guid: 74ca561df84ec2e40bf7c124742661cc, type: 3}
+  surname: He bring the light on Sevran
