@@ -4,8 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Q2", menuName = "Quest/Q2", order = 1)]
 public class Q2 : Quest
 {
-    
-    [SerializeField] public Vector3 playerSpawn;
 
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {

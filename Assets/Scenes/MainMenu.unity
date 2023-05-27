@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1113011986}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.73917866
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3345,7 +3345,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.73917866}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000024199486, y: -35.9}
   m_SizeDelta: {x: 19.2356, y: -63.9729}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3902,10 +3902,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105bcdb9d89aebc41a4405ab4e778dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundOnIcon: {fileID: 787131353}
-  soundOffIcon: {fileID: 1366980118}
+  onIcon: {fileID: 787131353}
+  offIcon: {fileID: 1366980118}
   toggleMusic: 0
   toggleEffects: 1
+  toggleFullscreen: 0
 --- !u!95 &1329992697
 Animator:
   serializedVersion: 5
@@ -5623,6 +5624,7 @@ MonoBehaviour:
   musicSource: {fileID: 284158144}
   effectsSource: {fileID: 1662356520}
   gameMusic: {fileID: 8300000, guid: e3f7d9a3807b14042bb09e22b786caeb, type: 3}
+  volume: 0
 --- !u!1 &2055098556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,10 +5810,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105bcdb9d89aebc41a4405ab4e778dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundOnIcon: {fileID: 194942914}
-  soundOffIcon: {fileID: 79226089}
+  onIcon: {fileID: 194942914}
+  offIcon: {fileID: 79226089}
   toggleMusic: 1
   toggleEffects: 0
+  toggleFullscreen: 0
 --- !u!1 &2087447844
 GameObject:
   m_ObjectHideFlags: 0

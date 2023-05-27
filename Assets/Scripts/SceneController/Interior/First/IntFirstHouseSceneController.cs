@@ -21,7 +21,10 @@ public class IntFirstHouseSceneController : SceneController
     //event function triggered when touching exiting point 
     public void OnExitScene()
     {
-        SceneManager.LoadScene("ExtFirstScene");
+        if (canGoOut)
+        {
+            SceneManager.LoadScene("ExtFirstScene");   
+        }
     }
     
     

@@ -9,11 +9,10 @@ public class Q1 : Quest
     
     [SerializeField] public Vector3 momPosition;
     [SerializeField] public Vector3 dadPosition;
-    [SerializeField] public Vector3 playerSpawn;
 
 
-    private bool test = false;
-    
+    private bool test;
+
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         test = questProperties.First((property => property.name == "test")).value == "1";
@@ -31,11 +30,8 @@ public class Q1 : Quest
 
     public override void OnLoadScene(string sceneName)
     {
-        Debug.Log(sceneName);
         if (sceneName == "IntFirstHouseScene")
         {
-            FindObjectOfType<SceneController>().canGoOut = true;
-            Debug.Log("itWorks");
             FindObjectOfType<parentsScript>().Enable(true, true, momPosition, dadPosition,
                 () => speakToParents(),
                 () => { }, () => { }, () => { });
@@ -80,7 +76,11 @@ public class Q1 : Quest
                 }),
                 Array.Empty<string>(),
                 i => { });
-            GameManager.Instance.AddCoins(20);
+            if (GameManager.Instance.coin != 20)
+            {
+                int to_give = 20 - GameManager.Instance.coin;
+                GameManager.Instance.AddCoins(to_give);
+            }
             Active = false;
             Completed = true;
             GameManager.Instance.quests[2].Active = true;

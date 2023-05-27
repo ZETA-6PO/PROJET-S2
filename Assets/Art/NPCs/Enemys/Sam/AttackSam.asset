@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e80f221755e89204a9df31cfe48c47ff, type: 3}
-  m_Name: Fire Harmonica
+  m_Name: AttackSam
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 817da4635f835d14e8cd119a69049237, type: 3}
-  name: Fire Harmonica
-  price: 20
-  description: 'A harmonica like no other: the fire option is included. Beware whoever
-    uses it!'
+  image: {fileID: 0}
+  name: La Technique
+  price: 0
+  description: 
   consumable: 0
-  MaxUse: 30
+  MaxUse: 20
   rarity: 0
   effect: 0
-  sound: {fileID: 8300000, guid: 26e48089cef563d479d9bee47d9c0a9a, type: 3}
-  damage: 10
+  sound: {fileID: 0}
+  damage: 5
   input:
-    time: 10
+    time: 5

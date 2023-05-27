@@ -19,9 +19,8 @@ MonoBehaviour:
   consumable: 0
   MaxUse: 20
   rarity: 0
+  effect: 0
   sound: {fileID: 8300000, guid: bc73d184ed51f1148890a6539cf07228, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 20
   input:
-    sequence: 1201000013010000110100001401000011010000
     time: 10
