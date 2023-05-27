@@ -18,11 +18,9 @@ MonoBehaviour:
   description: This xylophone was stolen from the town nursery! If you see it, return
     the 0 to its owners.
   consumable: 0
-  MaxUse: 10
-  rarity: 1
+  rarity: 0
+  effect: 3
   sound: {fileID: 8300000, guid: f194cfe063277644d9340faafb694d19, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 12
   input:
-    sequence: 130100001301000013010000130100001301000013010000
     time: 10

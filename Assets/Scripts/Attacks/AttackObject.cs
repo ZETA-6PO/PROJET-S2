@@ -11,7 +11,6 @@ public class AttackObject: Item
     /// This class is inteded to 
     /// </summary> // an int from 0 to MaxUse representing the use time of the attack
 
-    public int MaxUse;
     public Rarity rarity; // image in combat
     public Effect effect;
     public int InspirationCost
@@ -26,6 +25,24 @@ public class AttackObject: Item
                     return 2;
                 case Rarity.Legendary:
                     return 3;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+    }
+
+    public int MaxUse
+    {
+        get
+        {
+            switch (rarity)
+            {
+                case Rarity.Common:
+                    return 3;
+                case Rarity.Hyped:
+                    return 5;
+                case Rarity.Legendary:
+                    return 10;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

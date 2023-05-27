@@ -17,11 +17,9 @@ MonoBehaviour:
   price: 300
   description: Put it down somewhere and it won't move!
   consumable: 0
-  MaxUse: 6
-  rarity: 0
+  rarity: 1
+  effect: 3
   sound: {fileID: 8300000, guid: c704b7735b80c4b47a07765ce9fea165, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 15
   input:
-    sequence: 
     time: 0

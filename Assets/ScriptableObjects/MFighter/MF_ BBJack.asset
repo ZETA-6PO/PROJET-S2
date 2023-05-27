@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd2002811894f0d90b521b02f92603a, type: 3}
+  m_Name: MF_ BBJack
+  m_EditorClassIdentifier: 
+  maxResistance: 15
+  maxInspiration: 10
+  nickName: BBJack
+  attacks:
+  - {fileID: 11400000, guid: 06b558be560c98f48834e0eabb783aa3, type: 2}
+  - {fileID: 11400000, guid: 9d86981b52a4558488314abb8a735101, type: 2}
+  - {fileID: 11400000, guid: 792b5f7b34ff5cd4eab64f28ec850f57, type: 2}
+  - {fileID: 11400000, guid: b99eaaf63356d724fb718ac041d24b3f, type: 2}
+  consumables:
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: bfad448fd64c69b42983f553b187a2eb, type: 2}
+  - {fileID: 11400000, guid: 81615ee8a1cca4248b877f4a01f02f29, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: c6853fa8195d5364abf224483127cbd4, type: 2}
+  attacksUsage: 
+  image: {fileID: -1699646409, guid: ebb73594883bcc848b9f7850bd4838e5, type: 3}
+  surname: The Rookie

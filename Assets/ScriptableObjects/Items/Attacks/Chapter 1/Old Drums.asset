@@ -18,11 +18,9 @@ MonoBehaviour:
   description: This battery, despite its age, is essential for any musical creation,
     you can count on it.
   consumable: 0
-  MaxUse: 20
-  rarity: 0
+  rarity: 1
+  effect: 3
   sound: {fileID: 8300000, guid: 6b163f8ea3af3b94daa054936d2b7391, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 17
   input:
-    sequence: 1301000013010000130100001301000013010000
     time: 10

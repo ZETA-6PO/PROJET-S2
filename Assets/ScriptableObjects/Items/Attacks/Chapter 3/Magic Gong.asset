@@ -17,11 +17,9 @@ MonoBehaviour:
   price: 1000
   description: This gong can be heard from China to the United States.
   consumable: 0
-  MaxUse: 6
-  rarity: 0
+  rarity: 2
+  effect: 3
   sound: {fileID: 8300000, guid: 6413355a8c190a541822c019d5bc191c, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 19
   input:
-    sequence: 
     time: 0

@@ -18,11 +18,9 @@ MonoBehaviour:
   description: The sounds of this synth are so special that they are only bearable
     when listening to very few people, its whistles are the cause...
   consumable: 0
-  MaxUse: 20
   rarity: 0
+  effect: 3
   sound: {fileID: 8300000, guid: c0fe1f4307f98164e95acd455eeff2a6, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 10
   input:
-    sequence: 1201000012010000120100001201000012010000
     time: 10

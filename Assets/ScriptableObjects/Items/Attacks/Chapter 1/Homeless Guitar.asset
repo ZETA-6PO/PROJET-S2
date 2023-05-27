@@ -18,11 +18,9 @@ MonoBehaviour:
   description: "This guitar doesn\u2019t have all its strings and some sounds that
     are questionable to say the least"
   consumable: 0
-  MaxUse: 20
   rarity: 0
+  effect: 3
   sound: {fileID: 8300000, guid: d28cc496539a46948abdb314692c7a39, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 10
   input:
-    sequence: 14010000130100001301000013010000130100001301000013010000
     time: 10

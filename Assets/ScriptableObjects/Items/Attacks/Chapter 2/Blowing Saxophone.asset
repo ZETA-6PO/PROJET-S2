@@ -18,11 +18,9 @@ MonoBehaviour:
   description: Blowing into this sax will amplify your breath by 100 and can destabilize
     your opponent.
   consumable: 0
-  MaxUse: 6
-  rarity: 0
+  rarity: 1
+  effect: 3
   sound: {fileID: 8300000, guid: 1bcef8d12a7befd40957afd0602c3e55, type: 3}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 15
   input:
-    sequence: 
     time: 0
