@@ -46,6 +46,7 @@ public class SceneController : MonoBehaviour
             playerController.canMove = true;
             GameManager.Instance.OnSceneLoad();
             
+            
             //Set if the MiniMap appear or not if we are in Exterior or in Interior
             
             if (SceneManager.GetActiveScene().name.StartsWith("Ext"))

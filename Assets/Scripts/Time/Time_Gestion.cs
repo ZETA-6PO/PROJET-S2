@@ -41,4 +41,14 @@ public class Time_Gestion : MonoBehaviour
             hours = 0;
         }
     }
+
+    public void DisplayTime()
+    {
+        IEnumerator Dp() // Wait Until the first listener was add.
+        {
+            yield return new WaitUntil((() => onUpdateMinute.GetPersistentEventCount() < 1));
+            onUpdateMinute.Invoke(hours);
+        }
+        StartCoroutine(Dp());
+    }
 }
