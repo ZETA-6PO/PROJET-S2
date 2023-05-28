@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
+  m_Name: Kanoe
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 293039945, guid: ecde02c9c071bef40a0b2f77394acd24, type: 3}
+  unitName: Kanoe
+  resistance: 10
+  inspiration: 10
+  Attacks:
+  - {fileID: 11400000, guid: 0d681441c050305479555176c4998480, type: 2}
+  - {fileID: 11400000, guid: bd47d48e43503234098d66e9265c7ee6, type: 2}
+  - {fileID: 11400000, guid: 558560939e2a38248bf269ee31183618, type: 2}
+  - {fileID: 11400000, guid: 4fc43dc899ac2da4893e85c508f54cd4, type: 2}
+  difficulty: 0

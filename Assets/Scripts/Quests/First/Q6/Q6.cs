@@ -238,7 +238,7 @@ public class Q6 : Quest
                 {
                     new SingleDialogue("Mum", new[]
                     {
-                        "Go to the Butcher i wait you."
+                        "Go to the Butcher I wait you."
                     })
                 }),
                 Array.Empty<string>(),
@@ -279,7 +279,7 @@ public class Q6 : Quest
                     "am I right? Anyway, when he finds a talent he never makes a mistake.",
                     " He has a good eye for this kind of thing. Do you want to have a duel? " +
                     "There are 30 HypeCoins in play if you want. ",
-                    "But this time you won't be facing me, but Boobsbas. And you'll see it won't be the same."
+                    "But this time you won't be facing me, but Kanoe. And you'll see it won't be the same."
                 })
             }),
             new string[]{"Let's Go!", "Can you repeat ?"},

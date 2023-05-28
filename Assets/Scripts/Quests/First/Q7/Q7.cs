@@ -42,7 +42,7 @@ public class Q7 : Quest
                 FindObjectOfType<DialogManager>().StartDialogue(
                     new Dialogue(new[]
                     {
-                        new SingleDialogue("Studio Boss", new[]
+                        new SingleDialogue("Kore", new[]
                         {
                             "There you are! But you don't have the money. Well, " +
                             "I'm willing to make an exception for you since you are a promising talent. ",
@@ -53,7 +53,7 @@ public class Q7 : Quest
                             "Try to beat him when you're really ready, and when you have the money, " +
                             "because you can face him for 300 HypeCoins, and 50 HypeCoins if you lose the first time."
                         }),
-                        new SingleDialogue("KoBalaD", new[]
+                        new SingleDialogue("Koba LaD", new[]
                         {
                             "I'm going to blow you away without a care in the world!"
                         }),
