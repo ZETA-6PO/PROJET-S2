@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour{
     public int playerFame;
     public bool isWaypointActive = false;
     public Vector3 displayedWaypoint;
+    public Time_Gestion refTime_Gestion;
 
 
     /// <summary>
@@ -238,7 +239,8 @@ public class GameManager : MonoBehaviour{
         }
         
         // Instatiate the ATH for the coins
-        refATH = Instantiate(prefabATH);
+        refATH = Instantiate(prefabATH); 
+        refTime_Gestion.DisplayTime();
     }
 
 
