@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
   m_Name: GreyMontana Fighter
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 894142168, guid: 92487edab14d27a4f8949db91a22014e, type: 3}
   unitName: Grey Montana
   resistance: 0
   inspiration: 0
   Attacks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3cd0ab7ad6b6b304e84a4c86c6b6f881, type: 2}
+  - {fileID: 11400000, guid: 08987eaf72d15f54f83d0bf06f1d636f, type: 2}
+  - {fileID: 11400000, guid: 47ca9a76eec319c4285db5824ae76947, type: 2}
+  - {fileID: 11400000, guid: dc872ef87979f3b4d9f63c7ad2fabb4c, type: 2}
   difficulty: 3
