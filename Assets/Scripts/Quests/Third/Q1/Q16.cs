@@ -67,7 +67,7 @@ public class Q16 : Quest
                 {
                     new SingleDialogue("", new[]
                     {
-                        "You should head to the rich district to take on this city's greatest artist from now on."
+                        "You should head to the boss house to take on this city's greatest artist from now on."
                     })
                 }),
                 Array.Empty<string>(),
@@ -81,7 +81,7 @@ public class Q16 : Quest
             FindObjectOfType<DialogManager>().StartDialogue(
                 new Dialogue(new[]
                 {
-                    new SingleDialogue("Producer", new[]
+                    new SingleDialogue("Feneu", new[]
                     {
                         "I saw all your battles and you did a good job. Now it’s time to really prove to me what you can do. " +
                         "It’s not the difficulty you’ve had so far. Beat him and I’ll take your career even further."
@@ -118,8 +118,8 @@ public class Q16 : Quest
             {
                 new SingleDialogue(disciple.name, new[]
                 {
-                    "Because you really think you have a chance against me? I don't even know why the producer " +
-                    "agreed to work with someone like you. "
+                    "Before to fight the DUC, at least try to approach me HAHAHAHAHA" +
+                    "You can't do anything against me, it's so ridiculous..."
                 })
             }),
             new string[]{"Let's Go!", "Can you repeat ?"},
@@ -149,7 +149,7 @@ public class Q16 : Quest
                     {
                         new SingleDialogue(enemy.name, new[]
                         {
-                            "I will never get over such humiliation. You are truly a great artist."
+                            "Okay, maybe I was wrong about you," + "but you can't do anything against the DUC anyway..."
                         }),
                         new SingleDialogue("", new[]
                         {
@@ -177,7 +177,7 @@ public class Q16 : Quest
                     {
                         new SingleDialogue(enemy.name, new[]
                         {
-                            "Honestly easy I didn't even have to force it."
+                            "HAHAHAHAHA I warned you though !"
                         })
                     }),
                     new string[]{"I will beat you this time!", "No I prefer to stop the massacre..."},
