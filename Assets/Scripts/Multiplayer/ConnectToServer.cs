@@ -25,5 +25,12 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene("Lobby");
     }
+
+    public void OnClickBack()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    
+    
     
 }

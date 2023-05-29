@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
@@ -6,39 +5,39 @@ using Photon.Realtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
-    public TMP_InputField roomInput;
-
-    public GameObject lobbyPanel;
-
-    public GameObject roomPanel;
-
-    public TMP_Text roomName;
-
-    public RoomItem prefabRoomItem;
-
-    private List<RoomItem> roomItemsList = new List<RoomItem>();
-
-    public Transform contentObject;
-    
-    // Start is called before the first frame update
+    public bool inMatchmaking;
+    public TMP_Text btn_text;
     IEnumerator Start()
     {
-        yield return new WaitUntil((() => PhotonNetwork.IsConnected));
+        yield return new WaitUntil(() => PhotonNetwork.IsConnected);
         PhotonNetwork.JoinLobby();
     }
 
-    public void OnClickCreate()
+    public void OnClickStartMatchmaking()
     {
-        if (roomInput.text.Length >= 1)
+        if (inMatchmaking)
         {
-            PhotonNetwork.CreateRoom(roomInput.text, new RoomOptions()
-            {
-                MaxPlayers = 2,
-            });
+            inMatchmaking = false;
+            PhotonNetwork.LeaveRoom();
+            btn_text.text = "Launch matchmaking";
         }
+        else
+        {   
+            inMatchmaking = true;
+            btn_text.text = "Cancel matchmaking";
+            PhotonNetwork.JoinRandomRoom();
+        }
+        
+    }
+
+    public override void OnJoinRandomFailed(short returnCode, string message)
+    {
+        inMatchmaking = true;
+        PhotonNetwork.CreateRoom(null, new RoomOptions { EmptyRoomTtl = 0, MaxPlayers = 2 });
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -50,56 +49,22 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public override void OnJoinedRoom()
-    {
-        lobbyPanel.SetActive(false);
-        roomPanel.SetActive(true);
-        roomName.text = $"Room name : {PhotonNetwork.CurrentRoom.Name}";
-    }
-
-    public override void OnRoomListUpdate(List<RoomInfo> roomList)
-    {
-        //Debug.Log(roomList[0]!.Name);
-        UpdateRoomList(roomList);
-    }
-    
-    public void JoinRoom(string roomName)
-    {
-        PhotonNetwork.JoinRoom(roomName);
-    }
-
-    public void OnClickLeaveRoom()
-    {
-        PhotonNetwork.LeaveRoom();
-    }
-
-    public override void OnLeftRoom()
-    {
-        roomPanel.SetActive(false);
-        lobbyPanel.SetActive(true);
-    }
-
-    public void OnConnectedToServer()
+    public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();
     }
 
-    private void UpdateRoomList(List<RoomInfo> roomList)
+    public override void OnJoinedRoom()
     {
-        foreach (RoomItem item in roomItemsList)
+        Debug.Log("Entered room.");
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
         {
-            Destroy(item.gameObject);
-        }
-        roomItemsList.Clear();
-        foreach (RoomInfo room in roomList)
-        {
-            RoomItem newRoom = Instantiate(prefabRoomItem, contentObject);
-            newRoom.SetRoomName(room.Name);
-            roomItemsList.Add(newRoom);
+            inMatchmaking = false;
+            photonView.RPC("StartGame", RpcTarget.All);
         }
     }
-    
-    //PHOTON VIEW
+
+    // PHOTON VIEW
 
     [PunRPC]
     public void StartGame()
@@ -108,6 +73,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("Game");
     }
 
-
-
+    public void LeaveLobby()
+    {
+        inMatchmaking = false;
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LeaveLobby();
+        SceneManager.LoadScene("MainMenu");
+    }
 }

@@ -17,8 +17,9 @@ public class MAttackCell : MonoBehaviour
     private int _number;
     private int _index;
 
-    public void Initialise(AttackObject a, MAttackMenu m,int use,int i)
+    public void Initialise(AttackObject a, MAttackMenu m, int use, int i)
     {
+        Debug.Log($"InitialiseCell() -> {a.name}, index: {i}");
         _index = i;
         _attack = a;
         _launcher = m;
@@ -41,13 +42,15 @@ public class MAttackCell : MonoBehaviour
 
     public void CellClicked()
     {
+        _launcher.space.Change(_attack);
+    }
+
+    public void PlayClicked()
+    {
         if (_number>0)
         {
-            _number -= 1;
             countText.text = _number.ToString();
-            Debug.Log("attack"+_index+"clicked");
             _launcher.OnclickAttack(_index);
-            
         }
     }
 }
