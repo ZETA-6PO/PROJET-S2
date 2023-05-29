@@ -2,30 +2,20 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MBattleHUD: MonoBehaviour
+public class MBattleHUD : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject playerPrefab;
-    [SerializeField]
-    private GameObject enemyPrefab;
-    [SerializeField]
-    private Transform playerParent;
-    [SerializeField]
-    private Transform enemyParent;
-    [SerializeField]
-    private Text playerText;
-    [SerializeField]
-    private Text enemyText;
-    [SerializeField]
-    private Text dialogText;
-    [SerializeField]
-    private Slider appreciation;
-    [SerializeField]
-    private Slider resistance;
-    [SerializeField]
-    private Slider inspiration;
-    
-    //private GameObject PauseScreen;
+    [SerializeField] private Image playerSprite;
+    [SerializeField] private Image enemySprite;
+    [SerializeField] private Text playerText;
+    [SerializeField] private Text enemyText;
+    [SerializeField] private Text dialogText;
+    [SerializeField] private Slider appreciation;
+    [SerializeField] private Slider resistance;
+    [SerializeField] private Slider inspiration;
+    [SerializeField] private Button refForfeitButton;
+
+    private float appreciationToReach = 0.5f;
+    private float currentAppreciationVelocity = 0;
 
     public void Initialize(MultiplayerFighter player, MultiplayerFighter enemy)
     {
@@ -39,48 +29,63 @@ public class MBattleHUD: MonoBehaviour
         dialogText.text = text;
     }
 
-    /*public void ShowPauseMenu()
+    public void Update()
     {
-        PauseScreen.SetActive(true);
-    }*/
-        
-    /*public void HidePauseMenu()
-    {
-        PauseScreen.SetActive(false);
-    }*/
+        if (appreciation.value != appreciationToReach)
+        {
+            appreciation.value = Mathf.SmoothDamp(appreciation.value, appreciationToReach, ref currentAppreciationVelocity, 30 * Time.deltaTime);
+        }
+    }
 
     private void InitializePlayer(MultiplayerFighter fighter)
     {
         playerText.text = fighter.nickName;
-        GameObject go = Instantiate(playerPrefab, playerParent, false);
+        playerSprite.sprite = fighter.image;
     }
-        
+
     private void InitializeEnemy(MultiplayerFighter fighter)
     {
         enemyText.text = fighter.nickName;
-            
-        var go = Instantiate(enemyPrefab, enemyParent, false);
+        enemySprite.sprite = fighter.image;
     }
 
     private void InitializeBar(MultiplayerFighter player)
     {
-        inspiration.value = player.inspiration/10;
+        inspiration.value = player.inspiration / 10;
         resistance.value = player.resistance / 10;
         appreciation.value = 0.5f;
     }
 
-    public void UpdateAppreciation(float appreciation)
+    public void UpdateAppreciation(float _appreciation)
     {
-        this.appreciation.value = appreciation;
+        if (_appreciation > 1)
+            appreciationToReach = _appreciation / 100;
+        else
+        {
+            appreciationToReach = _appreciation;
+        }
     }
-    
+
     public void UpdateInspiration(float inspiration)
     {
-        this.inspiration.value = inspiration;
+        this.inspiration.value = inspiration / 10;
     }
-    
+
     public void UpdateResistance(float resistance)
     {
-        this.resistance.value = resistance;
+        this.resistance.value = resistance / 10;
     }
+
+    public void EnableButtonForfeit()
+    {
+        refForfeitButton.gameObject.SetActive(true);
+    }
+
+    public void DisableButtonForfeit()
+    {
+        refForfeitButton.gameObject.SetActive(false);
+    }
+
+
+
 }

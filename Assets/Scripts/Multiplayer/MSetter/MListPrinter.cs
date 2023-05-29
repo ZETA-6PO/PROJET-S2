@@ -19,7 +19,7 @@ public class MListPrinter : MonoBehaviour
 
     public void UpdateList(Dictionary<Item,int> items)
     {
-        Debug.Log("dico lenght :" + items.Count);
+        //Debug.Log("dico lenght :" + items.Count);
         foreach (Item item in items.Keys)
         {
             AddCell(item,items[item]);

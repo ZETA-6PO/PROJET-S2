@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MSetter : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class MSetter : MonoBehaviour
     private MListPrinter _printer;
     [SerializeField] private GameObject chooser;
     [SerializeField] private GameObject slotPrefab;
+
+    public UnityAction<MultiplayerFighter> onFighterSelected;
+
+
 
     private MultiplayerFighter _fighter;
 
@@ -48,6 +53,7 @@ public class MSetter : MonoBehaviour
     {
         GameObject obj = Instantiate(panelPrefab,transform);
         _panel = obj.GetComponent<MCharacterPanel>();
+        _panel.Initialize(this);
 
     }
     private void AddSlot(MultiplayerFighter fighter)
@@ -76,9 +82,9 @@ public class MSetter : MonoBehaviour
         ShowFighter();
     }
     
-    public MultiplayerFighter TakeFighter()
+    public void TakeFighter()
     {
-        return _fighter;
+        onFighterSelected(_fighter);
     }
     
 }
