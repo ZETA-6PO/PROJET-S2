@@ -30,4 +30,6 @@ public class Cell : MonoBehaviour
         Inventory.space.Change(item);
     }
 
+    
+
 }

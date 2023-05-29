@@ -21,8 +21,11 @@ MonoBehaviour:
   waypoints:
   - {x: -92.62, y: 53.37, z: 0}
   - {x: -69.3, y: 21.2, z: 0}
-  Active: 1
-  Completed: 0
+  Active: 0
+  Completed: 1
+  rewards:
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
   momPosition: {x: 1.38, y: -5.7, z: 0}
   dadPosition: {x: 0.35, y: -6.89, z: 0}
-  playerSpawn: {x: -69.5, y: 17.5, z: 0}

@@ -14,7 +14,6 @@ using UnityEngine.SceneManagement;
 
 public class Q5 : Quest
 {
-
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         Win = questProperties.First((property => property.name == "Win")).value == "1";

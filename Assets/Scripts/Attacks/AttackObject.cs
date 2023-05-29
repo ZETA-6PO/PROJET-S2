@@ -38,11 +38,11 @@ public class AttackObject: Item
             switch (rarity)
             {
                 case Rarity.Common:
-                    return 3;
+                    return 10;
                 case Rarity.Hyped:
                     return 5;
                 case Rarity.Legendary:
-                    return 10;
+                    return 3;
                 default:
                     throw new ArgumentOutOfRangeException();
             }

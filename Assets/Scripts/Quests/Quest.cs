@@ -32,6 +32,9 @@ public abstract class Quest : ScriptableObject
     public bool Active;
     public bool Completed;
     
+    //consumables to give in rewards
+    public List<Consumable> rewards;
+    
     /// <summary>
     /// Struct containing all basic Quest information such as the name and description.
     /// </summary>

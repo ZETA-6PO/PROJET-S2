@@ -9,17 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80f221755e89204a9df31cfe48c47ff, type: 3}
-  m_Name: Megatron
+  m_Script: {fileID: 11500000, guid: 44ccf5b78ebbfa74bb250fd4b612d862, type: 3}
+  m_Name: Playboi
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  name: Megatron
-  price: 0
-  description: 
-  consumable: 0
-  rarity: 2
-  effect: 2
-  sound: {fileID: 0}
-  damage: 8
-  input:
-    time: 0
+  sprite: {fileID: 0}
+  unitName: 
+  resistance: 0
+  inspiration: 0
+  Attacks: []
+  difficulty: 0

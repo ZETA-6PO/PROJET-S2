@@ -20,9 +20,12 @@ public class DescriptionSpace : MonoBehaviour
     public TMP_Text attackMaxUse;
     public TMP_Text healInspi;
     public TMP_Text healResist;
+    public GameObject useButton;
+    private Item _item;
     
     public void Change(Item item)
     {
+        _item = item;
         if (refImage is not null)refImage.sprite = item.image;
         if (name is not null)name.text = item.name;
         if (price is not null) price.text = item.price.ToString();
@@ -35,12 +38,14 @@ public class DescriptionSpace : MonoBehaviour
             if (attackRarity is not null) attackRarity.text = ((AttackObject)item).rarity.ToString();
             if (attackResist is not null) attackResist.text = ((AttackObject)item).ResistanceImpact.ToString();
             if (attackMaxUse is not null) attackMaxUse.text = ((AttackObject)item).MaxUse.ToString();
+            if (useButton is not null) useButton.SetActive(false);
         }
         if (item is Consumable)
         {
             if (healInspi is not null) healInspi.text = ((Consumable)item).addedInspiration.ToString();
             if (healResist is not null) healResist.text = ((Consumable)item).addedResistance.ToString();
             if (refImage is not null) refImage.sprite = item.image;
+            if (useButton is not null) useButton.SetActive(true);
         }
     }
 
@@ -48,5 +53,14 @@ public class DescriptionSpace : MonoBehaviour
     {
         name.text = quest.information.name;
         description.text = quest.information.description;
+    }
+    
+    public void Use()
+    {
+        if (_item is Consumable)
+        {
+            GameManager.Instance.UseItem((Consumable)_item);
+            GameManager.Instance.CloseInventory();
+        }
     }
 }

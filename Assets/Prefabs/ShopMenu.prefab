@@ -687,7 +687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: shop
+  m_text: Music Shop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
   m_sharedMaterial: {fileID: -7294418382763209940, guid: 9420a8c19acf7b34486fbb9c0a624087, type: 2}
@@ -709,15 +709,15 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
+  m_fontSize: 55.5
   m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -977,10 +977,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d912cd5766b947e6becfc071644e927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 765857237971399419}
+  refImage: {fileID: 765857237971399419}
   name: {fileID: 765857237415429121}
   price: {fileID: 765857238388856543}
   description: {fileID: 765857239047964059}
+  attackDamages: {fileID: 0}
+  attackCost: {fileID: 0}
+  attackEffect: {fileID: 0}
+  attackRarity: {fileID: 0}
+  attackResist: {fileID: 0}
+  attackMaxUse: {fileID: 0}
+  healInspi: {fileID: 0}
+  healResist: {fileID: 0}
 --- !u!1 &765857238388856513
 GameObject:
   m_ObjectHideFlags: 0

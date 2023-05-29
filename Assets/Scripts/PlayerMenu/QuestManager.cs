@@ -19,9 +19,10 @@ public class QuestManager : MonoBehaviour
         }
         foreach (Quest quest in quests)
         {
-            GameObject cellObject = Instantiate(questPrefab, panel.transform);
-            QuestCell cell = cellObject.GetComponent<QuestCell>();
-            cell.Initialise(quest,this);
+            if (quest.Active)
+            {
+                AddOneQuest(quest);
+            }
         }
     }
     public void AddOneQuest(Quest quest)

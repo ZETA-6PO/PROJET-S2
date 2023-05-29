@@ -9,12 +9,14 @@ public class EnemyScreen : MonoBehaviour
 {
     public TMP_Text pseudo;
     public TMP_Text description;
+    public TMP_Text level;
     public Animator anim;
     private Enemy enemy;
 
     public void Initialise(Enemy e)
     {
         enemy = e;
+        level.text = e.fighter.difficulty.ToString();
         pseudo.text = enemy.fighter.unitName;
         description.text = enemy.aka;
         anim.SetTrigger(enemy.triggerName);

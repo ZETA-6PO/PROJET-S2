@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,7 +9,6 @@ using Random = UnityEngine.Random;
 [CreateAssetMenu(fileName = "Q15", menuName = "Quest/Q15", order = 1)]
 public class Q15 : Quest
 {
-
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         had_pay = questProperties.First((property => property.name == "had_pay")).value == "1";

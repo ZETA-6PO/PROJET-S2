@@ -6,6 +6,6 @@ public class MusicShopSalerScript : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        GameManager.Instance.OpenShop(toBuy);
+        GameManager.Instance.OpenShop(toBuy,"Music Store");
     }
 }

@@ -140,6 +140,13 @@ public class GameManager : MonoBehaviour{
         return 5;
     }
 
+    public void UseItem(Consumable c)
+    {
+        playerInspiration += c.addedInspiration;
+        playerResistance += c.addedResistance;
+        RemoveItem(c);
+    }
+
     /// <summary>
     /// This function check wether or not the player has inspiration heal item in his inventory.
     /// </summary>
@@ -306,7 +313,7 @@ public class GameManager : MonoBehaviour{
         refPlayerMenu = null;
     }
     
-    public void OpenShop(List<Item> toBuy)
+    public void OpenShop(List<Item> toBuy,string shopName)
     {
         if (isShopOpen)
             return;
@@ -314,7 +321,7 @@ public class GameManager : MonoBehaviour{
             CloseInventory();
         isShopOpen = true;
         refShop = Instantiate(prefabShop, this.gameObject.transform.parent);
-        refShop.UdpdateShop(toBuy);
+        refShop.UdpdateShop(toBuy,shopName);
     }
     
     public void CloseShop()

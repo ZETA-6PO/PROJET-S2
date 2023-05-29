@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +8,6 @@ using Random = UnityEngine.Random;
 [CreateAssetMenu(fileName = "Q16", menuName = "Quest/Q16", order = 1)]
 public class Q16 : Quest
 {
-
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         return;
@@ -17,7 +17,6 @@ public class Q16 : Quest
     {
         return null;
     }
-
     public Vector3 producerPosition;
     public Vector3 disciplePosition;
     public Vector3 bossPosition;

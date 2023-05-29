@@ -15,7 +15,7 @@ public class Q3 : Quest
 
     private bool Win;
     [SerializeField] public Fighter enemy;
-
+    
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         Win = questProperties.First((property => property.name == "Win")).value == "1";

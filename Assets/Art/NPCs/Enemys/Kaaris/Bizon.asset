@@ -13,15 +13,13 @@ MonoBehaviour:
   m_Name: Bizon
   m_EditorClassIdentifier: 
   image: {fileID: 0}
-  name: 
+  name: Bizon
   price: 0
   description: 
   consumable: 0
-  MaxUse: 0
   rarity: 0
+  effect: 3
   sound: {fileID: 0}
-  DialogWhenAttackFail: 
-  DialogWhenAttackSucceed: 
+  damage: 4
   input:
-    sequence: 
     time: 0

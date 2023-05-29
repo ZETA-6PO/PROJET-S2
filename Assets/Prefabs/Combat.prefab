@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 3687627765840998311}
   - component: {fileID: 1547780798019310247}
   m_Layer: 0
-  m_Name: Variable_Name
+  m_Name: Variable_description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1021,10 +1021,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.5
+  m_fontSize: 72
   m_fontSizeBase: 32.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2051,9 +2051,10 @@ MonoBehaviour:
   attackCost: {fileID: 8679050765343413194}
   attackEffect: {fileID: 5399155762447363059}
   attackRarity: {fileID: 1382908316833492805}
+  attackResist: {fileID: 0}
+  attackMaxUse: {fileID: 0}
   healInspi: {fileID: 0}
   healResist: {fileID: 0}
-  healDescription: {fileID: 0}
 --- !u!1 &4911871387720310388
 GameObject:
   m_ObjectHideFlags: 0
@@ -7577,14 +7578,15 @@ MonoBehaviour:
   refImage: {fileID: 3338985357198627610}
   name: {fileID: 2478674055079460294}
   price: {fileID: 0}
-  description: {fileID: 0}
+  description: {fileID: 1547780798019310247}
   attackDamages: {fileID: 0}
   attackCost: {fileID: 0}
   attackEffect: {fileID: 0}
   attackRarity: {fileID: 0}
+  attackResist: {fileID: 0}
+  attackMaxUse: {fileID: 0}
   healInspi: {fileID: 831444851991510113}
   healResist: {fileID: 2747745460437376965}
-  healDescription: {fileID: 1547780798019310247}
 --- !u!1 &8304311535623523088
 GameObject:
   m_ObjectHideFlags: 0

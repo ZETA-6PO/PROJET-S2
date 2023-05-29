@@ -14,8 +14,6 @@ using UnityEngine.SceneManagement;
 
 public class Q9 : Quest
 {
-    
-    
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         had_pay = questProperties.First((property => property.name == "had_pay")).value == "1";

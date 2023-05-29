@@ -13,7 +13,6 @@ using UnityEngine.Events;
 
 public class Q4 : Quest
 {
-
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
     {
         return;

@@ -20,6 +20,10 @@ MonoBehaviour:
     description: You have to go to your first battle at the music club.
   waypoints:
   - {x: -41.2, y: -12, z: 0}
-  Active: 1
-  Completed: 0
+  Active: 0
+  Completed: 1
+  rewards:
+  - {fileID: 11400000, guid: b799171aa7631034298fb5aac00a3776, type: 2}
+  - {fileID: 11400000, guid: 01643297425e92b4db43652b92680a7f, type: 2}
+  - {fileID: 11400000, guid: 060c90055b2dbc441b5211f91e5c3648, type: 2}
   enemy: {fileID: 11400000, guid: 2eb7314555bfb0b4088c488e4c794ce0, type: 2}
