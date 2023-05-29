@@ -71,6 +71,7 @@ public class Q7 : Quest
                 GameManager.Instance.AddOneItem(item);
                 Active = false;
                 Completed = true;
+                GameManager.Instance.AddItems(rewards);
                 GameManager.Instance.quests[8].Active = true;
 
             }

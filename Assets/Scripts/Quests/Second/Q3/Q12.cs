@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "Q12", menuName = "Quest/Q12", order = 1)]
 public class Q12 : Quest
 {
-    public List<Consumable> rewards;
     public Vector3 mousePosition;
 
     public override void LoadQuestProperties(QuestData.QuestProperty[] questProperties)
@@ -94,6 +93,7 @@ public class Q12 : Quest
         GameManager.Instance.AddOneItem(toGive);
         Active = false;
         Completed = true;
+        GameManager.Instance.AddItems(rewards);
         GameManager.Instance.quests[13].Active = true;
     }
 }

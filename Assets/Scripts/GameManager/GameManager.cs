@@ -211,11 +211,12 @@ public class GameManager : MonoBehaviour{
     /// <param name="list"></param>
     public void AddItems(List<Item> list)
     {
-        foreach (Item item in list)
-        {
-            AddOneItem(item);
-        }
-
+        foreach (Item item in list) AddOneItem(item);
+    }
+    
+    public void AddItems(List<Consumable> list)
+    {
+        foreach (Consumable item in list) AddOneItem(item);
     }
     
     public void AddCoins(int n)

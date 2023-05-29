@@ -84,6 +84,7 @@ public class Q1 : Quest
             }
             Active = false;
             Completed = true;
+            GameManager.Instance.AddItems(rewards);
             GameManager.Instance.quests[2].Active = true;
             
         }

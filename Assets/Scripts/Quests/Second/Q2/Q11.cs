@@ -73,6 +73,7 @@ public class Q11 : Quest
             
             Active = false;
             Completed = true;
+            GameManager.Instance.AddItems(rewards);
             GameManager.Instance.quests[12].Active = true;
         }
         

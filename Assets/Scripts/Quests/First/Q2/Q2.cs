@@ -42,6 +42,7 @@ public class Q2 : Quest
                     i => { });
                 Active = false;
                 Completed = true;
+                GameManager.Instance.AddItems(rewards);
                 GameManager.Instance.quests[3].Active = true;
             }
         }

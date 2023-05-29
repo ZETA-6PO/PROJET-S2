@@ -109,6 +109,7 @@ public class Q8 : Quest
         GameManager.Instance.AddCoins(100);
         Active = false;
         Completed = true;
+        GameManager.Instance.AddItems(rewards);
         GameManager.Instance.quests[9].Active = true;
     }
 }

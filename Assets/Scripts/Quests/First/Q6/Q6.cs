@@ -177,6 +177,7 @@ public class Q6 : Quest
                     GameManager.Instance.displayedWaypoint = waypoints[2];
                     Active = false;
                     Completed = true;
+                    GameManager.Instance.AddItems(rewards);
                     GameManager.Instance.quests[7].Active = true;
                 }
             }

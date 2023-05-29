@@ -187,6 +187,7 @@ public class Q10 : Quest
                     FindObjectOfType<GameManager>().AddCoins(200);
                     Active = false;
                     Completed = true;
+                    GameManager.Instance.AddItems(rewards);
                     GameManager.Instance.quests[11].Active = true;
                     
                 }

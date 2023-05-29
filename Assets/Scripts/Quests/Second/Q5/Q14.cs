@@ -311,6 +311,7 @@ public class Q14 : Quest
                     }
                     Active = false;
                     Completed = true;
+                    GameManager.Instance.AddItems(rewards);
                     GameManager.Instance.quests[14].Active = true;
                     
                 }

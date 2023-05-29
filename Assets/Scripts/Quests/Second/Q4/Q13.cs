@@ -152,6 +152,7 @@ public class Q13 : Quest
                     GameManager.Instance.AddOneItem(toGive);
                     Active = false;
                     Completed = true;
+                    GameManager.Instance.AddItems(rewards);
                     GameManager.Instance.quests[14].Active = true;
                     
                 }

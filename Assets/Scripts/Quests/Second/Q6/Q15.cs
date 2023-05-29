@@ -201,6 +201,7 @@ public class Q15 : Quest
                 GameManager.Instance.AddOneItem(toGive);
                 Active = false;
                 Completed = true;
+                GameManager.Instance.AddItems(rewards);
                 GameManager.Instance.quests[16].Active = true;
                 
             }

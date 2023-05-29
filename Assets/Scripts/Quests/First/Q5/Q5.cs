@@ -150,6 +150,7 @@ public class Q5 : Quest
                 
                 Active = false;
                 Completed = true;
+                GameManager.Instance.AddItems(rewards);
                 GameManager.Instance.quests[6].Active = true;
                 
             }

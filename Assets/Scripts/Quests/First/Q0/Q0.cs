@@ -78,6 +78,7 @@ public class Q0 : Quest
             FindObjectOfType<SceneController>().canGoOut = true;
             Active = false;
             Completed = true;
+            GameManager.Instance.AddItems(rewards);
             GameManager.Instance.quests[1].Active = true;
         }
         Debug.Log($"Q0 is active : {Active}");

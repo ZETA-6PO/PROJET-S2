@@ -206,6 +206,7 @@ public class Q9 : Quest
                 GameManager.Instance.AddOneItem(item);
                 Active = false;
                 Completed = true;
+                GameManager.Instance.AddItems(rewards);
                 GameManager.Instance.quests[10].Active = true;
                 
             }

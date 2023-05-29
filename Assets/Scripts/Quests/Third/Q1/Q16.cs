@@ -166,6 +166,7 @@ public class Q16 : Quest
                 GameManager.Instance.AddOneItem(toGive);
                 Active = false;
                 Completed = true;
+                GameManager.Instance.AddItems(rewards);
                 GameManager.Instance.quests[17].Active = true;
                 
             }
